@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wifimingle"
+    android:installLocation="preferExternal"
+    android:versionCode="1"
+    android:versionName="@string/version_name" > <!-- FIXME: Isn't the app compatible with API Level 1 ? -->
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="24" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.wifimingle.application.BaseApplication"
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@mipmap/launcher_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="DATABASE"
+            android:value="mingle.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="5" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="com.wifimingle.model" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.wifimingle.camerademo"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/image_path" />
+        </provider>
+
+        <activity
+            android:name="com.wifimingle.activity.ActivityMain"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.wifimingle.activity.RegistrationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyThemeRegistrationPage" />
+        <activity
+            android:name="com.wifimingle.activity.TabActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.wifimingle.activity.ActivitySingleChat"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyThemeRegistrationPage" />
+        <activity
+            android:name="com.wifimingle.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme.Base" />
+        <activity
+            android:name="com.wifimingle.activity.ActivitySettings"
+            android:label="Settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.wifimingle.Utils.Prefs"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.PREFERENCE" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.wifimingle.service.ListeningForOnlineStatus" />
+        <service android:name="com.wifimingle.service.ListenForImageRecieving" />
+        <service
+            android:name="com.wifimingle.service.ServicForClosingAppScenario"
+            android:stopWithTask="false" />
+
+        <activity
+            android:name="com.wifimingle.activity.ProfilePictureShowActivity"
+            android:theme="@style/MyThemeProfile" />
+        <activity
+            android:name="com.wifimingle.activity.FeedBackActivity"
+            android:label="Contact Us"
+            android:theme="@style/CustomTheme" >
+        </activity>
+
+        <receiver android:name="com.wifimingle.broadcast.WifiStateChangeBroadCast" >
+            <intent-filter>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+
+        <activity
+            android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity"
+            android:exported="false"
+            android:label=""
+            android:theme="@style/EasyPermissions.Transparent" />
+
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
+    </application>
+
+</manifest>

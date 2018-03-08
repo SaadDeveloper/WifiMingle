@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2009-2010 Aubort Jean-Baptiste (Rorist)
+ Licensed under GNU's GPL 2, see README
+-->
+<resources>
+    <color name="colorPrimary">#696060</color>
+    <color name="colorPrimaryDark">#494646</color>
+    <color name="colorAccent">#c2c2c2</color>
+
+    <color name="grey">#cccccc</color>
+    <color name="orange">#F68C1F</color>
+    <color name="orange1">#ff9900</color>
+    <color name="orange2">#ff6600</color>
+    <color name="orange3">#ff3300</color>
+
+    <color name="onlinegreen">#63d636</color>
+    <color name="black">#000000</color>
+    <color name="jet_black">#494646</color>
+    <color name="grey_light">#DCDCDC</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#f10000</color>
+    <color name="bg_color">#2B4EF9</color>
+    <color name="grey_transparent">#78595959</color>
+    <color name="light_grey_transparent">#96c6c3c3</color>
+
+    <color name="background_chat">#F1F1F3</color>
+    <item name="seperator" type="color">#F1F1F3</item>
+    <color name="off_white">#fffafafa</color>
+    <item name="transparent" type="color">#00FFFFFF</item>
+    <color name="dark_gray">#ffb3b3b3</color>
+    <color name="very_dark_gray">#636363</color>
+    <color name="sea_green">#E4FFC6</color>
+    <color name="dark_green">#038579</color>
+
+    <color name="black_status">#a0000000</color>
+    <color name="black_navigation">#50000000</color>
+</resources>

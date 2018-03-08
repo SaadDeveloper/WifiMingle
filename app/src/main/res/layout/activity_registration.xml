@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/layoutTop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp">
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="@dimen/_90sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:background="@drawable/logo"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layoutBottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layoutTop"
+            android:background="@drawable/registration_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <EditText
+                    android:id="@+id/etname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:hint="Name"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:inputType="textCapSentences"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:theme="@style/MyEditTextTheme" />
+
+                <Spinner
+                    android:id="@+id/spGender"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="0dp"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/white"
+                    android:theme="@style/MyEditTextTheme" />
+
+                <EditText
+                    android:id="@+id/etDOB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Date of Birth"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:editable="false"
+                    android:textColor="@android:color/white"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:textColorHint="@android:color/white"
+                    android:theme="@style/MyEditTextTheme" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        app:ccp_contentColor="@color/white"
+                        app:ccp_countryAutoDetectionPref="LOCALE_NETWORK"
+                        app:ccp_autoDetectCountry="true"
+                        app:ccp_defaultNameCode="PK"
+                        app:ccp_showNameCode="false" />
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/white"
+                        android:maxLength="10"
+                        android:theme="@style/MyEditTextTheme"
+                        android:inputType="number"
+                        android:hint="Phone no."
+                        android:id="@+id/etPhone"/>
+                </LinearLayout>
+
+                <!--<EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Phone no."
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:inputType="number"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:theme="@style/MyEditTextTheme" />-->
+
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_seletor"
+                    android:text="Register"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_above="@id/layoutBottom"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-40dp"
+            android:src="@drawable/avatar"
+            app:civ_border_color="@android:color/white"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_image"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="40dp"
+            android:text="Join to mingle"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</ScrollView>

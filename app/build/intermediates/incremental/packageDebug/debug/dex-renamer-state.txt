@@ -1,0 +1,4 @@
+#Thu Mar 08 14:40:37 PKT 2018
+base.0=F\:\\CourseMaterial\\Android\\PITB work\\WifiMingle\\WifiMingle(Current_Working)\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

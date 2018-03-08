@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp"
+        android:layout_margin="10dp"
+        android:paddingBottom="5dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Status:"
+                android:layout_margin="@dimen/_15sdp"
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/header"
+                    android:layout_marginLeft="@dimen/_15sdp">
+
+                    <RadioButton
+                        android:id="@+id/radio_avail"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.7"
+                        android:layout_height="wrap_content"
+                        android:text="I am Online"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="@color/grey"
+                        android:paddingLeft="10dp"
+                        android:textAlignment="textStart"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:button="@drawable/online_radio_btn"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/radio_busy"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:text="I am busy"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="@color/grey"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:button="@drawable/ofline_radio_btn"
+                        android:layout_gravity="right"/>
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="2dp"
+                    android:id="@+id/view_online"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:background="@color/onlinegreen"/>
+                <View
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="2dp"
+                    android:id="@+id/view_offline"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_marginLeft="@dimen/_85sdp"
+                    android:background="@color/grey"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <include
+        layout="@layout/timer_rescan"/>
+
+</LinearLayout>
+<!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose your online status:"
+            android:layout_margin="@dimen/_15sdp"
+            android:textSize="18sp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_below="@id/header"
+            android:layout_marginStart="@dimen/_15sdp">
+
+            <RadioButton
+                android:id="@+id/radio_avail"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:text="Available"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:background="@drawable/radiobutton_drawables"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/radio_busy"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:text="Busy"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:background="@drawable/radiobutton_drawables"
+                android:button="@android:color/transparent"
+                android:layout_marginLeft="@dimen/_25sdp"/>
+        </RadioGroup>
+    </RelativeLayout>
+
+    <include
+        layout="@layout/timer_rescan"/>
+
+</LinearLayout>-->

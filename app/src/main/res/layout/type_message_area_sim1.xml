@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/rl_send_text"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_45sdp"
+    android:layout_alignParentBottom="true"
+    android:background="@color/grey_light"
+    android:orientation="horizontal"
+    android:weightSum="1.5"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.15"
+        android:background="@drawable/bg_edittext"
+        android:layout_margin="@dimen/_5sdp">
+        <EditText
+            android:id="@+id/message_body_field"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:imeOptions="actionSend|flagNoExtractUi"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="3"
+            android:layout_toLeftOf="@id/img_btn_attach"
+            android:scrollbars="vertical"
+            android:hint="Say Something"
+            android:background="@drawable/bg_edittext"
+            android:paddingLeft="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/img_btn_attach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_attach"
+            android:background="@drawable/bg_button"
+            android:padding="@dimen/_1sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_2sdp"
+        android:layout_weight="0.35">
+
+        <ImageButton
+            android:id="@+id/sendButton_sim1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/send"
+            android:theme="@style/AppTheme.Button" />
+
+    </LinearLayout>
+
+</LinearLayout>

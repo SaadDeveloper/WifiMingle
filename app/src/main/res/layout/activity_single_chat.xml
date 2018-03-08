@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_chat"
+    android:fitsSystemWindows="true"
+    android:isScrollContainer="false"
+    android:id="@+id/content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_layt"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/chat_header">
+
+        <TextView
+            android:id="@+id/tv_chat_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="25dp"
+            android:layout_marginStart="29dp"
+            android:text="Imad-Ud-Din"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_chat_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/tv_chat_name"
+            android:layout_marginBottom="10dp"
+            android:text="Online"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <ImageButton
+            android:id="@+id/imgBtn_back"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/back_arrow" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout"
+        android:orientation="vertical"
+        android:layout_below="@id/rl_layt">
+
+        <ListView
+            android:id="@+id/listMessages"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:transcriptMode="normal"
+            android:stackFromBottom="true"
+            tools:listitem="@layout/message_left" />
+    </LinearLayout>
+
+ <!--       android:dividerHeight="0dp"
+        android:stackFromBottom="true"-->
+
+        <include
+            android:id="@+id/layout"
+            layout="@layout/send_sms_layout"/>
+
+
+</RelativeLayout>

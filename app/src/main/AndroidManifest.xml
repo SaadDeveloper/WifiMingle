@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wifimingle"
+    android:installLocation="preferExternal"
+    android:versionCode="1"
+    android:versionName="@string/version_name"> <!-- FIXME: Isn't the app compatible with API Level 1 ? -->
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".application.BaseApplication"
+        android:icon="@mipmap/launcher_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="DATABASE"
+            android:value="mingle.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="1" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="com.wifimingle.model" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.camerademo"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/image_path" />
+        </provider>
+
+        <activity
+            android:name=".activity.ActivityMain"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.RegistrationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyThemeRegistrationPage" />
+        <activity
+            android:name=".activity.TabActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name=".activity.ActivitySingleChat"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyThemeRegistrationPage" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme.Base"/>
+        <activity
+            android:name=".activity.ActivitySettings"
+            android:label="Settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme"/>
+
+        <activity
+            android:name=".Utils.Prefs"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.PREFERENCE" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".service.ListeningForOnlineStatus" />
+        <service android:name=".service.ListenForImageRecieving"/>
+        <service
+            android:name=".service.ServicForClosingAppScenario"
+            android:stopWithTask="false" />
+
+        <activity
+            android:name=".activity.ProfilePictureShowActivity"
+            android:theme="@style/MyThemeProfile"/>
+
+        <activity android:name=".activity.FeedBackActivity"
+            android:label="Contact Us"
+            android:theme="@style/CustomTheme">
+        </activity>
+
+        <receiver android:name=".broadcast.WifiStateChangeBroadCast">
+            <intent-filter>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
