@@ -29,10 +29,6 @@ import static com.wifimingle.activity.ActivityMain.AVAILABLE;
 import static com.wifimingle.activity.ActivityMain.BUSY;
 import static com.wifimingle.activity.ActivityMain.MY_PREFERENCES;
 
-/**
- * Created by BrOlLy on 12/12/2017.
- */
-
 public class ActivitySettings extends AppCompatActivity {
 
     private RadioButton radioAvail;
@@ -53,7 +49,6 @@ public class ActivitySettings extends AppCompatActivity {
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(getResources().getColor(R.color.dark_gray));
-            //Utilities.statusBarLightMode(this);
         }
         setContentView(R.layout.activity_settings);
 

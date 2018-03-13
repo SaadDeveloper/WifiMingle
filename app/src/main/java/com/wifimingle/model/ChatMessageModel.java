@@ -19,7 +19,6 @@ public class ChatMessageModel extends SugarRecord {
     public String seen_unseen = SEEN;
     public boolean onlineStatus;
     public String imagePath;
-    public int notificationId;
 
     public ChatMessageModel() {
     }

@@ -41,11 +41,9 @@ public class ReadTextFile extends AsyncTask<Void, Void, Void> {
                 if(words.length == 3){
                     NicVendorsOffline nicVendorsOffline = new NicVendorsOffline(words[0], words[1], words[2]);
                     nicVendorsOfflines.add(nicVendorsOffline);
-                    //nicVendorsOffline.save();
                 }else if (words.length == 2){
                     NicVendorsOffline nicVendorsOffline = new NicVendorsOffline(words[0], words[1]);
                     nicVendorsOfflines.add(nicVendorsOffline);
-                    //nicVendorsOffline.save();
                 }
                 eachline = bufferedReader.readLine();
             }

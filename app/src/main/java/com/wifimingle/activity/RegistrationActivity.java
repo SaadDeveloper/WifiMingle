@@ -1,6 +1,5 @@
 package com.wifimingle.activity;
 
-import android.Manifest;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -48,12 +47,9 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-import id.zelory.compressor.Compressor;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 
@@ -83,14 +79,10 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
     public DatePicker mDatePicker;
     private String[] genderArr = {"Gender", "Male", "Female"};
     public RegistrationModel registrationModel;
-    private final int CAMERA_REQUEST = 1888;
-    //private String imagePath = null;
     private byte[] imgByte = null;
     private Bitmap originalSizeImage = null;
     private  byte[] originalSizeImageByteArr = null;
-    private byte[] orginalSizeImageWithoutCropByteArr = null;
-    private String originalSizeImageString = null;
-    //private byte[] imageByteArr = null;
+
     private final int PERMISSION_REQUEST_CODE = 1;
     private final int STORAGE_PERMISSION_REQUEST_CODE = 2;
     private File photoFile;
@@ -105,7 +97,6 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(getResources().getColor(R.color.dark_gray));
-            //Utilities.statusBarLightMode(this);
         }
         setContentView(R.layout.activity_registration);
 
@@ -169,17 +160,6 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
         profilePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*RegistrationModel registrationModel = RegistrationModel.first(RegistrationModel.class);
-                if (registrationModel == null || registrationModel.profilePic == null) {
-                    Intent camera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    startActivityForResult(camera, CAMERA_REQUEST);
-                }*/
-                /*if(imgByte == null){
-                    Intent camera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    startActivityForResult(camera, CAMERA_REQUEST);
-                }else {
-                    showDialogPicture(RegistrationActivity.this, imgByte, "Profile Picture");
-                }*/
                 if(originalSizeImage == null){
                     onLaunchCamera();
                 }else {
@@ -198,9 +178,6 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
     }
 
     private void validation() {
-        /*if(imgByte == null){
-            Toast.makeText(getApplicationContext(), "Profile pic not taken \n Click on the avatar icon to open camera", Toast.LENGTH_SHORT).show();
-        }else */
         if (!et_name.getText().toString().equals("") && !et_phone.getText().toString().equals("") && !et_dob.getText().toString().equals("")
                 && !spGender.getSelectedItem().toString().equals(spGender.getItemAtPosition(0))) {
             registrationModel = new RegistrationModel();
@@ -244,18 +221,6 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        /*if (requestCode == CAMERA_REQUEST && resultCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
-            try {
-                //Bitmap imageBitmap = (Bitmap) extras.get("data");
-                //byte[] image = ImageUtils.getInstance().getSimpleBytes(imageBitmap);
-                Bitmap PictureTaken = (Bitmap) extras.get("data");
-                profilePic.setImageBitmap(PictureTaken);
-                imgByte = getBytes(PictureTaken);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }*/
         if(requestCode == CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK){
             try {
                 originalSizeImage = BitmapFactory.decodeFile(photoPath);
@@ -264,22 +229,8 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
                 profilePic.setImageBitmap(originalSizeImage);
                 originalSizeImageByteArr = getBytes(originalSizeImage);
 
-                /*orginalSizeImageWithoutCropByteArr = getBytesForNormalSize(originalSizeImage);
-                originalSizeImageString = encodeToBase64String(orginalSizeImageWithoutCropByteArr);*/
-                /*File actualImage = new File(photoPath);
-                File compressedImage = new Compressor(RegistrationActivity.this)
-                        .setMaxWidth(186)
-                        .setMaxHeight(248)
-                        .setQuality(40)
-                        .setCompressFormat(Bitmap.CompressFormat.WEBP)
-                        .setDestinationDirectoryPath(Environment.getExternalStoragePublicDirectory(
-                                Environment.DIRECTORY_PICTURES).getAbsolutePath())
-                        .compressToFile(actualImage);*/
                 Bitmap imageBitmap = ThumbnailUtils.extractThumbnail(originalSizeImage, 186, 248);
                 imgByte = getLowQualityImageBytes(imageBitmap);
-                /*Uri uri = Uri.fromFile(compressedImage);
-                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);*/
-                //imgByte = getBytes(bitmap);
             }catch (OutOfMemoryError e) {
                 e.printStackTrace();
                 showToast("Error loading Image, Out of Memory");
@@ -306,7 +257,6 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
 
     public File getPhotoFileUri() {
         if (isExternalStorageAvailable()) {
-            //File mediaStorageDir = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES), APP_TAG);
             File mediaStorageDir = new File(Environment.getExternalStorageDirectory() + "/" + APP_NAME, APP_REGISTERATION_FOLDER);
             if (!mediaStorageDir.exists() && !mediaStorageDir.mkdirs()) {
                 Log.d(APP_TAG, "failed to create directory");
@@ -321,21 +271,6 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
     private void makeExternalDirectoryForMingle(){
         File f = new File(Environment.getExternalStorageDirectory(), APP_NAME);
         if (!f.exists()) {
-            /*if (f.isDirectory()) {
-                String[] children = f.list();
-                for (String aChildren : children) {
-                    File file = new File(f, aChildren);
-
-                    if(file.isDirectory()){
-                        String[] innerChild = file.list();
-                        for (String s: innerChild){
-                            new File(file, s).delete();
-                        }
-                    }
-                    new File(f, aChildren).delete();
-                }
-            }
-            f.delete();*/
             f.mkdirs();
         }
 
@@ -441,25 +376,12 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
             AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
             LayoutInflater inflater = mActivity.getLayoutInflater();
             View dialogView = inflater.inflate(R.layout.image_detail, null);
-            //View titleView = inflater.inflate(R.layout.custom_dialog_title, null);
             ImageView imageView = dialogView.findViewById(R.id.iv_pic);
             TextView tv_title = dialogView.findViewById(R.id.custom_title);
             if (title != null && title.length() > 0) {
-                //builder.setTitle(title);
                 tv_title.setText(title);
             }
 
-            /*imageView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(RegistrationActivity.this, ProfilePictureShowActivity.class);
-                    editor.putString("image", originalSizeImageString);
-                    editor.apply();
-                    startActivity(intent);
-                }
-            });*/
-
-            //image = Bitmap.createScaledBitmap(image, 700, 700, true);
             imageView.setImageBitmap(image);
             AlertDialog alertDialog = builder.create();
             alertDialog.setView(dialogView);
@@ -467,24 +389,6 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
             int width = getResources().getDimensionPixelSize(R.dimen._230sdp);
             int height = getResources().getDimensionPixelSize(R.dimen._270sdp);
             alertDialog.getWindow().setLayout(width, height);
-           // alertDialog.getWindow().setLayout(900, 1100);
-            /*Dialog dialog = new Dialog(mActivity,
-                    android.R.style.Theme_Translucent_NoTitleBar);
-            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-            dialog.setContentView(R.layout.image_detail);
-            WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
-            lp.copyFrom(dialog.getWindow().getAttributes());
-            lp.width = 200;
-            lp.height = 200;
-            lp.gravity = Gravity.CENTER;
-
-            //dialog.getWindow().setAttributes(lp);
-            dialog.setTitle(title);
-
-            ImageView imageView = (ImageView) dialog.findViewById(R.id.iv_pic);
-            imageView.setImageBitmap(image);
-            dialog.show();
-            dialog.getWindow().setAttributes(lp);*/
         } catch (Exception e) {
             Toast.makeText(mActivity, "Error displaying image", Toast.LENGTH_LONG).show();
         }
@@ -504,15 +408,6 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
 
     public void showToast(String messageToToast) {
         Toast.makeText(this, messageToToast, Toast.LENGTH_SHORT).show();
-    }
-
-    public String encodeToBase64String(byte[] data) {
-        if (data == null || data.length == 0) {
-            return "";
-        } else {
-            return Base64.encodeToString(data, 0, data.length, Base64.DEFAULT);
-        }
-
     }
 
     @AfterPermissionGranted(PERMISSION_REQUEST_CODE)
@@ -557,13 +452,6 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
 
     @Override
     public void onPermissionsGranted(int requestCode, List<String> perms) {
-        /*Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        photoFile = getPhotoFileUri();
-        Uri fileProvider = FileProvider.getUriForFile(this, "com.wifimingle.camerademo", photoFile);
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, fileProvider);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivityForResult(intent, CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE);
-        }*/
     }
 
     @Override

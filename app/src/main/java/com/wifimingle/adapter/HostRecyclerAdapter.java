@@ -24,10 +24,6 @@ import static com.wifimingle.activity.ActivityMain.AVAILABLE;
 import static com.wifimingle.activity.ActivityMain.BUSY;
 import static com.wifimingle.activity.ActivityMain.OFFLINE;
 
-/**
- * Created by BrOlLy on 29/11/2017.
- */
-
 public class HostRecyclerAdapter extends RecyclerView.Adapter<HostRecyclerAdapter.HostViewHolder> {
 
     private Activity context;
@@ -66,7 +62,7 @@ public class HostRecyclerAdapter extends RecyclerView.Adapter<HostRecyclerAdapte
         private CircleImageView profile;
         private HostBean hostBean;
 
-        public HostViewHolder(View itemView) {
+        private HostViewHolder(View itemView) {
             super(itemView);
             itemView.setOnClickListener(this);
 
@@ -81,7 +77,7 @@ public class HostRecyclerAdapter extends RecyclerView.Adapter<HostRecyclerAdapte
             profile = itemView.findViewById(R.id.profile_image_item_list);
         }
 
-        public void bindHolder(HostBean host){
+        private void bindHolder(HostBean host){
             hostBean = host;
 
             if(host.onlineStatus && host.status.equals(AVAILABLE)){
@@ -117,8 +113,8 @@ public class HostRecyclerAdapter extends RecyclerView.Adapter<HostRecyclerAdapte
                 vendorName.setVisibility(View.VISIBLE);
                 mac_or_personName.setText(host.hardwareAddress);
                 ip.setText(host.ipAddress);
-                if (host.hostname != null/* && !host.hostname.equals(host.ipAddress)*/) {
-                    vendorName.setText(host.hostname/* + " (" + host.ipAddress + ")"*/);
+                if (host.hostname != null) {
+                    vendorName.setText(host.hostname);
                 } else {
                     vendorName.setText("UnKnown");
                 }
@@ -141,23 +137,12 @@ public class HostRecyclerAdapter extends RecyclerView.Adapter<HostRecyclerAdapte
                 intent.putExtra("host_name", hostBean.deviceName);
                 intent.putExtra("host_phone", hostBean.phoneNumber);
                 intent.putExtra("host_status", hostBean.onlineStatus);
-                //((TabActivity) context).cancelTasks();
                 context.startActivity(intent);
             }
-            /*if(hostBean.deviceName != null && hostBean.onlineStatus) {
-                Intent intent = new Intent(context, ActivitySingleChat.class);
-                intent.putExtra("host", hostBean);
-                intent.putExtra("host_name", hostBean.deviceName);
-                intent.putExtra("host_phone", hostBean.phoneNumber);
-                intent.putExtra("host_status", hostBean.onlineStatus);
-                context.startActivity(intent);
-            }else if(hostBean.status.equals(OFFLINE)){
-                Toast.makeText(context, "This person is Offline \n Please wait for updated list", Toast.LENGTH_SHORT).show();
-            }*/
         }
     }
 
-    public Bitmap getImage(byte[] image) throws Exception {
+    private Bitmap getImage(byte[] image) throws Exception {
         return BitmapFactory.decodeByteArray(image, 0, image.length);
     }
 

@@ -45,15 +45,11 @@ public class WifiStateChangeBroadCast extends BroadcastReceiver {
             public void onResponse(Call<FeedBackModel> call, Response<FeedBackModel> response) {
                 if (response.message().equals("OK")) {
                     FeedBackModel.deleteAll(FeedBackModel.class, "id = ?", String.valueOf(feedBackModel.getId()));
-                    /*showResponse(response.body().toString());
-                    Log.i(TAG, "post submitted to API." + response.body().toString());*/
                 }
             }
 
             @Override
             public void onFailure(Call<FeedBackModel> call, Throwable t) {
-                /*Log.e(TAG, "Unable to submit post to API.");*/
-                //Toast.makeText(FeedBackActivity.this, "Unable to submit post to API.", Toast.LENGTH_SHORT).show();
             }
         });
     }

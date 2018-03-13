@@ -71,107 +71,6 @@ public abstract class ActivityNet extends AppCompatActivity {
 
     protected abstract void startTasks();
 
-    /*private BroadcastReceiver receiver = new BroadcastReceiver() {
-        public void onReceive(Context ctxt, Intent intent) {
-            info_ip_str = "";
-            info_mo_str = "";
-
-            // Wifi state
-            String action = intent.getAction();
-            if (action != null) {
-                if (action.equals(WifiManager.WIFI_STATE_CHANGED_ACTION)) {
-                    int WifiState = intent.getIntExtra(WifiManager.EXTRA_WIFI_STATE, -1);
-                    //Log.d(TAG, "WifiState=" + WifiState);
-                    switch (WifiState) {
-                        case WifiManager.WIFI_STATE_ENABLING:
-                            info_in_str = getString(R.string.wifi_enabling);
-                            break;
-                        case WifiManager.WIFI_STATE_ENABLED:
-                            info_in_str = getString(R.string.wifi_enabled);
-                            break;
-                        case WifiManager.WIFI_STATE_DISABLING:
-                            info_in_str = getString(R.string.wifi_disabling);
-                            break;
-                        case WifiManager.WIFI_STATE_DISABLED:
-                            info_in_str = getString(R.string.wifi_disabled);
-                            break;
-                        default:
-                            info_in_str = getString(R.string.wifi_unknown);
-                    }
-                }
-
-                if (action.equals(WifiManager.SUPPLICANT_STATE_CHANGED_ACTION) && net.getWifiInfo()) {
-                    SupplicantState sstate = net.getSupplicantState();
-                    //Log.d(TAG, "SupplicantState=" + sstate);
-                    if (sstate == SupplicantState.SCANNING) {
-                        info_in_str = getString(R.string.wifi_scanning);
-                    } else if (sstate == SupplicantState.ASSOCIATING) {
-                        info_in_str = getString(R.string.wifi_associating,
-                                (net.ssid != null ? net.ssid : (net.bssid != null ? net.bssid
-                                        : net.macAddress)));
-                    } else if (sstate == SupplicantState.COMPLETED) {
-                        info_in_str = getString(R.string.wifi_dhcp, net.ssid);
-                    }
-                }
-            }
-
-            // 3G(connected) -> Wifi(connected)
-            // Support Ethernet, with ConnectivityManager.TYPE_ETHER=3
-            final NetworkInfo ni = connMgr.getActiveNetworkInfo();
-            if (ni != null) {
-                //Log.i(TAG, "NetworkState="+ni.getDetailedState());
-                if (ni.getDetailedState() == NetworkInfo.DetailedState.CONNECTED) {
-                    int type = ni.getType();
-                    //Log.i(TAG, "NetworkType="+type);
-                    if (type == ConnectivityManager.TYPE_WIFI) { // WIFI
-                        net.getWifiInfo();
-                        if (net.ssid != null) {
-                            net.getIp();
-                            info_ip_str = getString(R.string.net_ip, net.ip, net.cidr, net.intf);
-                            info_in_str = getString(R.string.net_ssid, net.ssid);
-                            info_mo_str = getString(R.string.net_mode, getString(
-                                    R.string.net_mode_wifi, net.speed, WifiInfo.LINK_SPEED_UNITS));
-                            setButtons(false);
-                        }
-                        //startTasks();
-                    } else if (type == ConnectivityManager.TYPE_MOBILE) { // 3G
-                        if (prefs.getBoolean(Prefs.KEY_MOBILE, Prefs.DEFAULT_MOBILE)
-                                || prefs.getString(Prefs.KEY_INTF, Prefs.DEFAULT_INTF) != null) {
-                            net.getMobileInfo();
-                            if (net.carrier != null) {
-                                net.getIp();
-                                info_ip_str = getString(R.string.net_ip, net.ip, net.cidr, net.intf);
-                                info_in_str = getString(R.string.net_carrier, net.carrier);
-                                info_mo_str = getString(R.string.net_mode,
-                                        getString(R.string.net_mode_mobile));
-                                setButtons(false);
-                            }
-                        }
-                        //cancelTasks();
-                    } else if (type == 3 || type == 9) { // ETH
-                        net.getIp();
-                        info_ip_str = getString(R.string.net_ip, net.ip, net.cidr, net.intf);
-                        info_in_str = "";
-                        info_mo_str = getString(R.string.net_mode) + getString(R.string.net_mode_eth);
-                        setButtons(false);
-                        Log.i(TAG, "Ethernet connectivity detected!");
-                    } else {
-                        Log.i(TAG, "Connectivity unknown!");
-                        info_mo_str = getString(R.string.net_mode)
-                                + getString(R.string.net_mode_unknown);
-                    }
-                } else {
-                    cancelTasks();
-                }
-            } else {
-                cancelTasks();
-            }
-
-            // Always update network info
-            setInfo();
-        }
-    };*/
-
     private BroadcastReceiver receiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -248,28 +147,7 @@ public abstract class ActivityNet extends AppCompatActivity {
                                         setButtons(false);
                                     }
                                     //startTasks();
-                                } /*else if (type == ConnectivityManager.TYPE_MOBILE) { // 3G
-                                                if (prefs.getBoolean(Prefs.KEY_MOBILE, Prefs.DEFAULT_MOBILE)
-                                                        || prefs.getString(Prefs.KEY_INTF, Prefs.DEFAULT_INTF) != null) {
-                                                    net.getMobileInfo();
-                                                    if (net.carrier != null) {
-                                                        net.getIp();
-                                                        info_ip_str = getString(R.string.net_ip, net.ip, net.cidr, net.intf);
-                                                        info_in_str = getString(R.string.net_carrier, net.carrier);
-                                                        info_mo_str = getString(R.string.net_mode,
-                                                                getString(R.string.net_mode_mobile));
-                                                        setButtons(false);
-                                                    }
-                                                }
-                                                //cancelTasks();
-                                            } else if (type == 3 || type == 9) { // ETH
-                                                net.getIp();
-                                                info_ip_str = getString(R.string.net_ip, net.ip, net.cidr, net.intf);
-                                                info_in_str = "";
-                                                info_mo_str = getString(R.string.net_mode) + getString(R.string.net_mode_eth);
-                                                setButtons(false);
-                                                Log.i(TAG, "Ethernet connectivity detected!");
-                                            }*/ else {
+                                } else {
                                     Log.i(TAG, "Connectivity unknown!");
                                     info_mo_str = getString(R.string.net_mode)
                                             + getString(R.string.net_mode_unknown);

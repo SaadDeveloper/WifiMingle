@@ -1,6 +1,5 @@
 package com.wifimingle.activity;
 
-import android.Manifest;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -26,13 +25,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-//import com.bumptech.glide.Glide;
 import com.wifimingle.R;
 import com.wifimingle.Utils.Utilities;
 import com.wifimingle.application.BaseApplication;
 import com.wifimingle.interfaces.ApiService;
 import com.wifimingle.model.FeedBackModel;
-import com.wifimingle.retrofit.ApiClient;
 
 import java.util.List;
 
@@ -41,7 +38,6 @@ import pub.devrel.easypermissions.EasyPermissions;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 import static com.wifimingle.constants.Constants.STORAGE;
 import static com.wifimingle.constants.Constants.API_KEY;
@@ -76,7 +72,6 @@ public class FeedBackActivity extends AppCompatActivity implements EasyPermissio
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(getResources().getColor(R.color.dark_gray));
-            //Utilities.statusBarLightMode(this);
         }
         setContentView(R.layout.activity_feed_back);
         init();
@@ -123,7 +118,6 @@ public class FeedBackActivity extends AppCompatActivity implements EasyPermissio
             @Override
             public void onClick(View v) {
                 if (validateForm()) {
-                    resetForm();
                     if (Utilities.isNetworkAvailable(FeedBackActivity.this)) {
                         sendPost(name, email, message, attachmentString);
                         progressDialog.show();
@@ -174,9 +168,8 @@ public class FeedBackActivity extends AppCompatActivity implements EasyPermissio
             public void onResponse(Call<FeedBackModel> call, Response<FeedBackModel> response) {
                 progressDialog.dismiss();
                 if (response.message().equals("OK")) {
+                    resetForm();
                     Toast.makeText(FeedBackActivity.this, "Thankyou for your Feedback", Toast.LENGTH_SHORT).show();
-                    /*showResponse(response.body().toString());
-                    Log.i(TAG, "post submitted to API." + response.body().toString());*/
                 } else {
                     Toast.makeText(FeedBackActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
                 }
@@ -184,7 +177,6 @@ public class FeedBackActivity extends AppCompatActivity implements EasyPermissio
 
             @Override
             public void onFailure(Call<FeedBackModel> call, Throwable t) {
-                /*Log.e(TAG, "Unable to submit post to API.");*/
                 progressDialog.dismiss();
                 Toast.makeText(FeedBackActivity.this, "Unable to submit post to API.", Toast.LENGTH_SHORT).show();
             }
@@ -223,7 +215,6 @@ public class FeedBackActivity extends AppCompatActivity implements EasyPermissio
                     ivAttachment.setImageBitmap(bitmap);
                     byte[] byteArray = Utilities.getBytes(bitmap);
                     attachmentString = Base64.encodeToString(byteArray, Base64.DEFAULT);
-                    //Glide.with(this).load(fullPhotoUri).into(ivAttachment);
                 }
             } catch (Exception e) {
                 e.printStackTrace();

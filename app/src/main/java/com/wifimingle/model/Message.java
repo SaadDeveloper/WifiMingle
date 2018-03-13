@@ -2,10 +2,6 @@ package com.wifimingle.model;
 
 import java.io.Serializable;
 
-/**
- * Created by BrOlLy on 05/12/2017.
- */
-
 public class Message implements Serializable{
 
     public String client_server;
@@ -17,7 +13,6 @@ public class Message implements Serializable{
     public boolean OnlineStatus;
     public String message_seen;
     public byte[] imagebyte;
-    public int notificationId;
 
     public Message() {
     }

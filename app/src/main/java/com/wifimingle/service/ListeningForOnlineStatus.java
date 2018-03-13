@@ -114,14 +114,6 @@ public class ListeningForOnlineStatus extends Service {
                         e.printStackTrace();
                     }
                 }
-                /*if (serverSocket != null) {
-                    try {
-                        serverSocket.close();
-                    } catch (IOException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    }
-                }*/
             }
         }
 
@@ -180,46 +172,18 @@ public class ListeningForOnlineStatus extends Service {
                 dataInputStream = new DataInputStream(socket.getInputStream());
                 dataOutputStream = new DataOutputStream(socket.getOutputStream());
 
-                /*inputStream = socket.getInputStream();
-                outputStream = socket.getOutputStream();*/
-
-                //String n = dataInputStream.readUTF();
-                //clientIMEI = dataInputStream.readUTF();
-                /*String clientMessage = dataInputStream.readUTF();
-                if(clientMessage.equals("hello123")){
-                    //sendMsg("serverHello");
-                    dataOutputStream.writeUTF("serverHello");
-                    dataOutputStream.flush();
-                }*/
-
                 while (true) {
-                    //String newMsg = dataInputStream.readUTF();
-                    /*if (!clientMessage.equals("") && !clientMessage.equals("hello123")) {
-                        int notificationId = NotificationID.getID();
-                        buildingNotification(context, clientMessage, getPendingIntent(context, notificationId), notificationId);
-                        break;
-                    } else
-                        break;*/
                     if (dataInputStream.available() > 0) {
                         Log.e("ListenInsideIf", "date input stream is available method calls");
                         String newMsg = dataInputStream.readUTF();
                         Log.e("ClientServer", newMsg);
                         if (newMsg.substring(0, 2).equals("$h")) {
                             chatClientForPingResponse(newMsg);
-                            //sendMsg("serverHello");
-                            /*if (registrationModel != null) {
-                                *//*RegistrationModel registrationModel = RegistrationModel.first(RegistrationModel.class);
-                                String registrationModelString = new Gson().toJson(registrationModel);*//*
-                                dataOutputStream.writeUTF("$s" + RegistrationModel.first(RegistrationModel.class).status + "," + registrationModelString);
-                                //dataOutputStream.write(registrationModelString.getBytes());
-                                Log.e(TAG, Build.DEVICE + " " + registrationModel.name);
-                                dataOutputStream.flush();
-                            }*/
 
                         } else if (newMsg.substring(0, 7).equals("$status")) {
                             sendLocalBroadCastForStatusChange(context, newMsg);
                         } else if (newMsg.substring(0, 8).equals("$Welcome")) {
-                            //int id = NotificationID.getID();
+
                             try {
                                 JSONObject jsonObject = new JSONObject(newMsg.substring(newMsg.indexOf(",") + 1));
                                 String msgString = jsonObject.get("message_json").toString();
@@ -233,7 +197,6 @@ public class ListeningForOnlineStatus extends Service {
                                 int id = Integer.valueOf(phoneNumber.substring(phoneNumber.length() - 7));
                                 buildingNotification(context, msg.name, msg.message, getPendingIntent(context, id, hostBean, msg), id);
                                 sendLocalBroadCast(context, msg, id);
-                                //buildingNotification(context, "title", newMsg, getPendingIntent(context, notificationId, new HostBean(), new Message()), notificationId);
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }

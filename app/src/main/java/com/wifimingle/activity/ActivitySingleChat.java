@@ -76,7 +76,7 @@ public class ActivitySingleChat extends AppCompatActivity implements EasyPermiss
     public final static String SEEN = "seen";
     public final static String UNSEEN = "unseen";
 
-    private ArrayList</*Message*/ChatMessageModel> messageList;
+    private ArrayList<ChatMessageModel> messageList;
     private int REQUEST_IMAGE_OPEN = 123;
     private final int PERMISSION_REQUEST_CODE = 2;
 
@@ -87,7 +87,6 @@ public class ActivitySingleChat extends AppCompatActivity implements EasyPermiss
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(getResources().getColor(R.color.dark_gray));
-            //Utilities.statusBarLightMode(this);
         }
         setContentView(R.layout.activity_single_chat);
         try {
@@ -173,16 +172,7 @@ public class ActivitySingleChat extends AppCompatActivity implements EasyPermiss
 
     private void populateChat() {
         messageList = new ArrayList<>();
-        /*ArrayList<ChatMessageModel> msgs*/messageList = (ArrayList<ChatMessageModel>) ChatMessageModel.find(ChatMessageModel.class, "phone_Number = ?", hostBean.phoneNumber);
-        /*if (msgs.size() > 0) {
-            for (ChatMessageModel m : msgs) {
-                Message message = new Message(m.from_client_server, m.chatMessage, m.ip, m.date, m.name, m.phoneNumber);
-                message.OnlineStatus = m.onlineStatus;
-                message.message_seen = m.seen_unseen;
-                message.imagebyte = m.imagePath;
-                messageList.add(message);
-            }
-        }*/
+        messageList = (ArrayList<ChatMessageModel>) ChatMessageModel.find(ChatMessageModel.class, "phone_Number = ?", hostBean.phoneNumber);
 
         if (messageList != null && messagesList.getAdapter() != null) {
             singleChatListAdapter.setUpdatedList(messageList, personName.getText().toString());
@@ -233,25 +223,18 @@ public class ActivitySingleChat extends AppCompatActivity implements EasyPermiss
                     } else {
                         actualImage = new File(getRealPathFromURI(fullPhotoUri));
                     }
-                    //File actualImage = new File(getRealPathFromURI(fullPhotoUri));
-                    /*Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), fullPhotoUri);
-                    byte[] byteArray = Utilities.getBytes(bitmap);
-                    String attachmentString = Base64.encodeToString(byteArray, Base64.DEFAULT);*/
 
                     File compressedImage = new Compressor(ActivitySingleChat.this)
                             .setMaxWidth(640)
                             .setMaxHeight(480)
                             .setQuality(60)
                             .setCompressFormat(Bitmap.CompressFormat.WEBP)
-                            .setDestinationDirectoryPath(/*Environment.getExternalStoragePublicDirectory(
-                                    Environment.DIRECTORY_PICTURES).getAbsolutePath()*/
-                                    new File(Environment.getExternalStorageDirectory() + "/" + APP_NAME + "/" + APP_MINGLER_IMAGE_FOLDER, APP_MINGLER_IMAGE_SENT_FOLDER).getAbsolutePath())
+                            .setDestinationDirectoryPath(new File(Environment.getExternalStorageDirectory() + "/" + APP_NAME + "/" + APP_MINGLER_IMAGE_FOLDER, APP_MINGLER_IMAGE_SENT_FOLDER).getAbsolutePath())
                             .compressToFile(actualImage);
 
                     Uri comressedImageUri = Uri.fromFile(compressedImage);
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), comressedImageUri);
                     byte[] byteArray = Utilities.getBytes(bitmap);
-                    //String attachmentString = Base64.encodeToString(byteArray, Base64.DEFAULT);
                     insertImageAndSend(byteArray, compressedImage.getAbsolutePath());
                 }
             } catch (Exception e) {
@@ -263,7 +246,7 @@ public class ActivitySingleChat extends AppCompatActivity implements EasyPermiss
     private String getRealPathFromURI(Uri contentURI) {
         String result;
         Cursor cursor = getContentResolver().query(contentURI, null, null, null, null);
-        if (cursor == null) { // Source is Dropbox or other similar local file path
+        if (cursor == null) {
             result = contentURI.getPath();
         } else {
             cursor.moveToFirst();
@@ -347,7 +330,6 @@ public class ActivitySingleChat extends AppCompatActivity implements EasyPermiss
         String date = sdf.format(dateCurrent);
         String msg = etMessageArea.getText().toString().trim();
 
-
         etMessageArea.setText("");
         Message message = new Message("client", msg, getLocalIpAddress(), date, reg.name, reg.phone);
         message.OnlineStatus = hostBean.onlineStatus;
@@ -383,7 +365,7 @@ public class ActivitySingleChat extends AppCompatActivity implements EasyPermiss
                 e.printStackTrace();
             }
         }
-        messageList.add(/*message*/chatMessageModel);
+        messageList.add(chatMessageModel);
         if (messageList != null && messagesList.getAdapter() != null) {
             singleChatListAdapter.setUpdatedList(messageList, personName.getText().toString());
             ((SingleChatListAdapter) messagesList.getAdapter()).notifyDataSetChanged();
@@ -406,10 +388,6 @@ public class ActivitySingleChat extends AppCompatActivity implements EasyPermiss
 
     private void sendMessageWithImage(HostBean host, byte[] message) {
         Log.e("message_seen", "Message is being seen");
-        /*ChatClient chatClient = new ChatClient(host.ipAddress.trim());
-        chatClient.start();
-        chatClient.sendMsg(message);
-        chatClient.interrupt();*/
         ChatClientForImage chatClientForImage = new ChatClientForImage(host.ipAddress.trim());
         chatClientForImage.start();
         chatClientForImage.sendImage(message);

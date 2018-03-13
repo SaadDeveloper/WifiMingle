@@ -42,11 +42,9 @@ public class MinglersTabFragment extends Fragment implements FragmentMethodCalli
 
     private View parentView;
     private RecyclerView recyclerView;
-    //private TextView wifiDc;
     private TextView filerText;
     private LinearLayout progressMingler;
     private TextView fetchingMinglers;
-    //private LinearLayout wifiFetching;
     private HostRecyclerAdapter hostRecyclerAdapter;
     private LinearLayoutManager linearLayoutManager;
     private ArrayList<HostBean> hostBeans;
@@ -70,11 +68,9 @@ public class MinglersTabFragment extends Fragment implements FragmentMethodCalli
 
     private void init(View view){
         recyclerView = view.findViewById(R.id.minglers_list);
-        //wifiDc = view.findViewById(R.id.tv_wifi_dc);
         filerText = view.findViewById(R.id.tv_filter);
         progressMingler = view.findViewById(R.id.progress_minglers);
         fetchingMinglers = view.findViewById(R.id.fetching_minglers);
-        //wifiFetching = view.findViewById(R.id.wifi_fetching);
 
         if(getArguments() != null){
             hostBeans = getArguments().getParcelableArrayList("parameter");
@@ -121,28 +117,6 @@ public class MinglersTabFragment extends Fragment implements FragmentMethodCalli
         }else {
             filerText.setVisibility(View.GONE);
         }
-        /*switch (SCREEN_MESSAGE) {
-            case WIFI_DC:
-                wifiDc.setVisibility(View.VISIBLE);
-                wifiFetching.setVisibility(View.GONE);
-                filerText.setVisibility(View.GONE);
-                break;
-            case FETCHING:
-                wifiDc.setVisibility(View.GONE);
-                wifiFetching.setVisibility(View.VISIBLE);
-                filerText.setVisibility(View.GONE);
-                break;
-            case NO_MINGLER:
-                wifiDc.setVisibility(View.GONE);
-                wifiFetching.setVisibility(View.GONE);
-
-                break;
-            default:
-                wifiDc.setVisibility(View.GONE);
-                wifiFetching.setVisibility(View.GONE);
-                filerText.setVisibility(View.GONE);
-                break;
-        }*/
     }
 
     @Override

@@ -64,7 +64,6 @@ public abstract class AbstractDiscovery extends AsyncTask<Void, HostBean, Void> 
         progressDialog.setTitle("Please Wait...");
         progressDialog.setIndeterminate(true);
         progressDialog.setCancelable(false);
-        //progressDialog.show();
         size = (int) (end - start + 1);
     }
 
@@ -77,12 +76,10 @@ public abstract class AbstractDiscovery extends AsyncTask<Void, HostBean, Void> 
 
                     if (host[0] != null) {
                         if (!getLocalIpAddress().equals(host[0].ipAddress)) {
-                            //discover.addHost(host[0]);
                             if (host[0].deviceName != null) {
                                 hostBeans.add(host[0]);
                                 sendBroadCastToMinglerFragment(activity, host[0]);
                             } else {
-                                //String deviceName = getDeviceVendorName(host[0].hardwareAddress);
                                 hostBeansForOthers.add(host[0]);
                                 sendBroadCastToOthersFragment(activity, host[0]);
                             }
@@ -107,23 +104,6 @@ public abstract class AbstractDiscovery extends AsyncTask<Void, HostBean, Void> 
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    /*for(HostBean h: hostBeans){
-                        for(HostBean h1: hostBeansForOthers){
-                            if(h.ipAddress.equals(h1.ipAddress)){
-                                hostBeansForOthers.remove(h1);
-                                break;
-                            }
-                        }
-                    }*/
-                    /*hostBeans = checkDuplicate(hostBeans);
-                    hostBeansForDb.addAll(hostBeans);
-                    hostBeansForDb.addAll(hostBeansForOthers);
-                    if(HostBean.count(HostBean.class) > 0){
-                        HostBean.deleteAll(HostBean.class);
-                        HostBean.saveInTx(hostBeansForDb);
-                    }else {
-                        HostBean.saveInTx(hostBeansForDb);
-                    }*/
                     ((TabActivity) activity).setHostBeanListMinglers(hostBeans);
                     ((TabActivity) activity).setHostBeanListOthers(hostBeansForOthers);
                     ((TabActivity) activity).setFetchedMinglersProgress(null);
@@ -154,7 +134,6 @@ public abstract class AbstractDiscovery extends AsyncTask<Void, HostBean, Void> 
                 discover.makeToast(R.string.discover_canceled);
             }
         }
-        //super.onCancelled();
     }
 
     public String getLocalIpAddress() {

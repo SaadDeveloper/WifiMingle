@@ -14,7 +14,6 @@ public class Constants {
     public static final String APP_MINGLER_IMAGE_SENT_FOLDER = "Sent";
     public static final String CAMERA = Manifest.permission.CAMERA;
     public static final String STORAGE = Manifest.permission.WRITE_EXTERNAL_STORAGE;
-    //public static final String BASE_URL = "http://104.237.158.234/wifimingle/feedback/save/";
     public static final String BASE_URL = "http://104.237.158.234/";
     public static final String API_KEY = "Wifimingle0km7852Q1ykny9FfcIK5y9kVV5v6";
     public static final String DATE_TIME_24HOUR_FORMATE = "yyyy-MM-dd hh:mm:ss";

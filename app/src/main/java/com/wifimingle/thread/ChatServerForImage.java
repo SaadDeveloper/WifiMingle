@@ -57,27 +57,6 @@ public class ChatServerForImage extends Thread {
 
     public ChatServerForImage(Context context) {
         this.context = context;
-        /*defaultDiscovery = new DefaultDiscovery(activity);
-        setListener();
-        createFolderForImages();*/
-    }
-
-    private void createFolderForImages() {
-        File f = new File(Environment.getExternalStorageDirectory(), folder_main);
-        if (!f.exists()) {
-            f.mkdirs();
-        }
-    }
-
-    private String inserImageInThatFolder() {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HH_mm_ss");
-        String currentTimeStamp = dateFormat.format(new Date());
-        File f1 = new File(Environment.getExternalStorageDirectory() + "/" + folder_main + "/", "IMG" + currentTimeStamp + ".jpg");
-        if (!f1.exists()) {
-            f1.mkdirs();
-            return f1.getAbsolutePath();
-        } else
-            return f1.getAbsolutePath();
     }
 
     @Override
@@ -86,7 +65,6 @@ public class ChatServerForImage extends Thread {
         String imagePath = null;
 
         try {
-
             byte[] mmBuffer = new byte[8192];
             byte[] completeMessage = new byte[0];
 
@@ -102,40 +80,22 @@ public class ChatServerForImage extends Thread {
                 try {
                     // Read from the InputStream.
                     numBytes = objectInputStream.read(mmBuffer);
-                    /*byte[] mBuffer = new byte[2024];
-                    mmInStream.read(mBuffer);*/
                     if (numBytes != 0) {
                         if (flag) {
                             StringBuilder builder = new StringBuilder();
-                            //String[] data = new String[]{mmBuffer.toString()};
                             for (int i = 0; i < mmBuffer.length; i++) {
                                 if (mmBuffer[i] == 126) {
                                     flag = false;
                                     break;
                                 } else {
                                     builder.append(Character.toString((char) mmBuffer[i]));
-                                    length = builder.toString();
-                                    //actualLength = Integer.valueOf(length);
-                                    //actualLength = actualLength + Integer.valueOf(mmBuffer[i]);
                                 }
                             }
                         }
                         byte[] exTemp = new byte[mmBuffer.length];
                         System.arraycopy(mmBuffer, 0, exTemp, 0, mmBuffer.length);
                         String newStr = new String(exTemp);
-                        /*total += Integer.valueOf(length);
-                        mBuilder.setContentTitle("Downloading data")
-                                .setContentText("Download in progress")
-                                .setSmallIcon(R.mipmap.ic_launcher);
 
-                        mBuilder.setProgress(100, (int) (total * 100 / actualLength), false);
-                        mNotifyManager.notify(MainActivity.id, mBuilder.build());*/
-                        /*try {
-                            // Sleep for 5 seconds
-                            Thread.sleep(1*1000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }*/
                         byte[] tempBytes = completeMessage;
                         completeMessage = new byte[tempBytes.length + numBytes];
                         System.arraycopy(tempBytes, 0, completeMessage, 0, tempBytes.length);
@@ -146,69 +106,15 @@ public class ChatServerForImage extends Thread {
                                 && completeMessage[completeMessage.length - 5] == 126) {
 
                             savingMultimediaMessage(completeMessage);
-                            /*mmOutStream.write(ackByte);
-                            android.os.Message readMsg = mHandler.obtainMessage(
-                                    Constants.MESSAGE_TOAST_RECIEVED_ACKNOWLEDGMENT, numBytes, -1,
-                                    completeMessage);
-                            readMsg.sendToTarget();
-                            completeMessage = Arrays.copyOfRange(completeMessage, 0, completeMessage.length - 5);
-                            //String temp is the complete msg.
-                            String temp = new String(completeMessage);
-                            //connectionLost();
-                            byte[] tempByte = Base64.decode(temp,0);
-                            Bitmap bitmap = BitmapFactory.decodeByteArray(tempByte , 0, tempByte.length);
-                            //SaveImage(bitmap);
-                            mBuilder.setContentText("Download complete")
-                                    // Removes the progress bar
-                                    .setProgress(0,0,false);
-                            mNotifyManager.notify(MainActivity.id, mBuilder.build());
 
-                            Log.i("bluetooth bytes", temp.length() + " writing ack " + temp);*/
                             completeMessage = new byte[0];
                             break;
                         } else if (completeMessage.length == 1 && completeMessage[0] == 125) {
-                            /*android.os.Message readMsg = mHandler.obtainMessage(
-                                    Constants.MESSAGE_TOAST_SENT_ACKNOWLEDGMENT, numBytes, -1,
-                                    completeMessage);
-                            readMsg.sendToTarget();*/
-
-                            //Log.i("bluetooth bytes","inside ack");
                             completeMessage = new byte[0];
                         }
                     }else {
-                        /*savingMultimediaMessage(completeMessage);
-                        completeMessage = new byte[0];*/
                         break;
                     }
-                    /*try {
-                        ObjectInputStream inputStream = new ObjectInputStream(socket.getInputStream());
-                        int bytesRead;
-                        int current = 0;
-                        //int fileSize = inputStream.read();
-                        int fileSize = 150000;
-                        //int filesize=65383;
-                        byte [] mybytearray2  = new byte [fileSize];
-
-                        *//*imagebyte = inserImageInThatFolder();
-
-                        FileOutputStream fos = new FileOutputStream(imagebyte);
-                        BufferedOutputStream bos = new BufferedOutputStream(fos);
-                        bytesRead = is.read(mybytearray2,0,mybytearray2.length);
-                        current = bytesRead;*//*
-                        do {
-                            bytesRead = inputStream.read(mybytearray2, current, (mybytearray2.length-current));
-                            if(bytesRead >= 0) current += bytesRead;
-                        } while(bytesRead > -1);
-                        savingMultimediaMessage(mybytearray2);
-                        *//*bos.write(mybytearray2, 0 , current);
-                        bos.flush();
-
-                        bos.close();*//*
-
-                        break;
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }*/
 
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -313,7 +219,6 @@ public class ChatServerForImage extends Thread {
     private ChatMessageModel insertDataFromSrver(Message message) {
         ChatMessageModel chatMessageModel = new ChatMessageModel();
         chatMessageModel.chatMessage = message.message;
-        //chatMessageModel.imagePath = message.imagebyte;
         chatMessageModel.date = message.time;
         chatMessageModel.from_client_server = "server";
         chatMessageModel.ip = message.ip;
@@ -321,32 +226,11 @@ public class ChatServerForImage extends Thread {
         chatMessageModel.onlineStatus = message.OnlineStatus;
         chatMessageModel.phoneNumber = message.phone;
         return chatMessageModel;
-        //chatMessageModel.save();
     }
 
     private void saveImageInExternalStorage(ChatMessageModel chatMessageModel, Message msg, HostBean hostBean, int notificationId, Context context){
         SavePhotoTask savePhotoTask = new SavePhotoTask(chatMessageModel, msg, hostBean, notificationId, context);
         savePhotoTask.execute(msg.imagebyte);
-        /*final String imagePath;
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                File photo = new File(Environment.getExternalStorageDirectory() + "/" + APP_NAME + "/" + APP_MINGLER_IMAGE_FOLDER, "IMG-" + getCurrentTimeStamp() + ".jpeg");
-                if (!photo.exists()) {
-                    photo.mkdirs();
-                }
-                try {
-                    imagePath = photo.getAbsolutePath();
-                    FileOutputStream fos = new FileOutputStream(photo.getPath());
-
-                    fos.write(imgByte);
-                    fos.close();
-                }
-                catch (IOException e) {
-                    Log.e("PictureDemo", "Exception in photoCallback", e);
-                }
-            }
-        });*/
     }
 
     @Override
@@ -381,7 +265,6 @@ public class ChatServerForImage extends Thread {
 
         @Override
         protected String doInBackground(byte[]... jpeg) {
-            //File photo = new File(Environment.getExternalStorageDirectory() + "/" + APP_NAME + "/" + APP_MINGLER_IMAGE_FOLDER, "IMG-" + getCurrentTimeStamp() + ".jpeg");
             File photo = new File(Environment.getExternalStorageDirectory() + "/" + APP_NAME, APP_MINGLER_IMAGE_FOLDER );
             if (!photo.exists()) {
                 photo.mkdirs();

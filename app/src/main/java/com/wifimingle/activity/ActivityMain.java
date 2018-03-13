@@ -63,74 +63,13 @@ final public class ActivityMain extends Activity {
         // Reset interface
         Editor edit = prefs.edit();
         edit.putString(Prefs.KEY_INTF, Prefs.DEFAULT_INTF);
-        //phase2(ctxt);
         phase3(ctxt);
-        /*if(isMyServiceRunning(ListeningForOnlineStatus.class)){
-            stopService(new Intent(ActivityMain.this, ListeningForOnlineStatus.class));
-        }*/
+
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-    }
-
-    private void phase2(final Context ctxt) {
-
-        class DbUpdateProbes extends DbUpdate {
-
-            public DbUpdateProbes() {
-                super(ActivityMain.this, Db.DB_PROBES, "probes", "regex", 298);
-            }
-
-            protected void onPostExecute(Void unused) {
-                super.onPostExecute(unused);
-                final Activity d = mActivity.get();
-                phase3(d);
-            }
-
-            protected void onCancelled() {
-                super.onCancelled();
-                final Activity d = mActivity.get();
-                phase3(d);
-            }
-        }
-
-        class DbUpdateNic extends DbUpdate {
-            public DbUpdateNic() {
-                super(ActivityMain.this, Db.DB_NIC, "oui", "mac", 253);
-            }
-
-            protected void onPostExecute(Void unused) {
-                super.onPostExecute(unused);
-                final Activity d = mActivity.get();
-                new DbUpdateProbes();
-            }
-
-            protected void onCancelled() {
-                super.onCancelled();
-                final Activity d = mActivity.get();
-                new DbUpdateProbes();
-            }
-        }
-
-        // CheckNicDb
-        try {
-            if (prefs.getInt(Prefs.KEY_RESET_NICDB, Prefs.DEFAULT_RESET_NICDB) != getPackageManager()
-                    .getPackageInfo(PKG, 0).versionCode) {
-                new DbUpdateNic();
-            } else {
-                // There is a NIC Db installed
-                phase3(ctxt);
-            }
-        } catch (NameNotFoundException e) {
-            phase3(ctxt);
-        } catch (ClassCastException e) {
-            Editor edit = prefs.edit();
-            edit.putInt(Prefs.KEY_RESET_NICDB, 1);
-            edit.commit();
-            phase3(ctxt);
-        }
     }
 
     private void phase3(final Context ctxt) {

@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#android.support.v4.content.FileProvider
-INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:39:9-47:20
+INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:36:9-44:20
 	android:grantUriPermissions
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:43:13-47
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:40:13-47
 	android:authorities
 		INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:41:13-62
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:38:13-62
 	android:exported
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:42:13-37
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:39:13-37
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:40:13-67
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:37:13-67
 manifest
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:2:1-114:12
-INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:2:1-114:12
-INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:2:1-114:12
-INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:2:1-114:12
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:2:1-111:12
+INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:2:1-111:12
+INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:2:1-111:12
+INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:2:1-111:12
 MERGED from [com.hbb20:ccp:2.1.2] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\ccp-2.1.2.aar\0309a1c9f580ae6a3f81b69906e0ee59\AndroidManifest.xml:2:1-17:12
 MERGED from [com.android.support:design:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\9cf3c7b34c1e811b640a5980de70939c\AndroidManifest.xml:17:1-31:12
 MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\fastscroll-0.2.5.aar\2749c657291e7930743627f261f9237d\AndroidManifest.xml:2:1-13:12
@@ -40,9 +40,9 @@ MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Saad\.
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\1d6d464e2114539b58afdab6c756c12f\AndroidManifest.xml:17:1-31:12
 MERGED from [io.michaelrocks:libphonenumber-android:8.8.5] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\libphonenumber-android-8.8.5.aar\460a3d7d37609ce6e5f8244484e6ed8a\AndroidManifest.xml:2:1-12:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\d9b59a16d3af952507e16425abb1623e\AndroidManifest.xml:17:1-30:12
-INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:2:1-114:12
-INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:2:1-114:12
-INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:2:1-114:12
+INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:2:1-111:12
+INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:2:1-111:12
+INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:2:1-111:12
 	package
 		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:3:5-29
 		INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml
@@ -59,106 +59,40 @@ INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_
 		INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml
 	android:installLocation
 		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:4:5-45
-uses-sdk
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:7:5-9:40
-INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:7:5-9:40
-INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:7:5-9:40
-MERGED from [com.hbb20:ccp:2.1.2] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\ccp-2.1.2.aar\0309a1c9f580ae6a3f81b69906e0ee59\AndroidManifest.xml:7:5-9:41
-MERGED from [com.hbb20:ccp:2.1.2] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\ccp-2.1.2.aar\0309a1c9f580ae6a3f81b69906e0ee59\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:design:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\9cf3c7b34c1e811b640a5980de70939c\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:design:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\9cf3c7b34c1e811b640a5980de70939c\AndroidManifest.xml:21:5-23:62
-MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\fastscroll-0.2.5.aar\2749c657291e7930743627f261f9237d\AndroidManifest.xml:7:5-9:41
-MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\fastscroll-0.2.5.aar\2749c657291e7930743627f261f9237d\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\3e1f5df390b39e56b3c5e19fcae77aa8\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\3e1f5df390b39e56b3c5e19fcae77aa8\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\40de5fe3bbca7fed82a29465f8b43fe6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\40de5fe3bbca7fed82a29465f8b43fe6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\09412a5067e0ed13d3270370e5f9a1b8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\09412a5067e0ed13d3270370e5f9a1b8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\7bec856bbc383c5cb180a8652409946c\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\7bec856bbc383c5cb180a8652409946c\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-emoji:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-emoji-26.1.0.aar\527c43e2e85fca1dac9683c1fb5085ae\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-emoji:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-emoji-26.1.0.aar\527c43e2e85fca1dac9683c1fb5085ae\AndroidManifest.xml:20:5-44
-MERGED from [com.intuit.sdp:sdp-android:1.0.4] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\sdp-android-1.0.4.aar\994100df3ca79a4a25c8fe12e4eefad2\AndroidManifest.xml:7:5-9:41
-MERGED from [com.intuit.sdp:sdp-android:1.0.4] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\sdp-android-1.0.4.aar\994100df3ca79a4a25c8fe12e4eefad2\AndroidManifest.xml:7:5-9:41
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\796e49871ade1e612e2888356ae4e991\AndroidManifest.xml:5:5-7:41
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\796e49871ade1e612e2888356ae4e991\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.satyan:sugar:1.5] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\sugar-1.5.aar\639cef3ea46dfe553a608c7c40282fff\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.satyan:sugar:1.5] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\sugar-1.5.aar\639cef3ea46dfe553a608c7c40282fff\AndroidManifest.xml:7:5-9:41
-MERGED from [pub.devrel:easypermissions:1.0.1] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\easypermissions-1.0.1.aar\cdb0d0eb52eaacd3945576d16f57500f\AndroidManifest.xml:7:5-9:41
-MERGED from [pub.devrel:easypermissions:1.0.1] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\easypermissions-1.0.1.aar\cdb0d0eb52eaacd3945576d16f57500f\AndroidManifest.xml:7:5-9:41
-MERGED from [id.zelory:compressor:2.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\compressor-2.1.0.aar\195e3667791c39f743cf71fc79d9efea\AndroidManifest.xml:8:5-10:41
-MERGED from [id.zelory:compressor:2.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\compressor-2.1.0.aar\195e3667791c39f743cf71fc79d9efea\AndroidManifest.xml:8:5-10:41
-MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\b2b9d8df44428d8677a2ed1c647c1618\AndroidManifest.xml:8:5-10:41
-MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\b2b9d8df44428d8677a2ed1c647c1618\AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\c11bad06a60269dd3d32cb00481a154f\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\c11bad06a60269dd3d32cb00481a154f\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\f99383406cb64b18d2f00bfb5f3da3af\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\f99383406cb64b18d2f00bfb5f3da3af\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\4425cce5e2ffc101834e23c3b18bcf4a\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\4425cce5e2ffc101834e23c3b18bcf4a\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\681cf3ecd49b6434df492f546b76eb38\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\681cf3ecd49b6434df492f546b76eb38\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\4d7d4faf328800a24ccd6ec1ca9ac0c0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\4d7d4faf328800a24ccd6ec1ca9ac0c0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\5925752a7124c8796d0da038e13c4c0f\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\5925752a7124c8796d0da038e13c4c0f\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\4d90b632513cbc4a339b6036ef9a3bf3\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\4d90b632513cbc4a339b6036ef9a3bf3\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\348f76d9b670c8a396077fce599879fa\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\348f76d9b670c8a396077fce599879fa\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\1d6d464e2114539b58afdab6c756c12f\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\1d6d464e2114539b58afdab6c756c12f\AndroidManifest.xml:21:5-23:58
-MERGED from [io.michaelrocks:libphonenumber-android:8.8.5] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\libphonenumber-android-8.8.5.aar\460a3d7d37609ce6e5f8244484e6ed8a\AndroidManifest.xml:8:5-10:41
-MERGED from [io.michaelrocks:libphonenumber-android:8.8.5] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\libphonenumber-android-8.8.5.aar\460a3d7d37609ce6e5f8244484e6ed8a\AndroidManifest.xml:8:5-10:41
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\d9b59a16d3af952507e16425abb1623e\AndroidManifest.xml:20:5-22:41
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\d9b59a16d3af952507e16425abb1623e\AndroidManifest.xml:20:5-22:41
-INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:7:5-9:40
-INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:7:5-9:40
-	tools:overrideLibrary
-		ADDED from [com.android.support:design:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\9cf3c7b34c1e811b640a5980de70939c\AndroidManifest.xml:23:9-59
-	android:targetSdkVersion
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:9:9-37
-		INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml
-		INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml
-	android:minSdkVersion
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:8:9-34
-		INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml
-		INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.CAMERA
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:11:5-65
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:8:5-65
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:11:22-62
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:8:22-62
 uses-permission#android.permission.INTERNET
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:12:5-67
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:9:5-67
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:12:22-64
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:9:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:13:5-79
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:10:5-79
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:13:22-76
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:10:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:14:5-76
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:11:5-76
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:14:22-73
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:11:22-73
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:16:5-81
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:13:5-81
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:16:22-78
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:13:22-78
 uses-permission#android.permission.VIBRATE
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:17:5-66
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:14:5-66
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:17:22-63
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:14:22-63
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:18:5-75
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:15:5-75
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:18:22-72
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:15:22-72
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:19:5-80
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:16:5-80
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:19:22-77
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:16:22-77
 application
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:21:5-112:19
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:18:5-109:19
 MERGED from [com.hbb20:ccp:2.1.2] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\ccp-2.1.2.aar\0309a1c9f580ae6a3f81b69906e0ee59\AndroidManifest.xml:11:5-15:19
 MERGED from [com.hbb20:ccp:2.1.2] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\ccp-2.1.2.aar\0309a1c9f580ae6a3f81b69906e0ee59\AndroidManifest.xml:11:5-15:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\9cf3c7b34c1e811b640a5980de70939c\AndroidManifest.xml:25:5-29:19
@@ -202,163 +136,229 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Saad\.gradle\caches\
 	android:supportsRtl
 		ADDED from [com.hbb20:ccp:2.1.2] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\ccp-2.1.2.aar\0309a1c9f580ae6a3f81b69906e0ee59\AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:24:9-41
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:21:9-41
 	android:allowBackup
 		ADDED from [com.hbb20:ccp:2.1.2] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\ccp-2.1.2.aar\0309a1c9f580ae6a3f81b69906e0ee59\AndroidManifest.xml:12:9-35
 	android:icon
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:23:9-45
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:20:9-45
 	android:theme
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:25:9-40
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:22:9-40
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:22:9-52
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:19:9-52
 meta-data#DATABASE
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:26:9-28:41
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:23:9-25:41
 	android:value
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:28:13-38
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:25:13-38
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:27:13-36
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:24:13-36
 meta-data#VERSION
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:29:9-31:33
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:26:9-28:33
 	android:value
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:31:13-30
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:28:13-30
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:30:13-35
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:27:13-35
 meta-data#QUERY_LOG
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:32:9-34:36
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:29:9-31:36
 	android:value
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:34:13-33
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:31:13-33
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:33:13-37
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:30:13-37
 meta-data#DOMAIN_PACKAGE_NAME
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:35:9-37:52
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:32:9-34:52
 	android:value
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:37:13-49
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:34:13-49
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:36:13-47
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:33:13-47
 activity#com.wifimingle.activity.ActivityMain
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:49:9-58:20
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:46:9-55:20
 	android:label
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:52:13-45
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:49:13-45
 	android:configChanges
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:51:13-72
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:48:13-72
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:50:13-50
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:47:13-50
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:53:13-57:29
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:50:13-54:29
 action#android.intent.action.MAIN
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:54:17-69
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:51:17-69
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:54:25-66
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:51:25-66
 category#android.intent.category.LAUNCHER
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:56:17-77
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:53:17-77
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:56:27-74
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:53:27-74
 activity#com.wifimingle.activity.RegistrationActivity
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:59:9-62:62
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:56:9-59:62
 	android:screenOrientation
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:61:13-49
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:58:13-49
 	android:theme
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:62:13-59
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:59:13-59
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:60:13-58
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:57:13-58
 activity#com.wifimingle.activity.TabActivity
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:63:9-66:50
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:60:9-63:50
 	android:screenOrientation
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:65:13-49
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:62:13-49
 	android:theme
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:66:13-47
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:63:13-47
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:64:13-49
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:61:13-49
 activity#com.wifimingle.activity.ActivitySingleChat
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:67:9-71:62
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:64:9-68:62
 	android:screenOrientation
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:70:13-49
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:67:13-49
 	android:launchMode
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:69:13-43
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:66:13-43
 	android:theme
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:71:13-59
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:68:13-59
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:68:13-56
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:65:13-56
 activity#com.wifimingle.activity.SplashActivity
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:72:9-75:58
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:69:9-72:58
 	android:screenOrientation
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:74:13-49
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:71:13-49
 	android:theme
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:75:13-56
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:72:13-56
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:73:13-52
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:70:13-52
 activity#com.wifimingle.activity.ActivitySettings
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:76:9-80:49
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:73:9-77:49
 	android:screenOrientation
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:79:13-49
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:76:13-49
 	android:label
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:78:13-37
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:75:13-37
 	android:theme
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:80:13-47
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:77:13-47
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:77:13-54
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:74:13-54
 activity#com.wifimingle.Utils.Prefs
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:82:9-90:20
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:79:9-87:20
 	android:label
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:85:13-45
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:82:13-45
 	android:configChanges
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:84:13-72
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:81:13-72
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:83:13-40
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:80:13-40
 intent-filter#android.intent.category.DEFAULT+android.intent.category.PREFERENCE
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:86:13-89:29
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:83:13-86:29
 category#android.intent.category.DEFAULT
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:87:17-76
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:84:17-76
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:87:27-73
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:84:27-73
 category#android.intent.category.PREFERENCE
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:88:17-79
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:85:17-79
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:88:27-76
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:85:27-76
 service#com.wifimingle.service.ListeningForOnlineStatus
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:92:9-69
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:89:9-69
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:92:18-66
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:89:18-66
 service#com.wifimingle.service.ListenForImageRecieving
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:93:9-67
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:90:9-67
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:93:18-65
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:90:18-65
 service#com.wifimingle.service.ServicForClosingAppScenario
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:94:9-96:44
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:91:9-93:44
 	android:stopWithTask
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:96:13-41
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:93:13-41
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:95:13-64
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:92:13-64
 activity#com.wifimingle.activity.ProfilePictureShowActivity
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:98:9-100:52
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:95:9-97:52
 	android:theme
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:100:13-50
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:97:13-50
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:99:13-64
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:96:13-64
 activity#com.wifimingle.activity.FeedBackActivity
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:102:9-105:20
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:99:9-102:20
 	android:label
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:103:13-39
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:100:13-39
 	android:theme
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:104:13-47
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:101:13-47
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:102:19-60
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:99:19-60
 receiver#com.wifimingle.broadcast.WifiStateChangeBroadCast
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:107:9-111:20
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:104:9-108:20
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:107:19-69
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:104:19-69
 intent-filter#android.net.wifi.WIFI_STATE_CHANGED
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:108:13-110:29
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:105:13-107:29
 action#android.net.wifi.WIFI_STATE_CHANGED
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:109:17-78
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:106:17-78
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:109:25-75
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:106:25-75
+uses-sdk
+INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml
+INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml
+MERGED from [com.hbb20:ccp:2.1.2] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\ccp-2.1.2.aar\0309a1c9f580ae6a3f81b69906e0ee59\AndroidManifest.xml:7:5-9:41
+MERGED from [com.hbb20:ccp:2.1.2] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\ccp-2.1.2.aar\0309a1c9f580ae6a3f81b69906e0ee59\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\9cf3c7b34c1e811b640a5980de70939c\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\9cf3c7b34c1e811b640a5980de70939c\AndroidManifest.xml:21:5-23:62
+MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\fastscroll-0.2.5.aar\2749c657291e7930743627f261f9237d\AndroidManifest.xml:7:5-9:41
+MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\fastscroll-0.2.5.aar\2749c657291e7930743627f261f9237d\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\3e1f5df390b39e56b3c5e19fcae77aa8\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\3e1f5df390b39e56b3c5e19fcae77aa8\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\40de5fe3bbca7fed82a29465f8b43fe6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\40de5fe3bbca7fed82a29465f8b43fe6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\09412a5067e0ed13d3270370e5f9a1b8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\09412a5067e0ed13d3270370e5f9a1b8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\7bec856bbc383c5cb180a8652409946c\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\7bec856bbc383c5cb180a8652409946c\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-emoji:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-emoji-26.1.0.aar\527c43e2e85fca1dac9683c1fb5085ae\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-emoji:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-emoji-26.1.0.aar\527c43e2e85fca1dac9683c1fb5085ae\AndroidManifest.xml:20:5-44
+MERGED from [com.intuit.sdp:sdp-android:1.0.4] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\sdp-android-1.0.4.aar\994100df3ca79a4a25c8fe12e4eefad2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.intuit.sdp:sdp-android:1.0.4] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\sdp-android-1.0.4.aar\994100df3ca79a4a25c8fe12e4eefad2\AndroidManifest.xml:7:5-9:41
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\796e49871ade1e612e2888356ae4e991\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\796e49871ade1e612e2888356ae4e991\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.satyan:sugar:1.5] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\sugar-1.5.aar\639cef3ea46dfe553a608c7c40282fff\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.satyan:sugar:1.5] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\sugar-1.5.aar\639cef3ea46dfe553a608c7c40282fff\AndroidManifest.xml:7:5-9:41
+MERGED from [pub.devrel:easypermissions:1.0.1] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\easypermissions-1.0.1.aar\cdb0d0eb52eaacd3945576d16f57500f\AndroidManifest.xml:7:5-9:41
+MERGED from [pub.devrel:easypermissions:1.0.1] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\easypermissions-1.0.1.aar\cdb0d0eb52eaacd3945576d16f57500f\AndroidManifest.xml:7:5-9:41
+MERGED from [id.zelory:compressor:2.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\compressor-2.1.0.aar\195e3667791c39f743cf71fc79d9efea\AndroidManifest.xml:8:5-10:41
+MERGED from [id.zelory:compressor:2.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\compressor-2.1.0.aar\195e3667791c39f743cf71fc79d9efea\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\b2b9d8df44428d8677a2ed1c647c1618\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\b2b9d8df44428d8677a2ed1c647c1618\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\c11bad06a60269dd3d32cb00481a154f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\c11bad06a60269dd3d32cb00481a154f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\f99383406cb64b18d2f00bfb5f3da3af\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\f99383406cb64b18d2f00bfb5f3da3af\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\4425cce5e2ffc101834e23c3b18bcf4a\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\4425cce5e2ffc101834e23c3b18bcf4a\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\681cf3ecd49b6434df492f546b76eb38\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\681cf3ecd49b6434df492f546b76eb38\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\4d7d4faf328800a24ccd6ec1ca9ac0c0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\4d7d4faf328800a24ccd6ec1ca9ac0c0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\5925752a7124c8796d0da038e13c4c0f\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\5925752a7124c8796d0da038e13c4c0f\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\4d90b632513cbc4a339b6036ef9a3bf3\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\4d90b632513cbc4a339b6036ef9a3bf3\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\348f76d9b670c8a396077fce599879fa\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\348f76d9b670c8a396077fce599879fa\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\1d6d464e2114539b58afdab6c756c12f\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\1d6d464e2114539b58afdab6c756c12f\AndroidManifest.xml:21:5-23:58
+MERGED from [io.michaelrocks:libphonenumber-android:8.8.5] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\libphonenumber-android-8.8.5.aar\460a3d7d37609ce6e5f8244484e6ed8a\AndroidManifest.xml:8:5-10:41
+MERGED from [io.michaelrocks:libphonenumber-android:8.8.5] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\libphonenumber-android-8.8.5.aar\460a3d7d37609ce6e5f8244484e6ed8a\AndroidManifest.xml:8:5-10:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\d9b59a16d3af952507e16425abb1623e\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\d9b59a16d3af952507e16425abb1623e\AndroidManifest.xml:20:5-22:41
+INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml
+INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\9cf3c7b34c1e811b640a5980de70939c\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml
+		INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml
+		INJECTED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:44:13-46:54
+ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:41:13-43:54
 	android:resource
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:46:17-51
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:43:17-51
 	android:name
-		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:45:17-67
+		ADDED from F:\CourseMaterial\Android\PITB work\WifiMingle\WifiMingle(Current_Working)\app\src\main\AndroidManifest.xml:42:17-67
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\9cf3c7b34c1e811b640a5980de70939c\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Saad\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\3e1f5df390b39e56b3c5e19fcae77aa8\AndroidManifest.xml:26:9-28:38

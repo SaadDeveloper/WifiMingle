@@ -16,7 +16,6 @@ public class BaseActivity extends ActivityNet {
 
     public final static String TAG = "BaseActivity";
     public static final String PKG = "com.wifimingle";
-    //public static SharedPreferences prefs = null;
     private int currentNetwork = 0;
     public long network_ip = 0;
     public long network_start = 0;

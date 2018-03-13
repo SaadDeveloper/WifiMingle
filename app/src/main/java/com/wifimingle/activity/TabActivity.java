@@ -23,7 +23,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.wifimingle.R;
-import com.wifimingle.Utils.Utilities;
 import com.wifimingle.adapter.ViewPagerAdapter;
 import com.wifimingle.async.AbstractDiscovery;
 import com.wifimingle.async.DefaultDiscovery;
@@ -59,10 +58,8 @@ public class TabActivity extends BaseActivity {
     private SharedPreferences.Editor editor;
     public static String FILTER = null;
     public static boolean isScanStart = false;
-    //public static ArrayList <HostBean> hostBeans;
     public static ArrayList<HostBean> hostBeansForMinglers;
     public static ArrayList<HostBean> hostBeansForOthers;
-    public static String fetchingMinglers;
     private FragmentMethodCallingMinglers callingInterfaceMinglers;
     private FragmentMethodCallingOthers callingInterfaceOthers;
     private MinglersTabFragment minglerFragment;
@@ -75,7 +72,6 @@ public class TabActivity extends BaseActivity {
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(getResources().getColor(R.color.dark_gray));
-            //Utilities.statusBarLightMode(this);
         }
         setContentView(R.layout.activity_tab);
 
@@ -183,19 +179,16 @@ public class TabActivity extends BaseActivity {
 
     @Override
     public void cancelTasks() {
-        //super.cancelTasks();
         if(mDiscoveryTask != null) {
             mDiscoveryTask.cancel(true);
         }
         isScanStart = false;
-        //Toast.makeText(ctxt, "Wifi is disabled or Changed", Toast.LENGTH_SHORT).show();
         setFetchedMinglersProgress(null);
         ArrayList<HostBean> listt = (ArrayList<HostBean>) HostBean.listAll(HostBean.class);
         if(listt.size() > 0){
             for (HostBean h: listt){
                 h.status = OFFLINE;
                 h.onlineStatus = false;
-                //HostBean.delete(h);
                 HostBean.save(h);
             }
         }
@@ -205,18 +198,6 @@ public class TabActivity extends BaseActivity {
         bundle.putParcelableArrayList("host_list", listt);
         intent.putExtras(bundle);
         LocalBroadcastManager.getInstance(ctxt).sendBroadcast(intent);
-        //hostBeansForMinglers = null;
-        /*Intent intent = new Intent(INTENT_FILTER_BROADCAST);
-        Bundle bundle = new Bundle();
-        bundle.putParcelableArrayList("host_list", new ArrayList<HostBean>());
-        intent.putExtras(bundle);
-        LocalBroadcastManager.getInstance(ctxt).sendBroadcast(intent);
-
-        Intent intent1 = new Intent(INTENT_FILTER_BROADCAST_OTHERS);
-        Bundle bundle1 = new Bundle();
-        bundle1.putParcelableArrayList("host_list", new ArrayList<HostBean>());
-        intent1.putExtras(bundle1);
-        LocalBroadcastManager.getInstance(ctxt).sendBroadcast(intent1);*/
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -229,11 +210,8 @@ public class TabActivity extends BaseActivity {
 
     @Override
     protected void startTasks() {
-        //super.startTasks();
         if(!isScanStart) {
-            /*if (hostBeansForMinglers == null) {
-                ActivityMain.SCREEN_MESSAGE = FETCHING;
-            } else */if (hostBeansForMinglers.size() == 0) {
+            if (hostBeansForMinglers.size() == 0) {
                 ActivityMain.SCREEN_MESSAGE = NO_MINGLER;
             } else {
                 SCREEN_MESSAGE = "";
@@ -246,7 +224,6 @@ public class TabActivity extends BaseActivity {
                 }
             }, 1000);
         }
-        //initDiscovery();
     }
 
     public void setIndicationMessage(){
@@ -264,14 +241,9 @@ public class TabActivity extends BaseActivity {
         this.callingInterfaceOthers = callingInterface;
     }
 
-    public void setHostBeanListMinglers(ArrayList<HostBean> list/*HostBean hostBeanMinglers*/){
+    public void setHostBeanListMinglers(ArrayList<HostBean> list){
         if(checkWifiStatus()) {
-            //hostBeansForMinglers = list;
-            /*if (list.size() == 0) {
-                SCREEN_MESSAGE = NO_MINGLER;
-            } else {
-                SCREEN_MESSAGE = "";
-            }*/
+
             list = checkDuplicate(list);
 
             boolean forFirstTime = false;
@@ -334,7 +306,6 @@ public class TabActivity extends BaseActivity {
                 for (HostBean h: listt){
                     h.status = OFFLINE;
                     h.onlineStatus = false;
-                    //HostBean.delete(h);
                     HostBean.save(h);
                 }
             }
@@ -346,10 +317,7 @@ public class TabActivity extends BaseActivity {
                     initDiscovery();
                 }
             }, sharedPreferences.getInt("timerForScan", 5000));
-        }/*else {
-            SCREEN_MESSAGE = WIFI_DC;
-            setIndicationMessage();
-        }*/
+        }
     }
 
     public void setHostBeanListOthers(ArrayList<HostBean> list){
@@ -367,7 +335,6 @@ public class TabActivity extends BaseActivity {
         ArrayList<HostBean> listNew = new ArrayList<>();
         for (HostBean host : list) {
             boolean isFound = false;
-            // check if the event name exists in noRepeat
             for (HostBean hostBean : listNew) {
                 if (hostBean.ipAddress.equals(host.ipAddress)) {
                     isFound = true;

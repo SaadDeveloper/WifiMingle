@@ -11,10 +11,6 @@ import retrofit2.Retrofit;
 
 import static com.wifimingle.activity.ActivityMain.MY_PREFERENCES;
 
-/**
- * Created by BrOlLy on 08/12/2017.
- */
-
 public class BaseApplication extends Application {
 
     public SharedPreferences sharedPreferences;
@@ -27,6 +23,5 @@ public class BaseApplication extends Application {
         NotificationID.init();
         retrofit = ApiClient.getClient();
         SugarContext.init(this);
-        //NotificationID.initialize(sharedPreferences.getInt(GET_NOTIFICATION_ID, 0));
     }
 }

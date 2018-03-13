@@ -68,10 +68,10 @@ public class ChatServer extends Thread {
             while (true) {
                 try {
                     socket = serverSocket.accept();
-                    if(connectThread != null){
+                    if (connectThread != null) {
                         connectThread.setDataInputStream(socket);
                         Log.e("insideIf", "setDataInputStream method calls");
-                    }else {
+                    } else {
                         Log.e("insideIf", "connect thread initializes");
                         connectThread = new ConnectThread(socket, activity);
                         connectThread.start();
@@ -127,7 +127,7 @@ public class ChatServer extends Thread {
             serverName = "";
         }
 
-        private void setDataInputStream(Socket dataInputStreamSocket){
+        private void setDataInputStream(Socket dataInputStreamSocket) {
             try {
                 dataInputStream = new DataInputStream(dataInputStreamSocket.getInputStream());
                 dataOutputStream = new DataOutputStream(dataInputStreamSocket.getOutputStream());
@@ -163,9 +163,9 @@ public class ChatServer extends Thread {
                             publishHostInterface.publishHost(host);
 
                             long count = PhoneModelForWelcomingMessage.count(PhoneModelForWelcomingMessage.class);
-                            if(count > 0){
+                            if (count > 0) {
                                 List<PhoneModelForWelcomingMessage> found = PhoneModelForWelcomingMessage.find(PhoneModelForWelcomingMessage.class, "phone = ?", reg.phone);
-                                if (found.size() == 0){
+                                if (found.size() == 0) {
                                     PhoneModelForWelcomingMessage phone = new PhoneModelForWelcomingMessage();
                                     phone.setPhone(reg.phone);
                                     phone.save();
@@ -174,31 +174,6 @@ public class ChatServer extends Thread {
                                     chatClient.start();
                                     chatClient.sendMsg("$Welcome" + "," + jsonString);
                                     chatClient.interrupt();
-                                }
-                            }else {
-                                PhoneModelForWelcomingMessage phone = new PhoneModelForWelcomingMessage();
-                                phone.setPhone(reg.phone);
-                                phone.save();
-                                String jsonString = insertData(activity, host);
-                                ChatClient chatClient = new ChatClient(host.ipAddress);
-                                chatClient.start();
-                                chatClient.sendMsg("$Welcome" + "," + jsonString);
-                                chatClient.interrupt();
-                            }
-                            /*ArrayList<PhoneModelForWelcomingMessage> phoneList = (ArrayList<PhoneModelForWelcomingMessage>) PhoneModelForWelcomingMessage.listAll(PhoneModelForWelcomingMessage.class);
-                            if (phoneList.size() > 0) {
-                                for (PhoneModelForWelcomingMessage list : phoneList) {
-                                    if (!list.phone.equals(reg.phone)) {
-                                        PhoneModelForWelcomingMessage phone = new PhoneModelForWelcomingMessage();
-                                        phone.setPhone(reg.phone);
-                                        phone.save();
-                                        String jsonString = insertData(activity, host);
-                                        ChatClient chatClient = new ChatClient(host.ipAddress);
-                                        chatClient.start();
-                                        chatClient.sendMsg("$Welcome" + "," + jsonString);
-                                        chatClient.interrupt();
-                                        break;
-                                    }
                                 }
                             } else {
                                 PhoneModelForWelcomingMessage phone = new PhoneModelForWelcomingMessage();
@@ -209,23 +184,20 @@ public class ChatServer extends Thread {
                                 chatClient.start();
                                 chatClient.sendMsg("$Welcome" + "," + jsonString);
                                 chatClient.interrupt();
-                            }*/
+                            }
 
                             ArrayList<ChatMessageModel> forUnsentMesageList = (ArrayList<ChatMessageModel>) ChatMessageModel.find(ChatMessageModel.class, "phone_Number = ?", reg.phone);
-                            if(forUnsentMesageList.size() > 0){
+                            if (forUnsentMesageList.size() > 0) {
                                 ChatClient chatClient = new ChatClient(host.ipAddress);
                                 chatClient.start();
-                                for(ChatMessageModel m: forUnsentMesageList){
-                                    if(!m.onlineStatus){
+                                for (ChatMessageModel m : forUnsentMesageList) {
+                                    if (!m.onlineStatus) {
                                         Log.e("Error_Hello", "Error Hello message");
                                         chatClient.sendMsg(sendDataOfUnsentMessage(activity, host, m));
                                     }
                                 }
                                 chatClient.interrupt();
                             }
-
-                            //((TabActivity) activity).setHostBeanListMinglers(host);
-                            //publish(host);
                         } else {
                             Log.e("insideIf", "breaking while loop");
                             break;
@@ -267,7 +239,6 @@ public class ChatServer extends Thread {
             Date dateCurrent = new Date();
 
             String date = sdf.format(dateCurrent);
-            //String msg = et_message_area.getText().toString().trim();
 
             RegistrationModel reg = RegistrationModel.first(RegistrationModel.class);
             Message message = new Message("client", "Hello new Mingler", getLocalIpAddress(context), date, reg.name, reg.phone);
@@ -293,12 +264,6 @@ public class ChatServer extends Thread {
                 e.printStackTrace();
             }
             return jsonObject.toString();
-                /*sendMessage(hostBean, jsonObject.toString());
-                messageList.add(message);
-                if (messageList != null && messagesList.getAdapter() != null) {
-                    singleChatListAdapter.setUpdatedList(messageList);
-                    ((SingleChatListAdapter) messagesList.getAdapter()).notifyDataSetChanged();
-                }*/
         }
 
         private String sendDataOfUnsentMessage(Context context, HostBean hostBean, ChatMessageModel model) {

@@ -34,9 +34,7 @@ public class OthersTabFragment extends Fragment implements FragmentMethodCalling
 
     private View parentView;
     private RecyclerView recyclerView;
-    private TextView wifiDc;
     private TextView noOthers;
-    private LinearLayout wifiFetching;
     private HostRecyclerAdapter hostRecyclerAdapter;
     private LinearLayoutManager linearLayoutManager;
     private ArrayList<HostBean> hostBeans;
@@ -61,19 +59,13 @@ public class OthersTabFragment extends Fragment implements FragmentMethodCalling
 
     private void init(View view){
         recyclerView = view.findViewById(R.id.others_list);
-        //wifiDc = view.findViewById(R.id.tv_wifi_dc);
         noOthers = view.findViewById(R.id.tv_no_others);
-        //wifiFetching = view.findViewById(R.id.wifi_fetching);
 
         if(getArguments() != null){
             hostBeans = getArguments().getParcelableArrayList("parameter");
             if(hostBeans == null){
                 hostBeans = new ArrayList<>();
-            }/*else {
-                if (hostBeans.size() > 0) {
-                    wifiDc.setVisibility(View.GONE);
-                }
-            }*/
+            }
         }else {
             hostBeans = new ArrayList<>();
         }
@@ -94,27 +86,14 @@ public class OthersTabFragment extends Fragment implements FragmentMethodCalling
     }
 
     public void setIndication(){
-        /*if(wifiDc.getVisibility() == View.VISIBLE){
-            wifiDc.setVisibility(View.GONE);
-            wifiFetching.setVisibility(View.VISIBLE);
-        }else if(wifiFetching.getVisibility() == View.VISIBLE){
-            wifiFetching.setVisibility(View.GONE);
-        }*/
         switch (SCREEN_MESSAGE) {
             case WIFI_DC:
-                //noOthers.setVisibility(View.GONE);
-                //wifiDc.setVisibility(View.VISIBLE);
-                //wifiFetching.setVisibility(View.GONE);
                 break;
             case FETCHING:
                 noOthers.setVisibility(View.GONE);
-                //wifiDc.setVisibility(View.GONE);
-                //wifiFetching.setVisibility(View.VISIBLE);
                 break;
             default:
                 noOthers.setVisibility(View.GONE);
-                //wifiDc.setVisibility(View.GONE);
-                //wifiFetching.setVisibility(View.GONE);
                 break;
         }
     }
@@ -171,17 +150,7 @@ public class OthersTabFragment extends Fragment implements FragmentMethodCalling
                         hostBeans = list;
                         hostRecyclerAdapter.setUpdatedList(hostBeans);
                         recyclerView.getAdapter().notifyDataSetChanged();
-                    /*if(hostBeans.size() > 0) {
-                        wifiDc.setVisibility(View.GONE);
-                    }else {
-                        wifiDc.setVisibility(View.VISIBLE);
-                    }*/
                     } else {
-                    /*if(list.size() > 0) {
-                        wifiDc.setVisibility(View.GONE);
-                    }else {
-                        wifiDc.setVisibility(View.VISIBLE);
-                    }*/
                         hostRecyclerAdapter = new HostRecyclerAdapter(getActivity(), list);
                         recyclerView.setLayoutManager(linearLayoutManager);
                         recyclerView.setAdapter(hostRecyclerAdapter);

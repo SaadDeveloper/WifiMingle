@@ -47,9 +47,7 @@ public class DefaultDiscovery extends AbstractDiscovery implements PublishHostIn
     private final static int TIMEOUT_SHUTDOWN = 10; // seconds
     private final static int THREADS = 10; //FIXME: Test, plz set in options again ?
     private final int mRateMult = 5; // Number of alive hosts between Rate
-    private int pt_move = 2; // 1=backward 2=forward
-//    private final int SocketServerPORT = 8080;
-//    private ChatServerThread chatServerThread;
+    private int pt_move = 2;
     private ExecutorService mPool;
     private boolean doRateControl;
     private RateControl mRateControl;
@@ -66,7 +64,6 @@ public class DefaultDiscovery extends AbstractDiscovery implements PublishHostIn
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        //ListenForLiveHostbean(activity);
         if (mDiscover != null) {
             final BaseActivity discover = mDiscover.get();
             if (discover != null) {
@@ -148,19 +145,11 @@ public class DefaultDiscovery extends AbstractDiscovery implements PublishHostIn
                 // FIXME: Prevents some task to end (and close the Save DB)
             }
         }
-        /*if(chatServerThread != null){
-            chatServerThread.interrupt();
-            Log.e("chatSever in Discovery", "chatServer interept");
-        }*/
         super.onCancelled();
     }
 
     @Override
     protected void onPostExecute(Void unused) {
-        /*if(chatServerThread != null){
-            chatServerThread.interrupt();
-            Log.e("chatSever in Discovery", "chatServer interept");
-        }*/
         super.onPostExecute(unused);
     }
 
@@ -225,9 +214,6 @@ public class DefaultDiscovery extends AbstractDiscovery implements PublishHostIn
                     Log.e(TAG, "found using InetAddress ping "+addr);
                     publish(host);
                     sendAcknowledgeMessage(host);
-                    /*if(!sendAcknowledgeMessage(host, flag, addr)){
-                        publish(host);
-                    }*/
                     // Set indicator and get a rate
                     if (doRateControl && mRateControl.indicator == null) {
                         mRateControl.indicator = addr;
@@ -240,9 +226,6 @@ public class DefaultDiscovery extends AbstractDiscovery implements PublishHostIn
                 host.hardwareAddress = HardwareAddress.getHardwareAddress(addr);
                 if(!NetInfo.NOMAC.equals(host.hardwareAddress)){
                     Log.e(TAG, "found using arp #2 "+addr);
-                    /*if(!sendAcknowledgeMessage(host, flag, addr)){
-                        publish(host);
-                    }*/
                     publish(host);
                     sendAcknowledgeMessage(host);
                     return;
@@ -270,9 +253,6 @@ public class DefaultDiscovery extends AbstractDiscovery implements PublishHostIn
                 host.hardwareAddress = HardwareAddress.getHardwareAddress(addr);
                 if(!NetInfo.NOMAC.equals(host.hardwareAddress)){
                     Log.e(TAG, "found using arp #3 "+addr);
-                    /*if(!sendAcknowledgeMessage(host, flag, addr)){
-                        publish(host);
-                    }*/
                     publish(host);
                     sendAcknowledgeMessage(host);
                     return;
@@ -286,75 +266,6 @@ public class DefaultDiscovery extends AbstractDiscovery implements PublishHostIn
         }
     }
 
-    /*private boolean sendAcknowledgeMessage(HostBean host, boolean flag, String addr){
-        long startTime = System.currentTimeMillis();
-        long currentTime =startTime;
-        ChatClient chatClient = new ChatClient(addr.trim());
-        chatClient.start();
-        chatClient.sendMsg("$h");
-        Log.e("ClientServer1", String.valueOf(currentTime) + " , " + addr.trim());
-        while(currentTime < startTime + 5000){
-            //Do something here
-            if(chatClient.getMsgLog() != null && chatClient.getMsgLog().substring(0, 2).equals("$s")){
-                //List<String> fullMessage = Arrays.asList(chatClient.getMsgLog().split(","));
-                String msg = chatClient.getMsgLog();
-                String status = msg.substring(2, msg.indexOf(","));
-                String registrationString = msg.substring(msg.indexOf(",") + 1);
-                //RegistrationModel reg = new Gson().fromJson(chatClient.getMsgLog().substring(2), RegistrationModel.class);
-                RegistrationModel reg = new Gson().fromJson(registrationString, RegistrationModel.class);
-                reg.status = status;
-                Log.e("ClientServer", "get from server response of severHello , " + reg.name);
-                Log.e("ClientServer", String.valueOf(currentTime) + " , " + addr.trim());
-                host.onlineStatus = true;
-                host.deviceName = reg.name;
-                host.status = reg.status;
-                host.phoneNumber = reg.phone;
-                host.profilePicByte = reg.profilePic;
-                flag = true;
-                publish(host);
-                chatClient.disconnect();
-                break;
-            }
-            currentTime =System.currentTimeMillis();
-        }
-        return flag;
-    }*/
-
-    private String getDeviceVendorName(String macAdress) {
-        String dataUrl = "http://api.macvendors.com/" + macAdress;
-        HttpURLConnection connection = null;
-        try {
-            URL url = new URL(dataUrl);
-            connection = (HttpURLConnection) url.openConnection();
-            /*connection.setRequestMethod("POST");
-            connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-            connection.setDoInput(true);
-            connection.setDoOutput(true);*/
-            /*DataOutputStream wr = new DataOutputStream(connection.getOutputStream());
-            wr.flush();
-            wr.close();*/
-            InputStream is = connection.getInputStream();
-            BufferedReader rd = new BufferedReader(new InputStreamReader(is));
-            StringBuffer response = new StringBuffer();
-            String line;
-            while ((line = rd.readLine()) != null) {
-                response.append(line);
-                response.append('\r');
-            }
-            rd.close();
-            String responseStr = response.toString();
-            Log.e("Server response", responseStr);
-            return responseStr;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        } finally {
-            if (connection != null) {
-                connection.disconnect();
-            }
-        }
-    }
-
     private void sendAcknowledgeMessage(HostBean host){
         String hostString = new Gson().toJson(host);
 
@@ -364,84 +275,12 @@ public class DefaultDiscovery extends AbstractDiscovery implements PublishHostIn
             chatClient.sendMsg("$h" + getLocalIpAddress() + "," + hostString);
             chatClient.interrupt();
         }
-        /*chatClient.disconnect();
-        chatClient.interrupt();*/
-        /*if(!host.ipAddress.equals(getLocalIpAddress())) {
-            startSocket(host.ipAddress, 53705, "$h" + getLocalIpAddress() + "," + hostString);
-        }*/
-        /*new android.os.Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                chatClient.disconnect();
-            }
-        }, 500);*/
-    }
-
-    private void startSocket(String dstAddress, int SocketServerPORT, String msgToSend){
-        Socket socket = null;
-        DataOutputStream dataOutputStream = null;
-        //DataInputStream dataInputStream = null;
-
-        try {
-            socket = new Socket(dstAddress, SocketServerPORT);
-            //dataOutputStream = new DataOutputStream(socket.getOutputStream());
-            //dataInputStream = new DataInputStream(socket.getInputStream());
-
-            if (!msgToSend.equals("")) {
-                //dataOutputStream.writeUTF(msgToSend);
-                //dataOutputStream.flush();
-            }
-
-            /*while (dataInputStream.available() < 0)
-                ; //Server will send its name the very first time, client waits till then
-            setMsgLog(dataInputStream.readUTF());*/
-            //setMsgLogByte(convertInputStreamToByteArray(dataInputStream));
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (socket != null) {
-                try {
-                    socket.close();
-                    Log.e("socket closing", "Socket Closed");
-                } catch (IOException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-            }
-
-            if (dataOutputStream != null) {
-                try {
-                    dataOutputStream.close();
-                    Log.e("dataOutputStreamClosing", "dataOutputStream Closed");
-                } catch (IOException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-            }
-
-            /*if (dataInputStream != null) {
-                try {
-                    dataInputStream.close();
-                    Log.e("dataInputStreamClosing", "dataInputStream Closed");
-                } catch (IOException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-            }*/
-        }
     }
 
     public String getLocalIpAddress() {
         WifiManager wm = (WifiManager) activity.getApplicationContext().getSystemService(WIFI_SERVICE);
         return Formatter.formatIpAddress(wm.getConnectionInfo().getIpAddress());
     }
-
-    /*private void ListenForLiveHostbean(Context context){
-        chatServerThread = new ChatServerThread(context);
-        chatServerThread.start();
-    }*/
 
     @Override
     public void publishHost(HostBean hostBean) {
@@ -464,38 +303,14 @@ public class DefaultDiscovery extends AbstractDiscovery implements PublishHostIn
                 }
 
                 // NIC vendor
-                //host.nicVendor = HardwareAddress.getNicVendor(host.hardwareAddress);
 
                 // Is gateway ?
                 if (discover.net.gatewayIp.equals(host.ipAddress)) {
                     host.deviceType = HostBean.TYPE_GATEWAY;
                 }
-
-                // FQDN
-                // Static
-                /*if ((host.hostname = mSave.getCustomName(host)) == null) {
-                    // DNS
-                    if (discover.prefs.getBoolean(Prefs.KEY_RESOLVE_NAME,
-                            Prefs.DEFAULT_RESOLVE_NAME) == true) {
-                        try {
-                            host.hostname = (InetAddress.getByName(host.ipAddress)).getCanonicalHostName();
-                        } catch (UnknownHostException e) {
-                            Log.e(TAG, e.getMessage());
-                        }
-                    }
-                    // TODO: NETBIOS
-                    //try {
-                    //    host.hostname = NbtAddress.getByName(addr).getHostName();
-                    //} catch (UnknownHostException e) {
-                    //    Log.i(TAG, e.getMessage());
-                    //}
-                }*/
             }
         }
-        //String [] selectionArgs = {host.hardwareAddress.substring(0, 8) + "%"};
-        //ArrayList<NicVendorsOffline> list = (ArrayList<NicVendorsOffline>) NicVendorsOffline.findWithQuery(NicVendorsOffline.class, "select mac_Address from NIC_VENDORS_OFFLINE where mac_Address=?", selectionArgs);
         ArrayList<NicVendorsOffline> list = (ArrayList<NicVendorsOffline>) NicVendorsOffline.find(NicVendorsOffline.class, "mac_Address = ?", host.hardwareAddress.substring(0, 8).toUpperCase());
-        //host.hostname = getDeviceVendorName(host.hardwareAddress);
         if(list.size() > 0){
             if(list.get(0).companyFullName != null){
                 host.hostname = list.get(0).companyFullName;
@@ -505,136 +320,4 @@ public class DefaultDiscovery extends AbstractDiscovery implements PublishHostIn
         }
         publishProgress(host);
     }
-
-    /*private class ChatServerThread extends Thread {
-
-        ConnectThread connectThread = null;
-        private ServerSocket serverSocket;
-        private Context context;
-
-        public ChatServerThread(Context context) {
-            this.context = context;
-        }
-
-        @Override
-        public void run() {
-            Socket socket = null;
-
-            try {
-                serverSocket = new ServerSocket(SocketServerPORT);
-                while (true) {
-                    try {
-                        socket = serverSocket.accept();
-                        connectThread = new ConnectThread(socket, context);
-                        connectThread.start();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            } finally {
-                if (socket != null) {
-                    try {
-                        socket.close();
-                    } catch (IOException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    }
-                }
-            }
-        }
-
-        @Override
-        public void interrupt() {
-            super.interrupt();
-            if (serverSocket != null) {
-                try {
-                    serverSocket.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-
-        public void sendMsgServer(String s) {
-            if (connectThread != null) {
-                connectThread.sendMsg(s);
-            }
-        }
-    }
-
-    private class ConnectThread extends Thread {
-
-        Socket socket;
-        Context context;
-        String msgToSend = "";
-        String serverName;
-
-        ConnectThread(Socket socket, Context context) {
-            this.socket = socket;
-            this.context = context;
-            serverName = "";
-        }
-
-        @Override
-        public void run() {
-            DataInputStream dataInputStream = null;
-            DataOutputStream dataOutputStream = null;
-
-            try {
-                dataInputStream = new DataInputStream(socket.getInputStream());
-                dataOutputStream = new DataOutputStream(socket.getOutputStream());
-
-                while (true) {
-                    if (dataInputStream.available() > 0) {
-                        String newMsg = dataInputStream.readUTF();
-                        if(newMsg.substring(0, 2).equals("$s")){
-                            String hostString = newMsg.substring(2, newMsg.indexOf(";"));
-                            Log.e("newMessage", newMsg);
-                            Log.e("hostString", hostString);
-                            HostBean host = new Gson().fromJson(hostString, HostBean.class);
-                            String registrationString = newMsg.substring(newMsg.indexOf(";") + 1);
-                            RegistrationModel reg = new Gson().fromJson(registrationString, RegistrationModel.class);
-
-                            host.onlineStatus = true;
-                            host.deviceName = reg.name;
-                            host.status = reg.status;
-                            host.phoneNumber = reg.phone;
-                            host.profilePicByte = reg.profilePic;
-                            publish(host);
-                        }else {
-                            break;
-                        }
-                    }
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            } finally {
-                if (dataInputStream != null) {
-                    try {
-                        dataInputStream.close();
-                    } catch (IOException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    }
-                }
-
-                if (dataOutputStream != null) {
-                    try {
-                        dataOutputStream.close();
-                    } catch (IOException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    }
-                }
-                serverName = "";
-                msgToSend = "";
-            }
-        }
-
-        private void sendMsg(String msg) {
-            msgToSend = msg;
-        }
-    }*/
 }
