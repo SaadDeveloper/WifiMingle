@@ -2204,10 +2204,6 @@
         "source": "C:\\Users\\Saad\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\3e1f5df390b39e56b3c5e19fcae77aa8\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
-        "merged": "F:\\CourseMaterial\\Android\\PITB work\\WifiMingle\\WifiMingle(Current_Working)\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_bg_iv_msg.xml.flat",
-        "source": "F:\\CourseMaterial\\Android\\PITB work\\WifiMingle\\WifiMingle(Current_Working)\\app\\src\\main\\res\\drawable-ldpi\\bg_iv_msg.xml"
-    },
-    {
         "merged": "F:\\CourseMaterial\\Android\\PITB work\\WifiMingle\\WifiMingle(Current_Working)\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_hint_foreground_material_dark.xml.flat",
         "source": "C:\\Users\\Saad\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\3e1f5df390b39e56b3c5e19fcae77aa8\\res\\color\\abc_hint_foreground_material_dark.xml"
     },
@@ -3526,6 +3522,10 @@
     {
         "merged": "F:\\CourseMaterial\\Android\\PITB work\\WifiMingle\\WifiMingle(Current_Working)\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "C:\\Users\\Saad\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\3e1f5df390b39e56b3c5e19fcae77aa8\\res\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "F:\\CourseMaterial\\Android\\PITB work\\WifiMingle\\WifiMingle(Current_Working)\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_iv_msg.xml.flat",
+        "source": "F:\\CourseMaterial\\Android\\PITB work\\WifiMingle\\WifiMingle(Current_Working)\\app\\src\\main\\res\\drawable\\bg_iv_msg.xml"
     },
     {
         "merged": "F:\\CourseMaterial\\Android\\PITB work\\WifiMingle\\WifiMingle(Current_Working)\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4_flag_italy.png.flat",

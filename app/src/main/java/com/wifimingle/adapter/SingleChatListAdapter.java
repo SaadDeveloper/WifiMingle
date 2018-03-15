@@ -104,6 +104,7 @@ public class SingleChatListAdapter extends BaseAdapter {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(activity.getContentResolver(), uri);
                 imageMessage.setImageBitmap(bitmap);
             } catch (IOException e) {
+                imageMessage.setImageResource(R.drawable.ic_error);
                 e.printStackTrace();
             }
 

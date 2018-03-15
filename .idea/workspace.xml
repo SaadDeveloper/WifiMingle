@@ -18,21 +18,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92f319cd-40a7-4e49-b7be-216b678bddc6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/Utils/RoundCornersImageView.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivityMain$1DbUpdateNic.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivityMain$1DbUpdateProbes.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/async/AsyncPortscan$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/async/AsyncPortscan$Data.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/async/AsyncPortscan.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/model/HostBeansList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivityMain$1DbUpdateNic.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivityMain$1DbUpdateProbes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/async/AsyncPortscan$1.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/async/AsyncPortscan$Data.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/async/AsyncPortscan.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/model/HostBeansList.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/async/AsyncPortscan.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/model/HostBeansList.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-ldpi_bg_iv_msg.xml.flat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-ldpi/bg_iv_msg.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" />
@@ -41,214 +28,33 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/hbb20/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/hbb20/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$integer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$mipmap.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$mipmap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$raw.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$raw.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$xml.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/R$xml.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivityMain$CreateServicesDb.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivityMain$CreateServicesDb.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivityMain.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivityMain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivityNet$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivityNet$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivityNet.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivityNet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivitySettings$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivitySettings$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivitySettings$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivitySettings$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivitySettings$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivitySettings$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivitySettings.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivitySettings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivitySingleChat$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivitySingleChat$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivitySingleChat$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivitySingleChat$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivitySingleChat$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivitySingleChat$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivitySingleChat$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivitySingleChat$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivitySingleChat.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ActivitySingleChat.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/BaseActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/BaseActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/FeedBackActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/FeedBackActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/FeedBackActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/FeedBackActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/FeedBackActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/FeedBackActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/FeedBackActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/FeedBackActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ProfilePictureShowActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/ProfilePictureShowActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/SplashActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/SplashActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/SplashActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/SplashActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/TabActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/TabActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/TabActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/TabActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/TabActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/TabActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/TabActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/TabActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/TabActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/TabActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/TabActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/TabActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/TabActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/TabActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/adapter/HostRecyclerAdapter$HostViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/adapter/HostRecyclerAdapter$HostViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/adapter/HostRecyclerAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/adapter/HostRecyclerAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/adapter/SingleChatListAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/adapter/SingleChatListAdapter$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/adapter/SingleChatListAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/adapter/SingleChatListAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/adapter/ViewPagerAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/adapter/ViewPagerAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/application/BaseApplication.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/application/BaseApplication.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/async/AbstractDiscovery$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/async/AbstractDiscovery$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/async/AbstractDiscovery.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/async/AbstractDiscovery.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/async/DefaultDiscovery$CheckRunnable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/async/DefaultDiscovery$CheckRunnable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/async/DefaultDiscovery.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/async/DefaultDiscovery.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/async/ReadTextFile.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/async/ReadTextFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/broadcast/WifiStateChangeBroadCast$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/broadcast/WifiStateChangeBroadCast$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/broadcast/WifiStateChangeBroadCast.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/broadcast/WifiStateChangeBroadCast.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/fragments/MinglersTabFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/fragments/MinglersTabFragment$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/fragments/MinglersTabFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/fragments/MinglersTabFragment$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/fragments/MinglersTabFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/fragments/MinglersTabFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/fragments/OthersTabFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/fragments/OthersTabFragment$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/fragments/OthersTabFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/fragments/OthersTabFragment$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/fragments/OthersTabFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/fragments/OthersTabFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/model/ChatMessageModel.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/model/ChatMessageModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/model/Message.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/model/Message.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/service/ListeningForOnlineStatus$ChatServerThread.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/service/ListeningForOnlineStatus$ChatServerThread.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/service/ListeningForOnlineStatus$ConnectThread.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/service/ListeningForOnlineStatus$ConnectThread.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/service/ListeningForOnlineStatus.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/service/ListeningForOnlineStatus.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/thread/ChatServer$ConnectThread.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/thread/ChatServer$ConnectThread.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/thread/ChatServerForImage$SavePhotoTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/thread/ChatServerForImage$SavePhotoTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/thread/ChatServerForImage.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/thread/ChatServerForImage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/pub/devrel/easypermissions/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/pub/devrel/easypermissions/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/zip-cache/Tc7NU_xmiRUcDARX+noCW2ffL1w=" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/zip-cache/Tc7NU_xmiRUcDARX+noCW2ffL1w=" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_message_left.xml.flat" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_message_left.xml.flat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_message_right.xml.flat" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_message_right.xml.flat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/android/support/design/R$dimen.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/android/support/design/R$dimen.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/android/support/v7/appcompat/R$dimen.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/android/support/v7/appcompat/R$dimen.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/hbb20/R$dimen.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/hbb20/R$dimen.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$dimen.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$dimen.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$drawable.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$drawable.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$id.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$integer.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$integer.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$layout.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$layout.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$menu.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$menu.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$mipmap.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$mipmap.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$raw.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$raw.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$string.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$string.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$style.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$style.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$styleable.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$styleable.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$xml.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/R$xml.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivityMain$CreateServicesDb.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivityMain$CreateServicesDb.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivityMain.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivityMain.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivityNet$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivityNet$1.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivityNet.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivityNet.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivitySettings$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivitySettings$1.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivitySettings$2.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivitySettings$2.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivitySettings$3.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivitySettings$3.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivitySettings.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivitySettings.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivitySingleChat$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivitySingleChat$1.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivitySingleChat$2.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivitySingleChat$2.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivitySingleChat$3.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivitySingleChat$3.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivitySingleChat$4.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivitySingleChat$4.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivitySingleChat.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ActivitySingleChat.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/BaseActivity.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/BaseActivity.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/FeedBackActivity$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/FeedBackActivity$1.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/FeedBackActivity$2.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/FeedBackActivity$2.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/FeedBackActivity$3.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/FeedBackActivity$3.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/FeedBackActivity.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/FeedBackActivity.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ProfilePictureShowActivity.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/ProfilePictureShowActivity.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/RegistrationActivity$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/RegistrationActivity$1.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/RegistrationActivity$2.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/RegistrationActivity$2.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/RegistrationActivity$3.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/RegistrationActivity$3.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/RegistrationActivity$4.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/RegistrationActivity$4.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/RegistrationActivity$5.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/RegistrationActivity$5.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/RegistrationActivity$6.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/RegistrationActivity$6.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/RegistrationActivity.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/RegistrationActivity.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/SplashActivity$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/SplashActivity$1.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/SplashActivity.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/SplashActivity.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/TabActivity$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/TabActivity$1.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/TabActivity$2.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/TabActivity$2.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/TabActivity$3.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/TabActivity$3.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/TabActivity$4.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/TabActivity$4.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/TabActivity$5.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/TabActivity$5.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/TabActivity$6.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/TabActivity$6.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/TabActivity.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/activity/TabActivity.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/adapter/HostRecyclerAdapter$HostViewHolder.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/adapter/HostRecyclerAdapter$HostViewHolder.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/adapter/HostRecyclerAdapter.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/adapter/HostRecyclerAdapter.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/adapter/SingleChatListAdapter$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/adapter/SingleChatListAdapter$1.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/adapter/SingleChatListAdapter.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/adapter/SingleChatListAdapter.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/adapter/ViewPagerAdapter.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/adapter/ViewPagerAdapter.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/application/BaseApplication.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/application/BaseApplication.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/async/AbstractDiscovery$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/async/AbstractDiscovery$1.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/async/AbstractDiscovery.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/async/AbstractDiscovery.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/async/DefaultDiscovery$CheckRunnable.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/async/DefaultDiscovery$CheckRunnable.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/async/DefaultDiscovery.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/async/DefaultDiscovery.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/async/ReadTextFile.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/async/ReadTextFile.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/broadcast/WifiStateChangeBroadCast$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/broadcast/WifiStateChangeBroadCast$1.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/broadcast/WifiStateChangeBroadCast.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/broadcast/WifiStateChangeBroadCast.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/fragments/MinglersTabFragment$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/fragments/MinglersTabFragment$1.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/fragments/MinglersTabFragment$2.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/fragments/MinglersTabFragment$2.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/fragments/MinglersTabFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/fragments/MinglersTabFragment.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/fragments/OthersTabFragment$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/fragments/OthersTabFragment$1.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/fragments/OthersTabFragment$2.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/fragments/OthersTabFragment$2.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/fragments/OthersTabFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/fragments/OthersTabFragment.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/model/ChatMessageModel.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/model/ChatMessageModel.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/model/Message.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/model/Message.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/service/ListeningForOnlineStatus$ChatServerThread.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/service/ListeningForOnlineStatus$ChatServerThread.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/service/ListeningForOnlineStatus$ConnectThread.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/service/ListeningForOnlineStatus$ConnectThread.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/service/ListeningForOnlineStatus.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/service/ListeningForOnlineStatus.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/thread/ChatServer$ConnectThread.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/thread/ChatServer$ConnectThread.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/thread/ChatServerForImage$SavePhotoTask.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/thread/ChatServerForImage$SavePhotoTask.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/thread/ChatServerForImage.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/com/wifimingle/thread/ChatServerForImage.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/pub/devrel/easypermissions/R$dimen.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/37/pub/devrel/easypermissions/R$dimen.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/hbb20/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/hbb20/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/wifimingle/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/wifimingle/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/pub/devrel/easypermissions/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/pub/devrel/easypermissions/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/debug.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/debug.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/__content__.json" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/__content__.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivityMain.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivityMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivityNet.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivityNet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySettings.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySettings.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/BaseActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/BaseActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/FeedBackActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/FeedBackActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ProfilePictureShowActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ProfilePictureShowActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/RegistrationActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/RegistrationActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/SplashActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/SplashActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/TabActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/TabActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/adapter/HostRecyclerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/adapter/HostRecyclerAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/adapter/SingleChatListAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/adapter/SingleChatListAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/adapter/ViewPagerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/adapter/ViewPagerAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/application/BaseApplication.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/application/BaseApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/async/AbstractDiscovery.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/async/AbstractDiscovery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/async/DefaultDiscovery.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/async/DefaultDiscovery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/async/ReadTextFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/async/ReadTextFile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/broadcast/WifiStateChangeBroadCast.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/broadcast/WifiStateChangeBroadCast.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/constants/Constants.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/constants/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/fragments/MinglersTabFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/fragments/MinglersTabFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/fragments/OthersTabFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/fragments/OthersTabFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/model/ChatMessageModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/model/ChatMessageModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/model/Message.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/model/Message.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListeningForOnlineStatus.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListeningForOnlineStatus.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/thread/ChatServer.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/thread/ChatServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/thread/ChatServerForImage.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/thread/ChatServerForImage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/message_left.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/message_left.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/message_right.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/message_right.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimen.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimen.xml" />
     </list>
@@ -295,47 +101,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ChatMessageModel.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/model/ChatMessageModel.java">
+      <file leaf-file-name="message_right.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/message_right.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state relative-caret-position="833">
+              <caret line="49" column="54" lean-forward="false" selection-start-line="49" selection-start-column="54" selection-end-line="49" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="59" lean-forward="false" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoundCornersImageView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/Utils/RoundCornersImageView.java">
+      <file leaf-file-name="ActivityNet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivityNet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="27" column="106" lean-forward="false" selection-start-line="27" selection-start-column="106" selection-end-line="27" selection-end-column="106" />
+            <state relative-caret-position="68">
+              <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1293#1362#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#1886#1887#0" expanded="false" />
+                <element signature="e#1923#1924#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="message_left.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/message_left.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
+      <file leaf-file-name="ActivitySingleChat.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="43" column="62" lean-forward="false" selection-start-line="43" selection-start-column="62" selection-end-line="43" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SingleChatListAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/adapter/SingleChatListAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="84" column="37" lean-forward="false" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
+            <state relative-caret-position="738">
+              <caret line="265" column="21" lean-forward="false" selection-start-line="265" selection-start-column="21" selection-end-line="265" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -344,9 +154,46 @@
       <file leaf-file-name="ActivityMain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivityMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+            <state relative-caret-position="153">
+              <caret line="34" column="25" lean-forward="false" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SingleChatListAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/adapter/SingleChatListAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+              <folding>
+                <element signature="e#4191#4589#0" expanded="true" />
+                <element signature="e#4588#4589#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfilePictureShowActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ProfilePictureShowActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="48" column="23" lean-forward="false" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+              <folding>
+                <marker date="1520924277864" expanded="true" signature="3277:3588" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegistrationModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/model/RegistrationModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -356,27 +203,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
               <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dimen.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimen.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/model/Message.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2224,7 +2053,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_tab_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/model/FeedBackModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_single_chat.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_feed_back.xml" />
@@ -2250,9 +2078,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivityNet.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivityMain.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySettings.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/BaseActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ProfilePictureShowActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/RegistrationActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/SplashActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/TabActivity.java" />
@@ -2270,11 +2096,14 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/model/Message.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/Utils/RoundCoernersImageView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/Utils/RoundCornersImageView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/dimen.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/message_right.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/message_left.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/adapter/SingleChatListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/FeedBackActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/bg_iv_msg.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/message_right.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/dimen.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/adapter/SingleChatListAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ProfilePictureShowActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java" />
       </list>
     </option>
   </component>
@@ -2301,6 +2130,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2341,9 +2171,30 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WifiMingle(Current_Working)" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wifimingle" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
@@ -2467,7 +2318,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520922366582" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521124807841" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2515,7 +2366,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520922366582" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521124807841" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2547,6 +2398,27 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -2677,7 +2549,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520922366583" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521124807844" />
       </method>
     </configuration>
     <list size="1">
@@ -2713,6 +2585,14 @@
       <option name="presentableId" value="Default" />
       <updated>1507275091070</updated>
     </task>
+    <task id="LOCAL-00001" summary="RoundedImageView Added for Chat Image">
+      <created>1520922400535</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1520922400535</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2726,16 +2606,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.5665529" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5665529" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32935154" sideWeight="0.48940998" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.48940998" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24583964" sideWeight="0.5511811" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.51059" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28214827" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3225256" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34129694" sideWeight="0.4969743" order="12" side_tool="false" content_ui="tabs" />
@@ -2749,7 +2629,7 @@
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2602118" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34982935" sideWeight="0.49092284" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34982935" sideWeight="0.49092284" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5068259" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2760,6 +2640,7 @@
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28214827" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -3143,13 +3024,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java</url>
-          <line>410</line>
+          <line>438</line>
           <properties />
           <option name="timeStamp" value="768" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java</url>
-          <line>226</line>
+          <line>227</line>
           <properties />
           <option name="timeStamp" value="769" />
         </line-breakpoint>
@@ -3281,31 +3162,31 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java</url>
-          <line>260</line>
+          <line>288</line>
           <properties />
           <option name="timeStamp" value="916" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java</url>
-          <line>265</line>
+          <line>293</line>
           <properties />
           <option name="timeStamp" value="917" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java</url>
-          <line>271</line>
+          <line>299</line>
           <properties />
           <option name="timeStamp" value="918" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java</url>
-          <line>270</line>
+          <line>298</line>
           <properties />
           <option name="timeStamp" value="919" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java</url>
-          <line>274</line>
+          <line>302</line>
           <properties />
           <option name="timeStamp" value="920" />
         </line-breakpoint>
@@ -3352,109 +3233,22 @@
           <option name="timeStamp" value="939" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/adapter/SingleChatListAdapter.java</url>
-          <line>99</line>
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java</url>
+          <line>225</line>
           <properties />
-          <option name="timeStamp" value="940" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/adapter/SingleChatListAdapter.java</url>
-          <line>103</line>
-          <properties />
-          <option name="timeStamp" value="941" />
+          <option name="timeStamp" value="949" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="949" />
+      <option name="time" value="950" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.chrisbanes/PhotoView/2.1.3/6d6b5acafba1c3c0ec49b5ba09cf434c888a69d8/PhotoView-2.1.3-sources.jar!/com/github/chrisbanes/photoview/PhotoView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile_picture_show.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/3e1f5df390b39e56b3c5e19fcae77aa8/res/values/values.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3374">
-          <caret line="1663" column="105" lean-forward="true" selection-start-line="1663" selection-start-column="105" selection-end-line="1663" selection-end-column="105" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/26.1.0/2b34456c30d6b6e5db5fa3e8fa02f6cebd5531fd/appcompat-v7-26.1.0-sources.jar!/android/support/v7/app/ActionBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="1044" column="16" lean-forward="false" selection-start-line="1044" selection-start-column="16" selection-end-line="1044" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="36" lean-forward="false" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="57" lean-forward="false" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-26/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="3188" column="14" lean-forward="false" selection-start-line="3188" selection-start-column="14" selection-end-line="3188" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-26/android/view/ViewManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="33" column="16" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-26/android/view/WindowManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="874" column="32" lean-forward="false" selection-start-line="874" selection-start-column="32" selection-end-line="874" selection-end-column="32" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="54" lean-forward="false" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListenForImageRecieving.java">
@@ -3496,46 +3290,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivityNet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="149" column="33" lean-forward="false" selection-start-line="149" selection-start-column="33" selection-end-line="149" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySettings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1865">
           <caret line="50" column="81" lean-forward="false" selection-start-line="50" selection-start-column="81" selection-end-line="50" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="331" column="8" lean-forward="false" selection-start-line="331" selection-start-column="8" selection-end-line="331" selection-end-column="8" />
-          <folding>
-            <element signature="e#6057#6206#0" expanded="true" />
-            <element signature="e#6205#6206#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/BaseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-284">
-          <caret line="17" column="54" lean-forward="false" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ProfilePictureShowActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
-          <folding>
-            <marker date="1520518525844" expanded="true" signature="3095:3406" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3651,13 +3409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/model/FeedBackModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/model/HostBeansList.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/model/HostBean.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -3689,39 +3440,15 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/Utils/RoundCoernersImageView.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimen.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/message_left.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
           <caret line="43" column="62" lean-forward="false" selection-start-line="43" selection-start-column="62" selection-end-line="43" selection-end-column="62" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/adapter/SingleChatListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="84" column="37" lean-forward="false" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/Utils/Utilities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-          <folding />
-        </state>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/FeedBackActivity.java">
@@ -3734,40 +3461,182 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivityMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/message_right.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="45" column="63" lean-forward="false" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/Utils/RoundCornersImageView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="27" column="106" lean-forward="false" selection-start-line="27" selection-start-column="106" selection-end-line="27" selection-end-column="106" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1293#1362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/model/ChatMessageModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/Utils/Db.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="27" column="73" lean-forward="true" selection-start-line="27" selection-start-column="73" selection-end-line="27" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="46" column="54" lean-forward="false" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="50" column="57" lean-forward="false" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/bg_button.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-ldpi/bg_iv_msg.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/Utils/RoundCornersImageView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="43" column="79" lean-forward="false" selection-start-line="43" selection-start-column="79" selection-end-line="43" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimen.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_error.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/Utils/Utilities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/model/RegistrationModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_iv_msg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/message_right.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="54" lean-forward="false" selection-start-line="49" selection-start-column="54" selection-end-line="49" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="59" lean-forward="false" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivityNet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1886#1887#0" expanded="false" />
+            <element signature="e#1923#1924#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivityMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="34" column="25" lean-forward="false" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/model/FeedBackModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ProfilePictureShowActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="48" column="23" lean-forward="false" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+          <folding>
+            <marker date="1520924277864" expanded="true" signature="3277:3588" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/BaseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/adapter/SingleChatListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding>
+            <element signature="e#4191#4589#0" expanded="true" />
+            <element signature="e#4588#4589#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/id.zelory/compressor/2.1.0/60d3db295f54ffdbaedec2fdcac07b722e7a65d3/compressor-2.1.0-sources.jar!/id/zelory/compressor/Compressor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="265" column="21" lean-forward="false" selection-start-line="265" selection-start-column="21" selection-end-line="265" selection-end-column="21" />
           <folding />
         </state>
       </provider>

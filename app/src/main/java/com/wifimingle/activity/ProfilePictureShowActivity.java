@@ -56,10 +56,16 @@ public class ProfilePictureShowActivity extends AppCompatActivity {
         try {
             String imgString = sharedPreferences.getString("image", "");
             name = sharedPreferences.getString("name", "");
-            Uri uri = Uri.fromFile(new File(imgString));
-            Bitmap image = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+            try {
+                Uri uri = Uri.fromFile(new File(imgString));
+                Bitmap image = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
 
-            profilePic.setImageBitmap(image);
+                profilePic.setImageBitmap(image);
+            }catch (Exception e){
+                profilePic.setImageResource(R.drawable.ic_error);
+                e.printStackTrace();
+            }
+
             editor.putString("image", "");
             editor.putString("name", "");
             editor.apply();

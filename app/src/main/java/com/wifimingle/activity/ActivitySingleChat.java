@@ -178,7 +178,7 @@ public class ActivitySingleChat extends AppCompatActivity implements EasyPermiss
             singleChatListAdapter.setUpdatedList(messageList, personName.getText().toString());
             ((SingleChatListAdapter) messagesList.getAdapter()).notifyDataSetChanged();
         } else {
-            singleChatListAdapter = new SingleChatListAdapter(getApplicationContext(),this, messageList, personName.getText().toString());
+            singleChatListAdapter = new SingleChatListAdapter(getApplicationContext(), this, messageList, personName.getText().toString());
             messagesList.setAdapter(singleChatListAdapter);
             singleChatListAdapter.notifyDataSetChanged();
         }
@@ -223,19 +223,47 @@ public class ActivitySingleChat extends AppCompatActivity implements EasyPermiss
                     } else {
                         actualImage = new File(getRealPathFromURI(fullPhotoUri));
                     }
+                    long length = actualImage.length() / 1024;
+                    if (length > 500 && length < 1024) {
+                        File compressedImage = new Compressor(ActivitySingleChat.this)
+                                .setMaxWidth(640)
+                                .setMaxHeight(480)
+                                .setQuality(60)
+                                .setCompressFormat(Bitmap.CompressFormat.WEBP)
+                                .setDestinationDirectoryPath(new File(Environment.getExternalStorageDirectory() + "/" + APP_NAME + "/" + APP_MINGLER_IMAGE_FOLDER, APP_MINGLER_IMAGE_SENT_FOLDER).getAbsolutePath())
+                                .compressToFile(actualImage);
 
-                    File compressedImage = new Compressor(ActivitySingleChat.this)
-                            .setMaxWidth(640)
-                            .setMaxHeight(480)
-                            .setQuality(60)
-                            .setCompressFormat(Bitmap.CompressFormat.WEBP)
-                            .setDestinationDirectoryPath(new File(Environment.getExternalStorageDirectory() + "/" + APP_NAME + "/" + APP_MINGLER_IMAGE_FOLDER, APP_MINGLER_IMAGE_SENT_FOLDER).getAbsolutePath())
-                            .compressToFile(actualImage);
+                        Uri comressedImageUri = Uri.fromFile(compressedImage);
+                        Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), comressedImageUri);
+                        byte[] byteArray = Utilities.getBytes(bitmap);
+                        insertImageAndSend(byteArray, compressedImage.getAbsolutePath());
+                    }else if(length > 1024 && length < 1600){
+                        File compressedImage = new Compressor(ActivitySingleChat.this)
+                                .setMaxWidth(640)
+                                .setMaxHeight(480)
+                                .setQuality(50)
+                                .setCompressFormat(Bitmap.CompressFormat.WEBP)
+                                .setDestinationDirectoryPath(new File(Environment.getExternalStorageDirectory() + "/" + APP_NAME + "/" + APP_MINGLER_IMAGE_FOLDER, APP_MINGLER_IMAGE_SENT_FOLDER).getAbsolutePath())
+                                .compressToFile(actualImage);
 
-                    Uri comressedImageUri = Uri.fromFile(compressedImage);
-                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), comressedImageUri);
-                    byte[] byteArray = Utilities.getBytes(bitmap);
-                    insertImageAndSend(byteArray, compressedImage.getAbsolutePath());
+                        Uri comressedImageUri = Uri.fromFile(compressedImage);
+                        Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), comressedImageUri);
+                        byte[] byteArray = Utilities.getBytes(bitmap);
+                        insertImageAndSend(byteArray, compressedImage.getAbsolutePath());
+                    }else if(length < 500){
+                        File compressedImage = new Compressor(ActivitySingleChat.this)
+                                .setMaxWidth(640)
+                                .setMaxHeight(480)
+                                .setQuality(100)
+                                .setCompressFormat(Bitmap.CompressFormat.WEBP)
+                                .setDestinationDirectoryPath(new File(Environment.getExternalStorageDirectory() + "/" + APP_NAME + "/" + APP_MINGLER_IMAGE_FOLDER, APP_MINGLER_IMAGE_SENT_FOLDER).getAbsolutePath())
+                                .compressToFile(actualImage);
+
+                        Uri comressedImageUri = Uri.fromFile(compressedImage);
+                        Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), comressedImageUri);
+                        byte[] byteArray = Utilities.getBytes(bitmap);
+                        insertImageAndSend(byteArray, compressedImage.getAbsolutePath());
+                    }
                 }
             } catch (Exception e) {
                 e.printStackTrace();

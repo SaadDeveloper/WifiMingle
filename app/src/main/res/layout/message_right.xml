@@ -48,7 +48,6 @@
                         android:layout_width="@dimen/_200sdp"
                         android:layout_height="@dimen/_180sdp"
                         android:scaleType="centerCrop"
-                        android:background="@color/grey_light"
                         android:visibility="gone" />
 
                     <TextView
