@@ -155,16 +155,14 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
             public void onClick(View v) {
                 if(validation()){
                     saveLocally();
-                    /*if (Utilities.isNetworkAvailable(RegistrationActivity.this)) {
+                    if (Utilities.isNetworkAvailable(RegistrationActivity.this)) {
                         sendPost(name, gender, dob, phone, imgString);
                         progressDialog.show();
                     }else {
                         Toast.makeText(RegistrationActivity.this, "Network is not available \n We will send it later", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(RegistrationActivity.this, SplashActivity.class));
                         finish();
-                    }*/
-                    startActivity(new Intent(RegistrationActivity.this, SplashActivity.class));
-                    finish();
+                    }
                 }
             }
         });

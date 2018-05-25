@@ -92,16 +92,14 @@ public class ListeningForOnlineStatus extends Service {
                 while (true) {
                     try {
                         socket = serverSocket.accept();
-                        /*if(connectThread != null){
+                        if(connectThread != null){
                             connectThread.setDataInputStream(socket);
                             Log.e("ListenInsideIf", "setDataInputStream method calls");
                         }else {
                             Log.e("ListenInsideIf", "connect thread initializes");
                             connectThread = new ConnectThread(socket, context);
                             connectThread.start();
-                        }*/
-                        connectThread = new ConnectThread(socket, context);
-                        connectThread.start();
+                        }
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -169,13 +167,8 @@ public class ListeningForOnlineStatus extends Service {
             /*InputStream inputStream = null;
             OutputStream outputStream = null;*/
             //recieveMessageMechanismForIphone();
-            //tring recievedData = "";
-            String newMsg = recieveMessageMechanismForIphone(socket);
 
-            if (newMsg.substring(0, 2).equals("$h")) {
-                chatClientForPingResponse(newMsg);
-            }
-            /*try {
+            try {
                 dataInputStream = new DataInputStream(socket.getInputStream());
 
                 while (true) {
@@ -251,7 +244,7 @@ public class ListeningForOnlineStatus extends Service {
                 }
                 serverName = "";
                 msgToSend = "";
-            }*/
+            }
         }
 
         private void chatClientForPingResponse(String message) {
@@ -387,8 +380,9 @@ public class ListeningForOnlineStatus extends Service {
 
     }
 
-    private String recieveMessageMechanismForIphone(Socket socket){
-        //Socket socket = null;
+    private void recieveMessageMechanismForIphone(DataInputStream dataInputStream, String receivedData){
+        Socket socket = null;
+
         try {
             byte[] mmBuffer = new byte[8192];
             byte[] completeMessage = new byte[0];
@@ -436,14 +430,16 @@ public class ListeningForOnlineStatus extends Service {
                                 savingMultimediaMessage(completeMessage);
                             }*/
                             //savingMultimediaMessage(completeMessage);
-                            return new String(completeMessage);
+                            receivedData = new String(completeMessage);
+
+                            completeMessage = new byte[0];
+                            break;
                         } else if (completeMessage.length == 1 && completeMessage[0] == 125) {
                             completeMessage = new byte[0];
                         }
                     }else {
                         break;
                     }
-                    return "";
 
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -461,6 +457,5 @@ public class ListeningForOnlineStatus extends Service {
                 }
             }
         }
-        return "";
     }
 }
