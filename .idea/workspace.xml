@@ -19,9 +19,6 @@
   <component name="ChangeListManager">
     <list default="true" id="92f319cd-40a7-4e49-b7be-216b678bddc6" name="Default" comment="Image size control IF checks for compression">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/RegistrationActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/RegistrationActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListeningForOnlineStatus.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListeningForOnlineStatus.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/thread/ChatClient.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/thread/ChatClient.java" />
     </list>
     <ignored path="android-network-discovery-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,8 +102,8 @@
       <file leaf-file-name="DefaultDiscovery.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/async/DefaultDiscovery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="269" column="55" lean-forward="true" selection-start-line="269" selection-start-column="55" selection-end-line="269" selection-end-column="55" />
+            <state relative-caret-position="286">
+              <caret line="261" column="0" lean-forward="true" selection-start-line="261" selection-start-column="0" selection-end-line="261" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -2441,7 +2438,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527251945014" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527252644836" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2489,7 +2486,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527251945014" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527252644836" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2696,7 +2693,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527251945015" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527252644838" />
       </method>
     </configuration>
     <list size="1">
@@ -3958,8 +3955,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/async/DefaultDiscovery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="269" column="55" lean-forward="true" selection-start-line="269" selection-start-column="55" selection-end-line="269" selection-end-column="55" />
+        <state relative-caret-position="286">
+          <caret line="261" column="0" lean-forward="true" selection-start-line="261" selection-start-column="0" selection-end-line="261" selection-end-column="0" />
           <folding />
         </state>
       </provider>
