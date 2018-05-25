@@ -9,6 +9,7 @@ import android.graphics.Paint;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
+import android.telephony.TelephonyManager;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -29,6 +30,11 @@ import static com.wifimingle.constants.Constants.DATE_TIME_FORMATE_IMG_SAVING;
  */
 
 public class Utilities {
+
+    public static String getIMEINumber(Context mContext) {
+        TelephonyManager telephonyManager = (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
+        return telephonyManager.getDeviceId();
+    }
 
     /**
      * convert bitmap image to byte array

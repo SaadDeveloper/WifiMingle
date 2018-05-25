@@ -74,7 +74,8 @@ public class ChatClient extends Thread {
             dataInputStream = new DataInputStream(socket.getInputStream());
 
             if (!msgToSend.equals("")) {
-                dataOutputStream.writeUTF(msgToSend);
+                dataOutputStream.write(msgToSend.getBytes());
+                //dataOutputStream.writeUTF(msgToSend);
                 dataOutputStream.flush();
             }
 

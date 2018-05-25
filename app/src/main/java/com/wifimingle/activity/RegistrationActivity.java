@@ -1,6 +1,7 @@
 package com.wifimingle.activity;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -40,6 +41,10 @@ import android.widget.Toast;
 import com.hbb20.CountryCodePicker;
 import com.wifimingle.R;
 import com.wifimingle.Utils.DialogDatePicker;
+import com.wifimingle.Utils.Utilities;
+import com.wifimingle.application.BaseApplication;
+import com.wifimingle.interfaces.ApiService;
+import com.wifimingle.model.FeedBackModel;
 import com.wifimingle.model.RegistrationModel;
 
 import java.io.ByteArrayOutputStream;
@@ -52,10 +57,15 @@ import java.util.List;
 import de.hdodenhof.circleimageview.CircleImageView;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import static com.wifimingle.Utils.Utilities.getCurrentTimeStamp;
+import static com.wifimingle.Utils.Utilities.getIMEINumber;
 import static com.wifimingle.activity.ActivityMain.FORMAT_DATE;
 import static com.wifimingle.activity.ActivityMain.MY_PREFERENCES;
+import static com.wifimingle.constants.Constants.API_KEY;
 import static com.wifimingle.constants.Constants.APP_MINGLER_IMAGE_FOLDER;
 import static com.wifimingle.constants.Constants.APP_MINGLER_IMAGE_SENT_FOLDER;
 import static com.wifimingle.constants.Constants.APP_NAME;
@@ -63,6 +73,7 @@ import static com.wifimingle.constants.Constants.APP_REGISTERATION_FOLDER;
 import static com.wifimingle.constants.Constants.CAMERA;
 import static com.wifimingle.constants.Constants.DATE_TIME_24HOUR_FORMATE;
 import static com.wifimingle.constants.Constants.DATE_TIME_FORMATE_IMG_SAVING;
+import static com.wifimingle.constants.Constants.PHONE_STATE;
 import static com.wifimingle.constants.Constants.STORAGE;
 
 public class RegistrationActivity extends AppCompatActivity implements EasyPermissions.PermissionCallbacks {
@@ -80,15 +91,24 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
     private String[] genderArr = {"Gender", "Male", "Female"};
     public RegistrationModel registrationModel;
     private byte[] imgByte = null;
+    private String imgString = "";
     private Bitmap originalSizeImage = null;
     private  byte[] originalSizeImageByteArr = null;
 
     private final int PERMISSION_REQUEST_CODE = 1;
     private final int STORAGE_PERMISSION_REQUEST_CODE = 2;
+    private final int PHONE_STATE_PERMISSION_REQUEST_CODE = 3;
     private File photoFile;
     private String photoPath;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
+
+    private ApiService mApiService;
+    private ProgressDialog progressDialog;
+    private String name;
+    private String gender;
+    private String dob;
+    private String phone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,6 +138,12 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, genderArr);
         spGender.setAdapter(adapter);
 
+        mApiService = BaseApplication.retrofit.create(ApiService.class);
+        progressDialog = new ProgressDialog(this, android.app.AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
+        progressDialog.setTitle("Registering New Mingler");
+        progressDialog.setMessage("Please wait ....");
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+
         spGender.setSelection(0, true);
         View v = spGender.getSelectedView();
         ((TextView) v).setTextColor(getResources().getColor(R.color.white));
@@ -127,7 +153,19 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validation();
+                if(validation()){
+                    saveLocally();
+                    /*if (Utilities.isNetworkAvailable(RegistrationActivity.this)) {
+                        sendPost(name, gender, dob, phone, imgString);
+                        progressDialog.show();
+                    }else {
+                        Toast.makeText(RegistrationActivity.this, "Network is not available \n We will send it later", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(RegistrationActivity.this, SplashActivity.class));
+                        finish();
+                    }*/
+                    startActivity(new Intent(RegistrationActivity.this, SplashActivity.class));
+                    finish();
+                }
             }
         });
 
@@ -177,21 +215,70 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
         });
     }
 
-    private void validation() {
-        if (!et_name.getText().toString().equals("") && !et_phone.getText().toString().equals("") && !et_dob.getText().toString().equals("")
-                && !spGender.getSelectedItem().toString().equals(spGender.getItemAtPosition(0))) {
-            registrationModel = new RegistrationModel();
-            registrationModel.name = et_name.getText().toString();
-            registrationModel.gender = spGender.getSelectedItem().toString();
-            registrationModel.dob = et_dob.getText().toString();
-            registrationModel.phone = cpp_code.getSelectedCountryCodeWithPlus() + et_phone.getText().toString();
-            registrationModel.profilePic = imgByte;
-            registrationModel.save();
-            startActivity(new Intent(RegistrationActivity.this, SplashActivity.class));
-            finish();
+    private boolean validation() {
+        name = et_name.getText().toString();
+        gender = spGender.getSelectedItem().toString();
+        dob = et_dob.getText().toString();
+        phone = cpp_code.getSelectedCountryCodeWithPlus() + et_phone.getText().toString();
+
+        if (name.equals("")) {
+            Toast.makeText(this, "Name field is Empty", Toast.LENGTH_SHORT).show();
+            return false;
+        }else if(gender.equals(spGender.getItemAtPosition(0))){
+            Toast.makeText(this, "Please Select Gender", Toast.LENGTH_SHORT).show();
+            return false;
+        }else if(dob.equals("")){
+            Toast.makeText(this, "Please select Date of Birth", Toast.LENGTH_SHORT).show();
+            return false;
+        }else if(phone.equals("")){
+            Toast.makeText(this, "Phone number field is Empty", Toast.LENGTH_SHORT).show();
+            return false;
         } else {
-            Toast.makeText(getApplicationContext(), "Fields are empty", Toast.LENGTH_SHORT).show();
+            return true;
         }
+    }
+
+    private void saveLocally(){
+        registrationModel = new RegistrationModel();
+        registrationModel.setName(name);
+        registrationModel.setGender(gender);
+        registrationModel.setDob(dob);
+        registrationModel.setPhone(phone);
+        registrationModel.setProfilePicString(imgString);
+        registrationModel.setApiKey(API_KEY);
+        registrationModel.setImeiNo(getIMEINumber(RegistrationActivity.this));
+
+        registrationModel.profilePic = imgByte;
+        registrationModel.save();
+    }
+
+    public void sendPost(String rgName, String rgGender, String rgDob, String rgPhone, String rgImage) {
+        mApiService.saveRegistrationPost(rgName, rgPhone, rgGender, rgDob, API_KEY, getIMEINumber(this), rgImage).enqueue(new Callback<RegistrationModel>() {
+            @Override
+            public void onResponse(Call<RegistrationModel> call, Response<RegistrationModel> response) {
+                progressDialog.dismiss();
+                if (response.message().equals("OK")){
+                    RegistrationModel registrationModel = RegistrationModel.first(RegistrationModel.class);
+                    registrationModel.sent = true;
+                    registrationModel.save();
+                    Toast.makeText(RegistrationActivity.this, "Thank you for Registering in Wifi Mingle", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(RegistrationActivity.this, SplashActivity.class));
+                    finish();
+                } else {
+                    Toast.makeText(RegistrationActivity.this, "Something went wrong \n We will send it later", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(RegistrationActivity.this, SplashActivity.class));
+                    finish();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<RegistrationModel> call, Throwable t) {
+                progressDialog.dismiss();
+                Toast.makeText(RegistrationActivity.this, "Web server is Down Currently \n We will send it later", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(RegistrationActivity.this, SplashActivity.class));
+                finish();
+            }
+        });
     }
 
     public static void showDatePickerForMarshmallowAndAbove(Activity activity, final EditText editText) {
@@ -228,6 +315,7 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
 
                 profilePic.setImageBitmap(originalSizeImage);
                 originalSizeImageByteArr = getBytes(originalSizeImage);
+                imgString = Base64.encodeToString(originalSizeImageByteArr, Base64.DEFAULT);
 
                 Bitmap imageBitmap = ThumbnailUtils.extractThumbnail(originalSizeImage, 186, 248);
                 imgByte = getLowQualityImageBytes(imageBitmap);
@@ -438,10 +526,21 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
         }
     }
 
+    @AfterPermissionGranted(PHONE_STATE_PERMISSION_REQUEST_CODE)
+    private void methodRequiresPhoneStatePermission() {
+        String[] perms = {PHONE_STATE};
+        if (EasyPermissions.hasPermissions(this, perms)) {
+        } else {
+            EasyPermissions.requestPermissions(this, "Phone State Permission is still pending",
+                    STORAGE_PERMISSION_REQUEST_CODE, perms);
+        }
+    }
+
     @Override
     protected void onResume() {
         super.onResume();
         methodRequiresStoragePermission();
+        methodRequiresPhoneStatePermission();
     }
 
     @Override
@@ -460,6 +559,9 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
             Toast.makeText(RegistrationActivity.this, "Camera permission is required to access Camera", Toast.LENGTH_SHORT).show();
         }else if(requestCode == STORAGE_PERMISSION_REQUEST_CODE){
             Toast.makeText(RegistrationActivity.this, "Storage permission is necessary for Folders Creation", Toast.LENGTH_SHORT).show();
+            finish();
+        }else if(requestCode == PHONE_STATE_PERMISSION_REQUEST_CODE){
+            Toast.makeText(RegistrationActivity.this, "Phone State permission is necessary for Fetching Imei Number", Toast.LENGTH_SHORT).show();
             finish();
         }
     }

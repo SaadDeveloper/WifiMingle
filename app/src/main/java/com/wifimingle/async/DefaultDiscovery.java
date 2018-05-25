@@ -17,6 +17,7 @@ import com.wifimingle.Network.RateControl;
 import com.wifimingle.Utils.Prefs;
 import com.wifimingle.Utils.Save;
 import com.wifimingle.activity.BaseActivity;
+import com.wifimingle.constants.Constants;
 import com.wifimingle.interfaces.PublishHostInterface;
 import com.wifimingle.model.HostBean;
 import com.wifimingle.model.NicVendorsOffline;
@@ -272,7 +273,7 @@ public class DefaultDiscovery extends AbstractDiscovery implements PublishHostIn
         if(!host.ipAddress.equals(getLocalIpAddress())){
             final ChatClient chatClient = new ChatClient(host.ipAddress);
             chatClient.start();
-            chatClient.sendMsg("$h" + getLocalIpAddress() + "," + hostString);
+            chatClient.sendMsg("$h" + getLocalIpAddress() + "," + hostString + Constants.HEADER);
             chatClient.interrupt();
         }
     }

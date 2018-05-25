@@ -28,6 +28,7 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -76,9 +77,11 @@ public class ChatServerForImage extends Thread {
             serverSocket = new ServerSocket(SocketServerPORT);
             socket = serverSocket.accept();
             ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream());
+            //InputStream inputStream = socket.getInputStream();
             while (true) {
                 try {
                     // Read from the InputStream.
+                    //numBytes = inputStream.read(mmBuffer);
                     numBytes = objectInputStream.read(mmBuffer);
                     if (numBytes != 0) {
                         if (flag) {
@@ -94,17 +97,21 @@ public class ChatServerForImage extends Thread {
                         }
                         byte[] exTemp = new byte[mmBuffer.length];
                         System.arraycopy(mmBuffer, 0, exTemp, 0, mmBuffer.length);
-                        String newStr = new String(exTemp);
 
                         byte[] tempBytes = completeMessage;
                         completeMessage = new byte[tempBytes.length + numBytes];
                         System.arraycopy(tempBytes, 0, completeMessage, 0, tempBytes.length);
                         System.arraycopy(mmBuffer, 0, completeMessage, tempBytes.length, numBytes);
-                        //Log.i("bluetooth bytes","Copying data "+String.valueOf(numBytes));
+
                         if (completeMessage[completeMessage.length - 1] == 126 && completeMessage[completeMessage.length - 2] == 126
                                 && completeMessage[completeMessage.length - 3] == 126 && completeMessage[completeMessage.length - 4] == 126
                                 && completeMessage[completeMessage.length - 5] == 126) {
-
+                            /*String str = new String(completeMessage);
+                            if(str.substring(0, 6).equals("iphone")){
+                                savingMessageFromIOS(completeMessage);
+                            }else {
+                                savingMultimediaMessage(completeMessage);
+                            }*/
                             savingMultimediaMessage(completeMessage);
 
                             completeMessage = new byte[0];

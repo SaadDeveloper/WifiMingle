@@ -1,6 +1,7 @@
 package com.wifimingle.interfaces;
 
 import com.wifimingle.model.FeedBackModel;
+import com.wifimingle.model.RegistrationModel;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -20,4 +21,14 @@ public interface ApiService {
                                  @Field("fb_feedback") String feedBack,
                                  @Field("fb_image") String fbImage,
                                  @Field("api_key") String apiKey);
+
+    @POST("wifimingle/api/user_registeration")
+    @FormUrlEncoded
+    Call<RegistrationModel> saveRegistrationPost(@Field("name") String rgName,
+                                                 @Field("phone_number") String rgPhone,
+                                                 @Field("gender") String rgGender,
+                                                 @Field("birthday") String rgBirthday,
+                                                 @Field("api_key") String apiKey,
+                                                 @Field("imei_no") String rgImei,
+                                                 @Field("user_image") String rgProfilePic);
 }

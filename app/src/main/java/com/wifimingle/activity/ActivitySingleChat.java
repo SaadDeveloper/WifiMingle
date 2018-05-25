@@ -112,6 +112,7 @@ public class ActivitySingleChat extends AppCompatActivity implements EasyPermiss
         personName = findViewById(R.id.tv_chat_name);
         back = findViewById(R.id.imgBtn_back);
         reg = RegistrationModel.first(RegistrationModel.class);
+        reg.setProfilePicString("");
     }
 
     private void fetchData() {

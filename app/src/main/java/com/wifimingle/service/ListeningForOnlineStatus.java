@@ -29,6 +29,7 @@ import org.json.JSONObject;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -91,14 +92,16 @@ public class ListeningForOnlineStatus extends Service {
                 while (true) {
                     try {
                         socket = serverSocket.accept();
-                        if(connectThread != null){
+                        /*if(connectThread != null){
                             connectThread.setDataInputStream(socket);
                             Log.e("ListenInsideIf", "setDataInputStream method calls");
                         }else {
                             Log.e("ListenInsideIf", "connect thread initializes");
                             connectThread = new ConnectThread(socket, context);
                             connectThread.start();
-                        }
+                        }*/
+                        connectThread = new ConnectThread(socket, context);
+                        connectThread.start();
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -145,7 +148,6 @@ public class ListeningForOnlineStatus extends Service {
         String clientIMEI;
         boolean sendCheck = false;
         DataInputStream dataInputStream = null;
-        DataOutputStream dataOutputStream = null;
 
         ConnectThread(Socket socket, Context context) {
             this.socket = socket;
@@ -156,7 +158,6 @@ public class ListeningForOnlineStatus extends Service {
         private void setDataInputStream(Socket dataInputStreamSocket){
             try {
                 dataInputStream = new DataInputStream(dataInputStreamSocket.getInputStream());
-                dataOutputStream = new DataOutputStream(dataInputStreamSocket.getOutputStream());
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -167,10 +168,15 @@ public class ListeningForOnlineStatus extends Service {
 
             /*InputStream inputStream = null;
             OutputStream outputStream = null;*/
+            //recieveMessageMechanismForIphone();
+            //tring recievedData = "";
+            String newMsg = recieveMessageMechanismForIphone(socket);
 
-            try {
+            if (newMsg.substring(0, 2).equals("$h")) {
+                chatClientForPingResponse(newMsg);
+            }
+            /*try {
                 dataInputStream = new DataInputStream(socket.getInputStream());
-                dataOutputStream = new DataOutputStream(socket.getOutputStream());
 
                 while (true) {
                     if (dataInputStream.available() > 0) {
@@ -243,18 +249,9 @@ public class ListeningForOnlineStatus extends Service {
                         e.printStackTrace();
                     }
                 }
-
-                if (dataOutputStream != null) {
-                    try {
-                        dataOutputStream.close();
-                    } catch (IOException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    }
-                }
                 serverName = "";
                 msgToSend = "";
-            }
+            }*/
         }
 
         private void chatClientForPingResponse(String message) {
@@ -262,11 +259,12 @@ public class ListeningForOnlineStatus extends Service {
             String ipAddressOfClientDevice = message.substring(2, message.indexOf(","));
 
             RegistrationModel registrationModel = RegistrationModel.first(RegistrationModel.class);
-            String registrationModelString = new Gson().toJson(registrationModel);
 
             ChatClientFromService chatClientFromService = new ChatClientFromService(ipAddressOfClientDevice);
             chatClientFromService.start();
             if (registrationModel != null) {
+                registrationModel.setProfilePicString("");
+                String registrationModelString = new Gson().toJson(registrationModel);
                 chatClientFromService.sendMsg("$s" + hostBeanString + ";" + registrationModelString);
                 //chatClientFromService.disconnect();
                 chatClientFromService.interrupt();
@@ -383,5 +381,86 @@ public class ListeningForOnlineStatus extends Service {
     private PendingIntent getPendingIntentForWelcomeMessage(Context context, int notificationId) {
         Intent intent1 = new Intent(context, ActivityMain.class);
         return PendingIntent.getActivity(context, notificationId, intent1, PendingIntent.FLAG_UPDATE_CURRENT);
+    }
+
+    private void gettingByteArrayMessage(byte[] msg){
+
+    }
+
+    private String recieveMessageMechanismForIphone(Socket socket){
+        //Socket socket = null;
+        try {
+            byte[] mmBuffer = new byte[8192];
+            byte[] completeMessage = new byte[0];
+
+            int numBytes; // bytes returned from read()
+            boolean flag = true;
+            int actualLength = 0;
+            long total = 0;
+            String length = "";
+
+            ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream());
+            //InputStream inputStream = socket.getInputStream();
+            while (true) {
+                try {
+                    // Read from the InputStream.
+                    //numBytes = inputStream.read(mmBuffer);
+                    numBytes = objectInputStream.read(mmBuffer);
+                    if (numBytes != 0) {
+                        if (flag) {
+                            StringBuilder builder = new StringBuilder();
+                            for (int i = 0; i < mmBuffer.length; i++) {
+                                if (mmBuffer[i] == 126) {
+                                    flag = false;
+                                    break;
+                                } else {
+                                    builder.append(Character.toString((char) mmBuffer[i]));
+                                }
+                            }
+                        }
+                        byte[] exTemp = new byte[mmBuffer.length];
+                        System.arraycopy(mmBuffer, 0, exTemp, 0, mmBuffer.length);
+
+                        byte[] tempBytes = completeMessage;
+                        completeMessage = new byte[tempBytes.length + numBytes];
+                        System.arraycopy(tempBytes, 0, completeMessage, 0, tempBytes.length);
+                        System.arraycopy(mmBuffer, 0, completeMessage, tempBytes.length, numBytes);
+
+                        if (completeMessage[completeMessage.length - 1] == 126 && completeMessage[completeMessage.length - 2] == 126
+                                && completeMessage[completeMessage.length - 3] == 126 && completeMessage[completeMessage.length - 4] == 126
+                                && completeMessage[completeMessage.length - 5] == 126) {
+                            /*String str = new String(completeMessage);
+                            if(str.substring(0, 6).equals("iphone")){
+                                savingMessageFromIOS(completeMessage);
+                            }else {
+                                savingMultimediaMessage(completeMessage);
+                            }*/
+                            //savingMultimediaMessage(completeMessage);
+                            return new String(completeMessage);
+                        } else if (completeMessage.length == 1 && completeMessage[0] == 125) {
+                            completeMessage = new byte[0];
+                        }
+                    }else {
+                        break;
+                    }
+                    return "";
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (socket != null) {
+                try {
+                    socket.close();
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        }
+        return "";
     }
 }
