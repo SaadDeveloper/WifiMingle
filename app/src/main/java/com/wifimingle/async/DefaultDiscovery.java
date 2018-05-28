@@ -273,7 +273,7 @@ public class DefaultDiscovery extends AbstractDiscovery implements PublishHostIn
         if(!host.ipAddress.equals(getLocalIpAddress())){
             final ChatClient chatClient = new ChatClient(host.ipAddress);
             chatClient.start();
-            chatClient.sendMsg("$h" + getLocalIpAddress() + "," + hostString + Constants.HEADER);
+            chatClient.sendMsg("$h" + getLocalIpAddress() + "," + hostString);
             chatClient.interrupt();
         }
     }
