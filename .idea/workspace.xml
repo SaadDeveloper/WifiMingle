@@ -13,7 +13,6 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="ListenInsideIf" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
@@ -23,44 +22,21 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/activity/RegistrationActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/async/DefaultDiscovery.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/async/DefaultDiscovery.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/service/ListeningForOnlineStatus$ChatServerThread.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/service/ListeningForOnlineStatus$ChatServerThread.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/service/ListeningForOnlineStatus$ConnectThread.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/service/ListeningForOnlineStatus$ConnectThread.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/service/ListeningForOnlineStatus.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/service/ListeningForOnlineStatus.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/thread/ChatClient.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/wifimingle/thread/ChatClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/activity/RegistrationActivity$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/activity/RegistrationActivity$1.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/activity/RegistrationActivity$2.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/activity/RegistrationActivity$2.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/activity/RegistrationActivity$3.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/activity/RegistrationActivity$3.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/activity/RegistrationActivity$4.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/activity/RegistrationActivity$4.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/activity/RegistrationActivity$5.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/activity/RegistrationActivity$5.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/activity/RegistrationActivity$6.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/activity/RegistrationActivity$6.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/activity/RegistrationActivity$7.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/activity/RegistrationActivity$7.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/activity/RegistrationActivity.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/activity/RegistrationActivity.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/async/DefaultDiscovery.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/async/DefaultDiscovery.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/service/ListeningForOnlineStatus$ChatServerThread.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/service/ListeningForOnlineStatus$ChatServerThread.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/service/ListeningForOnlineStatus$ConnectThread.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/service/ListeningForOnlineStatus$ConnectThread.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/service/ListeningForOnlineStatus.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/service/ListeningForOnlineStatus.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/thread/ChatClient.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/38/com/wifimingle/thread/ChatClient.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/file-input-save-data.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/__content__.json" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/__content__.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/async/DefaultDiscovery.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/async/DefaultDiscovery.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListeningForOnlineStatus.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListeningForOnlineStatus.java" />
     </list>
     <ignored path="android-network-discovery-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,11 +81,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ListeningForOnlineStatus.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ListeningForOnlineStatus.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListeningForOnlineStatus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="260" column="0" lean-forward="false" selection-start-line="260" selection-start-column="0" selection-end-line="260" selection-end-column="0" />
+            <state relative-caret-position="-85">
+              <caret line="184" column="0" lean-forward="false" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -118,8 +94,8 @@
       <file leaf-file-name="ChatServer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/thread/ChatServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1469">
-              <caret line="155" column="0" lean-forward="false" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="44" column="40" lean-forward="false" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -128,19 +104,21 @@
       <file leaf-file-name="RegistrationActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/RegistrationActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="1904">
               <caret line="186" column="69" lean-forward="false" selection-start-line="186" selection-start-column="69" selection-end-line="186" selection-end-column="69" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChatClientFromService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ChatClientFromService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/thread/ChatClientFromService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="71" column="40" lean-forward="false" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
-              <folding />
+            <state relative-caret-position="2091">
+              <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+              <folding>
+                <element signature="e#3929#3930#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -148,8 +126,8 @@
       <file leaf-file-name="ChatClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/thread/ChatClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="76" column="53" lean-forward="true" selection-start-line="76" selection-start-column="53" selection-end-line="76" selection-end-column="53" />
+            <state relative-caret-position="1156">
+              <caret line="76" column="53" lean-forward="false" selection-start-line="76" selection-start-column="53" selection-end-line="76" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -158,7 +136,7 @@
       <file leaf-file-name="DefaultDiscovery.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/async/DefaultDiscovery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
+            <state relative-caret-position="3995">
               <caret line="275" column="78" lean-forward="false" selection-start-line="275" selection-start-column="78" selection-end-line="275" selection-end-column="78" />
               <folding>
                 <element signature="e#10303#10304#0" expanded="true" />
@@ -171,12 +149,9 @@
       <file leaf-file-name="ActivitySingleChat.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="338" column="67" lean-forward="false" selection-start-line="338" selection-start-column="51" selection-end-line="338" selection-end-column="71" />
-              <folding>
-                <element signature="e#6094#6243#0" expanded="true" />
-                <element signature="e#6242#6243#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="5967">
+              <caret line="412" column="22" lean-forward="false" selection-start-line="412" selection-start-column="22" selection-end-line="412" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -184,8 +159,8 @@
       <file leaf-file-name="SingleChatListAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/adapter/SingleChatListAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="99" column="72" lean-forward="true" selection-start-line="99" selection-start-column="72" selection-end-line="99" selection-end-column="72" />
+            <state relative-caret-position="1088">
+              <caret line="99" column="72" lean-forward="false" selection-start-line="99" selection-start-column="72" selection-end-line="99" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -194,7 +169,7 @@
       <file leaf-file-name="RegistrationModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/model/RegistrationModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
+            <state relative-caret-position="1190">
               <caret line="100" column="27" lean-forward="false" selection-start-line="100" selection-start-column="27" selection-end-line="100" selection-end-column="27" />
               <folding />
             </state>
@@ -204,8 +179,8 @@
       <file leaf-file-name="WifiStateChangeBroadCast.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/broadcast/WifiStateChangeBroadCast.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="82" column="62" lean-forward="true" selection-start-line="82" selection-start-column="62" selection-end-line="82" selection-end-column="62" />
+            <state relative-caret-position="986">
+              <caret line="82" column="62" lean-forward="false" selection-start-line="82" selection-start-column="62" selection-end-line="82" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -2122,8 +2097,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/thread/ChatServerForImage.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/RegistrationActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/thread/ChatClient.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListeningForOnlineStatus.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/async/DefaultDiscovery.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListeningForOnlineStatus.java" />
       </list>
     </option>
   </component>
@@ -2149,6 +2124,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2225,7 +2201,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2238,89 +2213,17 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidBuildScriptsGroupNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WifiMingle(Current_Working)" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WifiMingle(Current_Working)" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wifimingle" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WifiMingle(Current_Working)" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wifimingle" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WifiMingle(Current_Working)" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wifimingle" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="adapter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="device.picker.selection" value="W3D7N16519009580" />
-    <property name="DEBUGGABLE_DEVICE" value="huawei-ale_l21-W3D7N16519009580" />
+    <property name="DEBUGGABLE_DEVICE" value="huawei-pra_la1-HGH7N17726000745" />
     <property name="DEBUGGABLE_PROCESS" value="com.wifimingle" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="DEBUGGER_ID" value="Auto" />
@@ -2440,7 +2343,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527493388421" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527578807291" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2488,7 +2391,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527493388421" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527578807291" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2520,27 +2423,6 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -2695,7 +2577,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527493388422" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527578807293" />
       </method>
     </configuration>
     <list size="1">
@@ -2760,7 +2642,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5665529" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.5665529" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34300342" sideWeight="0.48940998" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24357034" sideWeight="0.5616798" order="3" side_tool="true" content_ui="tabs" />
@@ -3087,13 +2969,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListeningForOnlineStatus.java</url>
-          <line>322</line>
+          <line>321</line>
           <properties />
           <option name="timeStamp" value="461" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListeningForOnlineStatus.java</url>
-          <line>323</line>
+          <line>322</line>
           <properties />
           <option name="timeStamp" value="462" />
         </line-breakpoint>
@@ -3417,21 +3299,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListeningForOnlineStatus.java</url>
-          <line>255</line>
+          <line>262</line>
           <properties />
           <option name="timeStamp" value="993" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListeningForOnlineStatus.java</url>
-          <line>257</line>
-          <properties />
-          <option name="timeStamp" value="994" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListeningForOnlineStatus.java</url>
-          <line>260</line>
-          <properties />
-          <option name="timeStamp" value="995" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/thread/ChatServer.java</url>
@@ -3465,7 +3335,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListeningForOnlineStatus.java</url>
-          <line>434</line>
+          <line>433</line>
           <properties />
           <option name="timeStamp" value="1025" />
         </line-breakpoint>
@@ -3477,25 +3347,25 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListeningForOnlineStatus.java</url>
-          <line>401</line>
+          <line>400</line>
           <properties />
           <option name="timeStamp" value="1028" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListeningForOnlineStatus.java</url>
-          <line>447</line>
+          <line>446</line>
           <properties />
           <option name="timeStamp" value="1029" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListeningForOnlineStatus.java</url>
-          <line>448</line>
+          <line>447</line>
           <properties />
           <option name="timeStamp" value="1030" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListeningForOnlineStatus.java</url>
-          <line>395</line>
+          <line>394</line>
           <properties />
           <option name="timeStamp" value="1031" />
         </line-breakpoint>
@@ -3511,8 +3381,62 @@
           <properties />
           <option name="timeStamp" value="1034" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java</url>
+          <line>338</line>
+          <properties />
+          <option name="timeStamp" value="1037" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java</url>
+          <line>344</line>
+          <properties />
+          <option name="timeStamp" value="1038" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/thread/ChatClientFromService.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="1039" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/thread/ChatClientFromService.java</url>
+          <line>68</line>
+          <properties />
+          <option name="timeStamp" value="1040" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/thread/ChatClientFromService.java</url>
+          <line>132</line>
+          <properties />
+          <option name="timeStamp" value="1041" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java</url>
+          <line>96</line>
+          <properties />
+          <option name="timeStamp" value="1042" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java</url>
+          <line>95</line>
+          <properties />
+          <option name="timeStamp" value="1043" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java</url>
+          <line>411</line>
+          <properties />
+          <option name="timeStamp" value="1044" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java</url>
+          <line>413</line>
+          <properties />
+          <option name="timeStamp" value="1045" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1037" />
+      <option name="time" value="1046" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -3530,13 +3454,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/message_right.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
           <caret line="49" column="54" lean-forward="false" selection-start-line="49" selection-start-column="54" selection-end-line="49" selection-end-column="54" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/BaseActivity.java">
@@ -3554,13 +3478,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_registration.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="15" lean-forward="false" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.0.2/2e1d97eec8a4c7517486234666d8b8245f63ae89/retrofit-2.0.2-sources.jar!/retrofit2/Retrofit.java">
@@ -3687,7 +3611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3713,13 +3636,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_feed_back.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1071">
           <caret line="63" column="21" lean-forward="false" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
@@ -3771,14 +3694,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="34" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/thread/ChatClientForImage.java">
@@ -3797,7 +3720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="69" lean-forward="false" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3813,7 +3735,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/RegistrationActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="1904">
           <caret line="186" column="69" lean-forward="false" selection-start-line="186" selection-start-column="69" selection-end-line="186" selection-end-column="69" />
           <folding />
         </state>
@@ -3821,7 +3743,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/async/DefaultDiscovery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
+        <state relative-caret-position="3995">
           <caret line="275" column="78" lean-forward="false" selection-start-line="275" selection-start-column="78" selection-end-line="275" selection-end-column="78" />
           <folding>
             <element signature="e#10303#10304#0" expanded="true" />
@@ -3830,25 +3752,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/thread/ChatServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1469">
-          <caret line="155" column="0" lean-forward="false" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/thread/ChatClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="76" column="53" lean-forward="true" selection-start-line="76" selection-start-column="53" selection-end-line="76" selection-end-column="53" />
+        <state relative-caret-position="1156">
+          <caret line="76" column="53" lean-forward="false" selection-start-line="76" selection-start-column="53" selection-end-line="76" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/model/RegistrationModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
+        <state relative-caret-position="1190">
           <caret line="100" column="27" lean-forward="false" selection-start-line="100" selection-start-column="27" selection-end-line="100" selection-end-column="27" />
           <folding />
         </state>
@@ -3856,43 +3770,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/broadcast/WifiStateChangeBroadCast.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="82" column="62" lean-forward="true" selection-start-line="82" selection-start-column="62" selection-end-line="82" selection-end-column="62" />
+        <state relative-caret-position="986">
+          <caret line="82" column="62" lean-forward="false" selection-start-line="82" selection-start-column="62" selection-end-line="82" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/adapter/SingleChatListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="99" column="72" lean-forward="true" selection-start-line="99" selection-start-column="72" selection-end-line="99" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="338" column="67" lean-forward="false" selection-start-line="338" selection-start-column="51" selection-end-line="338" selection-end-column="71" />
-          <folding>
-            <element signature="e#6094#6243#0" expanded="true" />
-            <element signature="e#6242#6243#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListeningForOnlineStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="260" column="0" lean-forward="false" selection-start-line="260" selection-start-column="0" selection-end-line="260" selection-end-column="0" />
+        <state relative-caret-position="1088">
+          <caret line="99" column="72" lean-forward="false" selection-start-line="99" selection-start-column="72" selection-end-line="99" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/thread/ChatClientFromService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="71" column="40" lean-forward="false" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
+        <state relative-caret-position="2091">
+          <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+          <folding>
+            <element signature="e#3929#3930#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/activity/ActivitySingleChat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5967">
+          <caret line="412" column="22" lean-forward="false" selection-start-line="412" selection-start-column="22" selection-end-line="412" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/thread/ChatServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="44" column="40" lean-forward="false" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wifimingle/service/ListeningForOnlineStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="184" column="0" lean-forward="false" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
           <folding />
         </state>
       </provider>

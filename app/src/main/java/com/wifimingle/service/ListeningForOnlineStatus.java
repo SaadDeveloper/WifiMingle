@@ -252,14 +252,13 @@ public class ListeningForOnlineStatus extends Service {
             String ipAddressOfClientDevice = message.substring(2, message.indexOf(","));
 
             RegistrationModel registrationModel = RegistrationModel.first(RegistrationModel.class);
-
             ChatClientFromService chatClientFromService = new ChatClientFromService(ipAddressOfClientDevice);
-            chatClientFromService.start();
             if (registrationModel != null) {
                 registrationModel.setProfilePicString("");
                 String registrationModelString = new Gson().toJson(registrationModel);
+
+                chatClientFromService.start();
                 chatClientFromService.sendMsg("$s" + hostBeanString + ";" + registrationModelString);
-                //chatClientFromService.disconnect();
                 chatClientFromService.interrupt();
             } else {
                 chatClientFromService.interrupt();

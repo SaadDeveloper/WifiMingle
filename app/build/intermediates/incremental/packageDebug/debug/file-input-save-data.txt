@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon May 28 12:29:20 PKT 2018
+#Mon May 28 13:47:06 PKT 2018
 20.base=F\:\\CourseMaterial\\Android\\PITB work\\WifiMingle\\WifiMingle(Current_Working)\\app\\build\\intermediates\\assets\\debug
 143.base=F\:\\CourseMaterial\\Android\\PITB work\\WifiMingle\\WifiMingle(Current_Working)\\app\\build\\intermediates\\assets\\debug
 237.path=io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_DE
