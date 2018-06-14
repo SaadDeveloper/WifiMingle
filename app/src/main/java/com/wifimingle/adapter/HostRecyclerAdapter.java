@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.widget.RecyclerView;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -121,8 +122,9 @@ public class HostRecyclerAdapter extends RecyclerView.Adapter<HostRecyclerAdapte
             }
 
             try {
-                if (host.profilePicByte != null && host.profilePicByte.length > 0) {
-                    profile.setImageBitmap(getImage(host.profilePicByte));
+                if (host.profilePicString != null) {
+                    byte[] img = Base64.decode(host.profilePicString, Base64.DEFAULT);
+                    profile.setImageBitmap(getImage(img));
                 }
             }catch (Exception e){
                 e.printStackTrace();

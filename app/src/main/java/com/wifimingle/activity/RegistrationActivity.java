@@ -91,6 +91,7 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
     private String[] genderArr = {"Gender", "Male", "Female"};
     public RegistrationModel registrationModel;
     private byte[] imgByte = null;
+    private String imgByteString = "";
     private String imgString = "";
     private Bitmap originalSizeImage = null;
     private  byte[] originalSizeImageByteArr = null;
@@ -248,7 +249,7 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
         registrationModel.setApiKey(API_KEY);
         registrationModel.setImeiNo(getIMEINumber(RegistrationActivity.this));
 
-        registrationModel.profilePic = imgByte;
+        registrationModel.profilePic = imgByteString;
         registrationModel.save();
     }
 
@@ -319,6 +320,7 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
 
                 Bitmap imageBitmap = ThumbnailUtils.extractThumbnail(originalSizeImage, 186, 248);
                 imgByte = getLowQualityImageBytes(imageBitmap);
+                imgByteString = Base64.encodeToString(imgByte, Base64.DEFAULT);
             }catch (OutOfMemoryError e) {
                 e.printStackTrace();
                 showToast("Error loading Image, Out of Memory");

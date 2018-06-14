@@ -6,6 +6,8 @@ import android.text.TextUtils;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.Arrays;
 
@@ -21,7 +23,9 @@ public class ChatClientFromService extends Thread {
 
     private Socket socket = null;
     private DataOutputStream dataOutputStream = null;
-    private DataInputStream dataInputStream = null;
+    /*private DataOutputStream dataOutputStream = null;
+    private DataInputStream dataInputStream = null;*/
+    //private ObjectOutputStream dataOutputStream = null;
 
     public ChatClientFromService(String address) {
         dstAddress = address;
@@ -62,10 +66,17 @@ public class ChatClientFromService extends Thread {
         try {
             socket = new Socket(dstAddress, SocketServerPORT);
             dataOutputStream = new DataOutputStream(socket.getOutputStream());
-            dataInputStream = new DataInputStream(socket.getInputStream());
+            /*dataOutputStream = new DataOutputStream(socket.getOutputStream());
+            dataInputStream = new DataInputStream(socket.getInputStream());*/
+            //dataOutputStream = new ObjectOutputStream(socket.getOutputStream());
 
-            if (!msgToSend.equals("")) {
+            /*if (!msgToSend.equals("")) {
                 dataOutputStream.writeUTF(msgToSend);
+                dataOutputStream.flush();
+            }*/
+            if (!msgToSend.equals("")) {
+                dataOutputStream.write(msgToSend.getBytes());
+                //dataOutputStream.writeUTF(msgToSend);
                 dataOutputStream.flush();
             }
 
@@ -90,15 +101,6 @@ public class ChatClientFromService extends Thread {
             if (dataOutputStream != null) {
                 try {
                     dataOutputStream.close();
-                } catch (IOException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-            }
-
-            if (dataInputStream != null) {
-                try {
-                    dataInputStream.close();
                 } catch (IOException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
@@ -163,15 +165,6 @@ public class ChatClientFromService extends Thread {
         if (dataOutputStream != null) {
             try {
                 dataOutputStream.close();
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-        }
-
-        if (dataInputStream != null) {
-            try {
-                dataInputStream.close();
             } catch (IOException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();

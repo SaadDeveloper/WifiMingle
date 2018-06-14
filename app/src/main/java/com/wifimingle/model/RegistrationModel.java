@@ -40,10 +40,19 @@ public class RegistrationModel extends SugarRecord {
     @Expose
     public String profilePicString;
     public String status = AVAILABLE;
-    public byte[] profilePic;
+    public String profilePic;
+    //public byte[] profilePic;
     public boolean sent = false;
 
     public RegistrationModel() {
+    }
+
+    public String getProfilePic() {
+        return profilePic;
+    }
+
+    public void setProfilePic(String profilePic) {
+        this.profilePic = profilePic;
     }
 
     public String getName() {

@@ -411,7 +411,7 @@ public class ActivitySingleChat extends AppCompatActivity implements EasyPermiss
         Log.e("message_seen", "Message is being seen");
         ChatClient chatClient = new ChatClient(host.ipAddress.trim());
         chatClient.start();
-        chatClient.sendMsg(message);
+        chatClient.sendMsg(message + Constants.HEADER);
         chatClient.interrupt();
     }
 

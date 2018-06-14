@@ -204,7 +204,7 @@ public class MinglersTabFragment extends Fragment implements FragmentMethodCalli
                     hostBean.deviceName = reg.name;
                     hostBean.status = reg.status;
                     hostBean.phoneNumber = reg.phone;
-                    hostBean.profilePicByte = reg.profilePic;
+                    hostBean.profilePicString = reg.profilePic;
                     ArrayList<HostBean> copyListForLoop1 = new ArrayList<>(hostBeans);
                     if(hostBeans.size() > 0){
                         boolean newDevice = true;
@@ -241,7 +241,7 @@ public class MinglersTabFragment extends Fragment implements FragmentMethodCalli
                         hostBean.deviceName = reg.name;
                         hostBean.status = reg.status;
                         hostBean.phoneNumber = reg.phone;
-                        hostBean.profilePicByte = reg.profilePic;
+                        hostBean.profilePicString = reg.profilePic;
                         hostBeans.add(hostBean);
                         hostRecyclerAdapter.setUpdatedList(hostBeans);
                         recyclerView.getAdapter().notifyDataSetChanged();

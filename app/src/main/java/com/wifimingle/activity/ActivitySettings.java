@@ -21,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.wifimingle.R;
+import com.wifimingle.constants.Constants;
 import com.wifimingle.model.HostBean;
 import com.wifimingle.model.RegistrationModel;
 import com.wifimingle.thread.ChatClient;
@@ -160,7 +161,7 @@ public class ActivitySettings extends AppCompatActivity {
                 //String hostBeanString = new Gson().toJson(hostBean);
                 ChatClient chatClient = new ChatClient(hostBean.ipAddress);
                 chatClient.start();
-                chatClient.sendMsg("$status"+ status + "," + getLocalIpAddress());
+                chatClient.sendMsg("$status"+ status + "," + getLocalIpAddress() + Constants.HEADER);
                 chatClient.interrupt();
             }
         }

@@ -35,7 +35,7 @@ public class HostBean extends SugarRecord implements Parcelable {
     public String status = AVAILABLE;
     public String deviceName = null;
     //public String profilePicString;
-    public byte[] profilePicByte = null;
+    public String profilePicString = null;
     public String phoneNumber;
 
     public int deviceType = TYPE_COMPUTER;
@@ -62,7 +62,7 @@ public class HostBean extends SugarRecord implements Parcelable {
         this.hostname = bean.hostname;
         this.phoneNumber = bean.phoneNumber;
         this.status = bean.status;
-        this.profilePicByte = bean.profilePicByte;
+        this.profilePicString = bean.profilePicString;
         this.deviceName = bean.deviceName;
         this.hardwareAddress = bean.hardwareAddress;
         this.deviceType = bean.deviceType;

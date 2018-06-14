@@ -7,6 +7,8 @@ import android.util.Log;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.Arrays;
 
@@ -23,8 +25,10 @@ public class ChatClient extends Thread {
     private byte[] msgLogByte;
 
     private Socket socket = null;
+    /*private DataOutputStream dataOutputStream = null;
+    private DataInputStream dataInputStream = null;*/
     private DataOutputStream dataOutputStream = null;
-    private DataInputStream dataInputStream = null;
+    //private ObjectOutputStream dataOutputStream = null;
 
     public ChatClient(String address) {
         dstAddress = address;
@@ -66,12 +70,13 @@ public class ChatClient extends Thread {
 
         socket = null;
         dataOutputStream = null;
-        dataInputStream = null;
 
         try {
             socket = new Socket(dstAddress, SocketServerPORT);
+            /*dataOutputStream = new DataOutputStream(socket.getOutputStream());
+            dataInputStream = new DataInputStream(socket.getInputStream());*/
+            //dataOutputStream = new ObjectOutputStream(socket.getOutputStream());
             dataOutputStream = new DataOutputStream(socket.getOutputStream());
-            dataInputStream = new DataInputStream(socket.getInputStream());
 
             if (!msgToSend.equals("")) {
                 dataOutputStream.write(msgToSend.getBytes());
@@ -105,15 +110,6 @@ public class ChatClient extends Thread {
                     e.printStackTrace();
                 }
             }
-
-            if (dataInputStream != null) {
-                try {
-                    dataInputStream.close();
-                } catch (IOException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-            }
         }
     }
 
@@ -121,59 +117,6 @@ public class ChatClient extends Thread {
     public void interrupt() {
         super.interrupt();
         //disconnect();
-    }
-
-    private void startSocket(){
-        socket = null;
-        dataOutputStream = null;
-        dataInputStream = null;
-
-        try {
-            socket = new Socket(dstAddress, SocketServerPORT);
-            dataOutputStream = new DataOutputStream(socket.getOutputStream());
-            dataInputStream = new DataInputStream(socket.getInputStream());
-
-            if (!msgToSend.equals("")) {
-                dataOutputStream.writeUTF(msgToSend);
-                dataOutputStream.flush();
-            }
-
-            while (dataInputStream.available() < 0)
-                ; //Server will send its name the very first time, client waits till then
-            setMsgLog(dataInputStream.readUTF());
-            //setMsgLogByte(convertInputStreamToByteArray(dataInputStream));
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (socket != null) {
-                try {
-                    socket.close();
-                } catch (IOException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-            }
-
-            if (dataOutputStream != null) {
-                try {
-                    dataOutputStream.close();
-                } catch (IOException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-            }
-
-            if (dataInputStream != null) {
-                try {
-                    dataInputStream.close();
-                } catch (IOException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-            }
-        }
     }
 
     public byte[] convertInputStreamToByteArray(DataInputStream in) {
@@ -228,16 +171,6 @@ public class ChatClient extends Thread {
             try {
                 dataOutputStream.close();
                 Log.e("dataOutputStream", "dataOutputStream closed");
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-        }
-
-        if (dataInputStream != null) {
-            try {
-                dataInputStream.close();
-                Log.e("dataInputStream", "dataInputStream closed");
             } catch (IOException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();

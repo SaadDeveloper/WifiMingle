@@ -12,12 +12,14 @@ import android.os.Build;
 import android.os.IBinder;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.NotificationCompat;
+import android.util.Base64;
 import android.util.Log;
 
 import com.google.gson.Gson;
 import com.wifimingle.R;
 import com.wifimingle.activity.ActivityMain;
 import com.wifimingle.activity.ActivitySingleChat;
+import com.wifimingle.constants.Constants;
 import com.wifimingle.model.ChatMessageModel;
 import com.wifimingle.model.HostBean;
 import com.wifimingle.model.Message;
@@ -147,7 +149,8 @@ public class ListeningForOnlineStatus extends Service {
         String serverName;
         String clientIMEI;
         boolean sendCheck = false;
-        DataInputStream dataInputStream = null;
+        //DataInputStream dataInputStream = null;
+        ObjectInputStream dataInputStream = null;
 
         ConnectThread(Socket socket, Context context) {
             this.socket = socket;
@@ -157,7 +160,8 @@ public class ListeningForOnlineStatus extends Service {
 
         private void setDataInputStream(Socket dataInputStreamSocket){
             try {
-                dataInputStream = new DataInputStream(dataInputStreamSocket.getInputStream());
+                //dataInputStream = new DataInputStream(dataInputStreamSocket.getInputStream());
+                dataInputStream = new ObjectInputStream(dataInputStreamSocket.getInputStream());
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -172,8 +176,59 @@ public class ListeningForOnlineStatus extends Service {
             //tring recievedData = "";
             String newMsg = recieveMessageMechanismForIphone(socket);
 
-            if (newMsg.substring(0, 2).equals("$h")) {
-                chatClientForPingResponse(newMsg);
+            if (!newMsg.equals("")) {
+                newMsg = newMsg.replace("~", "").replace("~", "").replace("~", "")
+                        .replace("~", "").replace("~", "");
+
+                if (newMsg.substring(0, 2).equals("$h")) {
+                    chatClientForPingResponse(newMsg);
+                }else if (newMsg.substring(0, 7).equals("$status")) {
+                    sendLocalBroadCastForStatusChange(context, newMsg);
+                } else if (newMsg.substring(0, 8).equals("$Welcome")) {
+
+                    try {
+                        JSONObject jsonObject = new JSONObject(newMsg.substring(newMsg.indexOf(",") + 1));
+                        String msgString = jsonObject.get("message_json").toString();
+                        String hostBeanString = jsonObject.get("hostbean_json").toString();
+
+                        Gson gson = new Gson();
+                        Message msg = gson.fromJson(msgString, Message.class);
+                        HostBean hostBean = gson.fromJson(hostBeanString, HostBean.class);
+                        insertDataFromSrver(msg);
+                        String phoneNumber = msg.phone;
+                        int id = Integer.valueOf(phoneNumber.substring(phoneNumber.length() - 7));
+                        buildingNotification(context, msg.name, msg.message, getPendingIntent(context, id, hostBean, msg), id);
+                        sendLocalBroadCast(context, msg, id);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    //buildingNotification(context, "Welcome Message", "Hello new Mingler", getPendingIntentForWelcomeMessage(context, id), id);
+                }else if (newMsg.substring(0, 15).equals("$acknowledgment")) {
+                    String phone = newMsg.substring(15);
+                    seenMessageInDb(phone);
+                    sendLocalBroadCastForAcknowledge(context);
+                }else if (!newMsg.equals("") && !newMsg.substring(0, 2).equals("$h") && !newMsg.substring(0, 7).equals("$status") && !newMsg.substring(0, 8).equals("$Welcome") && !newMsg.substring(0, 15).equals("$acknowledgment")) {
+                    //int notificationId = NotificationID.getID();
+                    try {
+                        JSONObject jsonObject = new JSONObject(newMsg);
+                        String msgString = jsonObject.get("message_json").toString();
+                        String hostBeanString = jsonObject.get("hostbean_json").toString();
+                        String registrationString = jsonObject.get("registration_json").toString();
+
+                        Gson gson = new Gson();
+                        Message msg = gson.fromJson(msgString, Message.class);
+                        HostBean hostBean = gson.fromJson(hostBeanString, HostBean.class);
+                        insertDataFromSrver(msg);
+                        String phoneNumber = msg.phone;
+                        sendLocalBroadCastForNewMingler(context, hostBeanString, registrationString);
+                        int notificationId = Integer.valueOf(phoneNumber.substring(phoneNumber.length() - 7));
+                        buildingNotification(context, msg.name, msg.message, getPendingIntent(context, notificationId, hostBean, msg), notificationId);
+                        sendLocalBroadCast(context, msg, notificationId);
+                        //buildingNotification(context, "title", newMsg, getPendingIntent(context, notificationId, new HostBean(), new Message()), notificationId);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
             }
             /*try {
                 dataInputStream = new DataInputStream(socket.getInputStream());
@@ -261,11 +316,11 @@ public class ListeningForOnlineStatus extends Service {
             RegistrationModel registrationModel = RegistrationModel.first(RegistrationModel.class);
 
             ChatClientFromService chatClientFromService = new ChatClientFromService(ipAddressOfClientDevice);
-            chatClientFromService.start();
             if (registrationModel != null) {
                 registrationModel.setProfilePicString("");
                 String registrationModelString = new Gson().toJson(registrationModel);
-                chatClientFromService.sendMsg("$s" + hostBeanString + ";" + registrationModelString);
+                chatClientFromService.start();
+                chatClientFromService.sendMsg("$s" + hostBeanString + ";" + registrationModelString + Constants.HEADER);
                 //chatClientFromService.disconnect();
                 chatClientFromService.interrupt();
             } else {
@@ -389,8 +444,9 @@ public class ListeningForOnlineStatus extends Service {
 
     private String recieveMessageMechanismForIphone(Socket socket){
         //Socket socket = null;
+        DataInputStream dataInputStream = null;
         try {
-            byte[] mmBuffer = new byte[8192];
+            byte[] mmBuffer = new byte[2136];
             byte[] completeMessage = new byte[0];
 
             int numBytes; // bytes returned from read()
@@ -399,13 +455,14 @@ public class ListeningForOnlineStatus extends Service {
             long total = 0;
             String length = "";
 
-            ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream());
+            //ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream());
+            dataInputStream = new DataInputStream(socket.getInputStream());
             //InputStream inputStream = socket.getInputStream();
             while (true) {
                 try {
                     // Read from the InputStream.
                     //numBytes = inputStream.read(mmBuffer);
-                    numBytes = objectInputStream.read(mmBuffer);
+                    numBytes = dataInputStream.read(mmBuffer);
                     if (numBytes != 0) {
                         if (flag) {
                             StringBuilder builder = new StringBuilder();
@@ -443,10 +500,10 @@ public class ListeningForOnlineStatus extends Service {
                     }else {
                         break;
                     }
-                    return "";
 
                 } catch (Exception e) {
                     e.printStackTrace();
+                    break;
                 }
             }
         } catch (IOException e) {
@@ -455,6 +512,14 @@ public class ListeningForOnlineStatus extends Service {
             if (socket != null) {
                 try {
                     socket.close();
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+            if(dataInputStream != null){
+                try {
+                    dataInputStream.close();
                 } catch (IOException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
