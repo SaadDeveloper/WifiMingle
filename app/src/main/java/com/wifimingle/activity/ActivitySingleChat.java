@@ -3,6 +3,7 @@ package com.wifimingle.activity;
 import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.Cursor;
@@ -18,6 +19,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.format.Formatter;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -219,17 +221,43 @@ public class ActivitySingleChat extends AppCompatActivity implements EasyPermiss
             File actualImage = new File("");
             try {
                 if (fullPhotoUri != null) {
-                    if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+                    /*if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
                         actualImage = new File(getRealPathFromURI(getApplicationContext(), fullPhotoUri));
                     } else {
                         actualImage = new File(getRealPathFromURI(fullPhotoUri));
+                    }*/
+                    try {
+                        actualImage = new File(getRealPathFromURI_API11to18(getApplicationContext(), fullPhotoUri));
+                    }catch (Exception e){
+                        try {
+                            actualImage = new File(getRealPathFromURI_API19(getApplicationContext(), fullPhotoUri));
+                        }catch (Exception e1){
+                            try{
+                                actualImage = new File(getRealPathFromURI_BelowAPI11(getApplicationContext(), fullPhotoUri));
+                            }catch (Exception e2){
+                                e2.printStackTrace();
+                            }
+                        }
                     }
                     long length = actualImage.length() / 1024;
-                    if (length > 500 && length < 1024) {
+                    if(length > 1600){
                         File compressedImage = new Compressor(ActivitySingleChat.this)
                                 .setMaxWidth(640)
                                 .setMaxHeight(480)
-                                .setQuality(60)
+                                .setQuality(50)
+                                .setCompressFormat(Bitmap.CompressFormat.WEBP)
+                                .setDestinationDirectoryPath(new File(Environment.getExternalStorageDirectory() + "/" + APP_NAME + "/" + APP_MINGLER_IMAGE_FOLDER, APP_MINGLER_IMAGE_SENT_FOLDER).getAbsolutePath())
+                                .compressToFile(actualImage);
+
+                        Uri comressedImageUri = Uri.fromFile(compressedImage);
+                        Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), comressedImageUri);
+                        byte[] byteArray = Utilities.getBytes(bitmap);
+                        insertImageAndSend(byteArray, compressedImage.getAbsolutePath());
+                    }else if (length > 500 && length < 1024) {
+                        File compressedImage = new Compressor(ActivitySingleChat.this)
+                                .setMaxWidth(640)
+                                .setMaxHeight(480)
+                                .setQuality(80)
                                 .setCompressFormat(Bitmap.CompressFormat.WEBP)
                                 .setDestinationDirectoryPath(new File(Environment.getExternalStorageDirectory() + "/" + APP_NAME + "/" + APP_MINGLER_IMAGE_FOLDER, APP_MINGLER_IMAGE_SENT_FOLDER).getAbsolutePath())
                                 .compressToFile(actualImage);
@@ -272,6 +300,33 @@ public class ActivitySingleChat extends AppCompatActivity implements EasyPermiss
         }
     }
 
+    public static String getRealPathFromURI_API11to18(Context context, Uri contentUri) {
+        String[] proj = { MediaStore.Images.Media.DATA };
+        String result = null;
+
+        CursorLoader cursorLoader = new CursorLoader(
+                context,
+                contentUri, proj, null, null, null);
+        Cursor cursor = cursorLoader.loadInBackground();
+
+        if(cursor != null){
+            int column_index =
+                    cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+            cursor.moveToFirst();
+            result = cursor.getString(column_index);
+        }
+        return result;
+    }
+
+    public static String getRealPathFromURI_BelowAPI11(Context context, Uri contentUri){
+        String[] proj = { MediaStore.Images.Media.DATA };
+        Cursor cursor = context.getContentResolver().query(contentUri, proj, null, null, null);
+        int column_index
+                = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+        cursor.moveToFirst();
+        return cursor.getString(column_index);
+    }
+
     private String getRealPathFromURI(Uri contentURI) {
         String result;
         Cursor cursor = getContentResolver().query(contentURI, null, null, null, null);
@@ -284,6 +339,30 @@ public class ActivitySingleChat extends AppCompatActivity implements EasyPermiss
             cursor.close();
         }
         return result;
+    }
+
+    public static String getRealPathFromURI_API19(Context context, Uri uri){
+        String filePath = "";
+        String wholeID = DocumentsContract.getDocumentId(uri);
+
+        // Split at colon, use second item in the array
+        String id = wholeID.split(":")[1];
+
+        String[] column = { MediaStore.Images.Media.DATA };
+
+        // where id is equal to
+        String sel = MediaStore.Images.Media._ID + "=?";
+
+        Cursor cursor = context.getContentResolver().query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+                column, sel, new String[]{ id }, null);
+
+        int columnIndex = cursor.getColumnIndex(column[0]);
+
+        if (cursor.moveToFirst()) {
+            filePath = cursor.getString(columnIndex);
+        }
+        cursor.close();
+        return filePath;
     }
 
     public static String getRealPathFromURI(Context context, Uri imageUri) {
@@ -359,11 +438,12 @@ public class ActivitySingleChat extends AppCompatActivity implements EasyPermiss
         String date = sdf.format(dateCurrent);
         String msg = etMessageArea.getText().toString().trim();
 
+        String imgString = Base64.encodeToString(imagebyte, Base64.DEFAULT);
         etMessageArea.setText("");
         Message message = new Message("client", msg, getLocalIpAddress(), date, reg.name, reg.phone);
         message.OnlineStatus = hostBean.onlineStatus;
         message.message_seen = UNSEEN;
-        message.imagebyte = imagebyte;
+        message.imageString = imgString;
 
         ChatMessageModel chatMessageModel = new ChatMessageModel();
         chatMessageModel.chatMessage = msg;

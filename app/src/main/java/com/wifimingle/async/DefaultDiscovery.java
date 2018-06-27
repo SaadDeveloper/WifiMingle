@@ -311,12 +311,14 @@ public class DefaultDiscovery extends AbstractDiscovery implements PublishHostIn
                 }
             }
         }
-        ArrayList<NicVendorsOffline> list = (ArrayList<NicVendorsOffline>) NicVendorsOffline.find(NicVendorsOffline.class, "mac_Address = ?", host.hardwareAddress.substring(0, 8).toUpperCase());
-        if(list.size() > 0){
-            if(list.get(0).companyFullName != null){
-                host.hostname = list.get(0).companyFullName;
-            }else {
-                host.hostname = list.get(0).companyName;
+        if(!host.hardwareAddress.equals("Unknown")) {
+            ArrayList<NicVendorsOffline> list = (ArrayList<NicVendorsOffline>) NicVendorsOffline.find(NicVendorsOffline.class, "mac_Address = ?", host.hardwareAddress.substring(0, 8).toUpperCase());
+            if (list.size() > 0) {
+                if (list.get(0).companyFullName != null) {
+                    host.hostname = list.get(0).companyFullName;
+                } else {
+                    host.hostname = list.get(0).companyName;
+                }
             }
         }
         publishProgress(host);

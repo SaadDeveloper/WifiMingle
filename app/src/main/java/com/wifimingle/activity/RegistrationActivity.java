@@ -155,7 +155,7 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
             @Override
             public void onClick(View v) {
                 if(validation()){
-                    saveLocally();
+                    long isSave = saveLocally();
                     /*if (Utilities.isNetworkAvailable(RegistrationActivity.this)) {
                         sendPost(name, gender, dob, phone, imgString);
                         progressDialog.show();
@@ -164,8 +164,10 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
                         startActivity(new Intent(RegistrationActivity.this, SplashActivity.class));
                         finish();
                     }*/
-                    startActivity(new Intent(RegistrationActivity.this, SplashActivity.class));
-                    finish();
+                    if(isSave == 1) {
+                        startActivity(new Intent(RegistrationActivity.this, SplashActivity.class));
+                        finish();
+                    }
                 }
             }
         });
@@ -239,7 +241,7 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
         }
     }
 
-    private void saveLocally(){
+    private long saveLocally(){
         registrationModel = new RegistrationModel();
         registrationModel.setName(name);
         registrationModel.setGender(gender);
@@ -250,7 +252,7 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
         registrationModel.setImeiNo(getIMEINumber(RegistrationActivity.this));
 
         registrationModel.profilePic = imgByteString;
-        registrationModel.save();
+        return registrationModel.save();
     }
 
     public void sendPost(String rgName, String rgGender, String rgDob, String rgPhone, String rgImage) {

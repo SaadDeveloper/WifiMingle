@@ -32,11 +32,11 @@ public class ChatClientForImage extends Thread {
         try {
             socket = new Socket(dstAddress, SocketServerPORT);
 
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
+            //ObjectOutputStream objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
+            DataOutputStream dataOutputStream = new DataOutputStream(socket.getOutputStream());
             if(imageByte != null) {
-                int fileSize = imageByte.length;
-                objectOutputStream.write(imageByte);
-                objectOutputStream.flush();
+                dataOutputStream.write(imageByte);
+                dataOutputStream.flush();
             }
         } catch (IOException e) {
             e.printStackTrace();

@@ -12,6 +12,7 @@ import android.os.Build;
 import android.os.Environment;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.NotificationCompat;
+import android.util.Base64;
 import android.util.Log;
 
 import com.google.gson.Gson;
@@ -25,21 +26,18 @@ import com.wifimingle.model.Message;
 
 import org.json.JSONObject;
 
+import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import static com.wifimingle.Utils.Utilities.getCurrentTimeStamp;
 import static com.wifimingle.activity.ActivityMain.INTENT_FILTER_BROADCAST;
 import static com.wifimingle.activity.ActivityMain.INTENT_FILTER_BROADCAST_INCOMING;
 import static com.wifimingle.constants.Constants.APP_MINGLER_IMAGE_FOLDER;
-import static com.wifimingle.constants.Constants.APP_MINGLER_IMAGE_SENT_FOLDER;
 import static com.wifimingle.constants.Constants.APP_NAME;
 
 /**
@@ -76,13 +74,14 @@ public class ChatServerForImage extends Thread {
             String length = "";
             serverSocket = new ServerSocket(SocketServerPORT);
             socket = serverSocket.accept();
-            ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream());
+            DataInputStream dataInputStream = new DataInputStream(socket.getInputStream());
+            //ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream());
             //InputStream inputStream = socket.getInputStream();
             while (true) {
                 try {
                     // Read from the InputStream.
                     //numBytes = inputStream.read(mmBuffer);
-                    numBytes = objectInputStream.read(mmBuffer);
+                    numBytes = dataInputStream.read(mmBuffer);
                     if (numBytes != 0) {
                         if (flag) {
                             StringBuilder builder = new StringBuilder();
@@ -125,6 +124,7 @@ public class ChatServerForImage extends Thread {
 
                 } catch (Exception e) {
                     e.printStackTrace();
+                    break;
                 }
             }
         } catch (IOException e) {
@@ -237,7 +237,8 @@ public class ChatServerForImage extends Thread {
 
     private void saveImageInExternalStorage(ChatMessageModel chatMessageModel, Message msg, HostBean hostBean, int notificationId, Context context){
         SavePhotoTask savePhotoTask = new SavePhotoTask(chatMessageModel, msg, hostBean, notificationId, context);
-        savePhotoTask.execute(msg.imagebyte);
+        byte[] imgByte = Base64.decode(msg.imageString, Base64.DEFAULT);
+        savePhotoTask.execute(imgByte);
     }
 
     @Override

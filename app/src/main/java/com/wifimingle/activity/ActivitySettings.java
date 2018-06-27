@@ -161,7 +161,7 @@ public class ActivitySettings extends AppCompatActivity {
                 //String hostBeanString = new Gson().toJson(hostBean);
                 ChatClient chatClient = new ChatClient(hostBean.ipAddress);
                 chatClient.start();
-                chatClient.sendMsg("$status"+ status + "," + getLocalIpAddress() + Constants.HEADER);
+                chatClient.sendMsg("$status"+ ";" + status + "," + getLocalIpAddress() + Constants.HEADER);
                 chatClient.interrupt();
             }
         }

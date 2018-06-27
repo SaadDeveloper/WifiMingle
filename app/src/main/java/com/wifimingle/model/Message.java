@@ -12,7 +12,7 @@ public class Message implements Serializable{
     public String phone;
     public boolean OnlineStatus;
     public String message_seen;
-    public byte[] imagebyte;
+    public String imageString;
 
     public Message() {
     }

@@ -174,7 +174,9 @@ public class ListeningForOnlineStatus extends Service {
             OutputStream outputStream = null;*/
             //recieveMessageMechanismForIphone();
             //tring recievedData = "";
+            Log.e("ListenInsideIf", "date input stream is available method calls");
             String newMsg = recieveMessageMechanismForIphone(socket);
+            Log.e("ClientServer", newMsg);
 
             if (!newMsg.equals("")) {
                 newMsg = newMsg.replace("~", "").replace("~", "").replace("~", "")
@@ -379,7 +381,7 @@ public class ListeningForOnlineStatus extends Service {
 
     private void sendLocalBroadCastForStatusChange(Context context, String message) {
         Intent intentBroadcast = new Intent(INTENT_FILTER_BROADCAST);
-        String status = message.substring(7, message.indexOf(","));
+        String status = message.substring(message.indexOf(";") + 1, message.indexOf(","));
         String hostIp = message.substring(message.indexOf(",") + 1);
         intentBroadcast.putExtra("status", status);
         intentBroadcast.putExtra("host_ip_String", hostIp);
