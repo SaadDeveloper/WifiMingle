@@ -164,10 +164,21 @@ public class ChatServer extends Thread {
                 host.profilePicString = reg.profilePic;
                 publishHostInterface.publishHost(host);
 
-                long count = PhoneModelForWelcomingMessage.count(PhoneModelForWelcomingMessage.class);
-                if (count > 0) {
-                    List<PhoneModelForWelcomingMessage> found = PhoneModelForWelcomingMessage.find(PhoneModelForWelcomingMessage.class, "phone = ?", reg.phone);
-                    if (found.size() == 0) {
+                try {
+                    long count = PhoneModelForWelcomingMessage.count(PhoneModelForWelcomingMessage.class);
+                    if (count > 0) {
+                        List<PhoneModelForWelcomingMessage> found = PhoneModelForWelcomingMessage.find(PhoneModelForWelcomingMessage.class, "phone = ?", reg.phone);
+                        if (found.size() == 0) {
+                            PhoneModelForWelcomingMessage phone = new PhoneModelForWelcomingMessage();
+                            phone.setPhone(reg.phone);
+                            phone.save();
+                            String jsonString = insertData(activity, host);
+                            ChatClient chatClient = new ChatClient(host.ipAddress);
+                            chatClient.start();
+                            chatClient.sendMsg("$Welcome" + "," + jsonString + Constants.HEADER);
+                            chatClient.interrupt();
+                        }
+                    } else {
                         PhoneModelForWelcomingMessage phone = new PhoneModelForWelcomingMessage();
                         phone.setPhone(reg.phone);
                         phone.save();
@@ -177,28 +188,21 @@ public class ChatServer extends Thread {
                         chatClient.sendMsg("$Welcome" + "," + jsonString + Constants.HEADER);
                         chatClient.interrupt();
                     }
-                } else {
-                    PhoneModelForWelcomingMessage phone = new PhoneModelForWelcomingMessage();
-                    phone.setPhone(reg.phone);
-                    phone.save();
-                    String jsonString = insertData(activity, host);
-                    ChatClient chatClient = new ChatClient(host.ipAddress);
-                    chatClient.start();
-                    chatClient.sendMsg("$Welcome" + "," + jsonString + Constants.HEADER);
-                    chatClient.interrupt();
-                }
 
-                ArrayList<ChatMessageModel> forUnsentMesageList = (ArrayList<ChatMessageModel>) ChatMessageModel.find(ChatMessageModel.class, "phone_Number = ?", reg.phone);
-                if (forUnsentMesageList.size() > 0) {
-                    ChatClient chatClient = new ChatClient(host.ipAddress);
-                    chatClient.start();
-                    for (ChatMessageModel m : forUnsentMesageList) {
-                        if (!m.onlineStatus) {
-                            Log.e("Error_Hello", "Error Hello message");
-                            chatClient.sendMsg(sendDataOfUnsentMessage(activity, host, m) + Constants.HEADER);
+                    ArrayList<ChatMessageModel> forUnsentMesageList = (ArrayList<ChatMessageModel>) ChatMessageModel.find(ChatMessageModel.class, "phone_Number = ?", reg.phone);
+                    if (forUnsentMesageList.size() > 0) {
+                        ChatClient chatClient = new ChatClient(host.ipAddress);
+                        chatClient.start();
+                        for (ChatMessageModel m : forUnsentMesageList) {
+                            if (!m.onlineStatus) {
+                                Log.e("Error_Hello", "Error Hello message");
+                                chatClient.sendMsg(sendDataOfUnsentMessage(activity, host, m) + Constants.HEADER);
+                            }
                         }
+                        chatClient.interrupt();
                     }
-                    chatClient.interrupt();
+                }catch (Exception e){
+                    e.printStackTrace();
                 }
             }
                 /*while (true) {

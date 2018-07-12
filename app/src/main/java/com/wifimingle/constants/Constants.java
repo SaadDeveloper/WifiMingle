@@ -15,7 +15,7 @@ public class Constants {
     public static final String CAMERA = Manifest.permission.CAMERA;
     public static final String STORAGE = Manifest.permission.WRITE_EXTERNAL_STORAGE;
     public static final String PHONE_STATE = Manifest.permission.READ_PHONE_STATE;
-    public static final String BASE_URL = "http://104.237.158.234/";
+    public static final String BASE_URL = "http://wifimingle.com/";
     public static final String API_KEY = "Wifimingle0km7852Q1ykny9FfcIK5y9kVV5v6";
     public static final String DATE_TIME_24HOUR_FORMATE = "yyyy-MM-dd hh:mm:ss";
     public static final String DATE_TIME_FORMATE_IMG_SAVING = "yyyyMMdd-hhmmss";

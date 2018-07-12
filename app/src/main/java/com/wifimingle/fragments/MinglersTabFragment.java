@@ -123,6 +123,9 @@ public class MinglersTabFragment extends Fragment implements FragmentMethodCalli
     public void onResume() {
         super.onResume();
         LocalBroadcastManager.getInstance(getContext()).registerReceiver(mRegisterReciever, new IntentFilter(INTENT_FILTER_BROADCAST));
+        if(recyclerView.getAdapter() != null){
+            recyclerView.getAdapter().notifyDataSetChanged();
+        }
     }
 
     @Override

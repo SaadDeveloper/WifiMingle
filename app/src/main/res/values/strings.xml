@@ -4,7 +4,7 @@
 -->
 <resources>
     <string name="app_name">Wifi Mingle</string>
-    <string name="version_name">1.0 </string>
+    <string name="version_name">1.0</string>
     <string name="app_loading">Loading</string>
     <string name="btn_yes">Yes</string>
     <string name="btn_no">No</string>

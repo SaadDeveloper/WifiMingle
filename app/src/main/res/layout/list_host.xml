@@ -1,71 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
  Copyright (C) 2009-2010 Aubort Jean-Baptiste (Rorist)
  Licensed under GNU's GPL 2, see README
 -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="?android:attr/listPreferredItemHeight"
-    android:orientation="horizontal"
-    android:padding="2dip"
-    android:background="?attr/selectableItemBackground"
-    android:layout_marginTop="10dp"
     android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp">
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="horizontal"
+    android:padding="2dip">
 
-<!--    android:background="@drawable/row_item"-->
+    <!--    android:background="@drawable/row_item"-->
 
-   <!-- <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingRight="5dip"
-        android:paddingLeft="5dip"
-        android:background="@color/grey_light"
-        android:layout_marginRight="10dp">-->
+    <!-- <RelativeLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingRight="5dip"
+         android:paddingLeft="5dip"
+         android:background="@color/grey_light"
+         android:layout_marginRight="10dp">-->
 
-        <LinearLayout
-            android:layout_width="70dp"
-            android:layout_height="60dp"
-            android:background="@color/white"
-            android:paddingLeft="10dp">
+    <LinearLayout
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:paddingLeft="10dp">
 
-            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/profile_image_item_list"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/avatar"
-                app:civ_border_color="@android:color/white"
-                app:civ_border_width="2dp" />
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image_item_list"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/avatar"
+            app:civ_border_color="@android:color/white"
+            app:civ_border_width="2dp" />
 
-        </LinearLayout>
+    </LinearLayout>
 
-        <!--<TextView
-            android:id="@+id/online_status"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_alignBottom="@+id/logo"
-            android:layout_marginLeft="25dp"
-            android:layout_gravity="right"
-            android:background="@drawable/round_button"
-            android:gravity="center"
-            android:textSize="12sp"
-            android:visibility="gone" />-->
+    <!--<TextView
+        android:id="@+id/online_status"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignBottom="@+id/logo"
+        android:layout_marginLeft="25dp"
+        android:layout_gravity="right"
+        android:background="@drawable/round_button"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:visibility="gone" />-->
     <!--</RelativeLayout>
 -->
 
     <LinearLayout
         android:layout_width="1dp"
         android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
         android:layout_marginTop="1dp"
-        android:background="@color/grey_light"
-        android:layout_gravity="center_vertical">
+        android:background="@color/grey_light">
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:background="@color/grey_light"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@color/grey_light" />
 
     </LinearLayout>
 
@@ -73,103 +71,88 @@
         android:layout_width="0dip"
         android:layout_height="60dp"
         android:layout_weight="1"
-        android:orientation="vertical"
-        android:focusable="false"
         android:background="@color/white"
-        android:focusableInTouchMode="false">
-        
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:orientation="vertical">
+
         <TextView
             android:id="@+id/ip"
+            style="@style/ListTextTitle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:ellipsize="start"
             android:maxLines="2"
             android:paddingLeft="10dp"
-            style="@style/ListTextTitle"
-            android:visibility="invisible"
-            android:text="List" />
+            android:text="List"
+            android:visibility="invisible" />
 
         <TextView
             android:id="@+id/mac_or_name"
+            style="@style/ListTextTitle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:lines="1"
             android:ellipsize="end"
+            android:lines="1"
             android:paddingLeft="10dp"
-            style="@style/ListTextTitle"
             android:text="hardware" />
 
         <TextView
             android:id="@+id/hostname"
+            style="@style/ListTextTitle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:lines="1"
-            android:visibility="invisible"
             android:ellipsize="end"
+            android:lines="1"
             android:paddingLeft="10dp"
-            style="@style/ListTextTitle"
-            android:text="device name" />
+            android:text="device name"
+            android:visibility="invisible" />
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:layout_gravity="center_vertical"
-        android:gravity="right"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:paddingLeft="10dp">
 
-       <RelativeLayout
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:background="@color/white"
-           android:paddingLeft="10dp">
+        <TextView
+            android:id="@+id/online_status"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/round_button"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:visibility="gone" />
 
-            <TextView
-                android:id="@+id/online_status"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_gravity="right"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="25dp"
-                android:background="@drawable/round_button"
-                android:gravity="center"
-                android:textSize="12sp"
-                android:visibility="gone" />
+        <TextView
+            android:id="@+id/busy_status"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rounded_busy"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:visibility="gone" />
 
-            <TextView
-                android:id="@+id/busy_status"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_gravity="right"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/rounded_busy"
-                android:gravity="center"
-                android:textSize="12sp"
-                android:visibility="gone" />
+        <TextView
+            android:id="@+id/offline_status"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rounded_offline"
+            android:gravity="center"
+            android:visibility="gone" />
 
-           <TextView
-               android:id="@+id/offline_status"
-               android:layout_width="15dp"
-               android:layout_height="15dp"
-               android:layout_gravity="right"
-               android:layout_marginTop="25dp"
-               android:layout_marginRight="10dp"
-               android:background="@drawable/rounded_offline"
-               android:gravity="center"
-               android:textSize="12sp"
-               android:visibility="gone" />
-
-       </RelativeLayout>
-
-
-
-
-    </LinearLayout>
-
-
-
-
+    </RelativeLayout>
 </LinearLayout>
 

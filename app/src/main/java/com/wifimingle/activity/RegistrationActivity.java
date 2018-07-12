@@ -39,6 +39,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hbb20.CountryCodePicker;
+import com.mikhaellopez.circularimageview.CircularImageView;
 import com.wifimingle.R;
 import com.wifimingle.Utils.DialogDatePicker;
 import com.wifimingle.Utils.Utilities;
@@ -86,7 +87,8 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
     private CountryCodePicker cpp_code;
     private EditText et_phone;
     private Button btnRegister;
-    private CircleImageView profilePic;
+    //private CircleImageView profilePic;
+    private CircularImageView profilePic;
     public DatePicker mDatePicker;
     private String[] genderArr = {"Gender", "Male", "Female"};
     public RegistrationModel registrationModel;
@@ -155,16 +157,12 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
             @Override
             public void onClick(View v) {
                 if(validation()){
-                    long isSave = saveLocally();
-                    /*if (Utilities.isNetworkAvailable(RegistrationActivity.this)) {
+                    saveLocally();
+                    if (Utilities.isNetworkAvailable(RegistrationActivity.this)) {
                         sendPost(name, gender, dob, phone, imgString);
                         progressDialog.show();
                     }else {
                         Toast.makeText(RegistrationActivity.this, "Network is not available \n We will send it later", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(RegistrationActivity.this, SplashActivity.class));
-                        finish();
-                    }*/
-                    if(isSave == 1) {
                         startActivity(new Intent(RegistrationActivity.this, SplashActivity.class));
                         finish();
                     }
@@ -189,12 +187,13 @@ public class RegistrationActivity extends AppCompatActivity implements EasyPermi
         et_dob.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                showDatePickerForMarshmallowAndAbove(RegistrationActivity.this, et_dob);
+                /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     showDatePickerForMarshmallowAndAbove(RegistrationActivity.this, et_dob);
                 } else {
                     DialogDatePicker dataPicker = new DialogDatePicker(RegistrationActivity.this, et_dob, "Select Date of Birth");
                     mDatePicker = dataPicker.showDateDialog();
-                }
+                }*/
             }
         });
 

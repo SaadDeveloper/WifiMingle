@@ -63,6 +63,7 @@ final public class ActivityMain extends Activity {
 
         prefs = PreferenceManager.getDefaultSharedPreferences(ctxt);
 
+
         // Reset interface
         Editor edit = prefs.edit();
         edit.putString(Prefs.KEY_INTF, Prefs.DEFAULT_INTF);

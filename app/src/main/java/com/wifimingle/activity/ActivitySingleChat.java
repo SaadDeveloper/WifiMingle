@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -55,6 +56,7 @@ import id.zelory.compressor.Compressor;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 
+import static com.wifimingle.activity.ActivityMain.MY_PREFERENCES;
 import static com.wifimingle.constants.Constants.APP_MINGLER_IMAGE_FOLDER;
 import static com.wifimingle.constants.Constants.APP_MINGLER_IMAGE_SENT_FOLDER;
 import static com.wifimingle.constants.Constants.APP_NAME;
@@ -81,6 +83,8 @@ public class ActivitySingleChat extends AppCompatActivity implements EasyPermiss
     private ArrayList<ChatMessageModel> messageList;
     private int REQUEST_IMAGE_OPEN = 123;
     private final int PERMISSION_REQUEST_CODE = 2;
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -113,6 +117,8 @@ public class ActivitySingleChat extends AppCompatActivity implements EasyPermiss
         messagesList = findViewById(R.id.listMessages);
         personName = findViewById(R.id.tv_chat_name);
         back = findViewById(R.id.imgBtn_back);
+        sharedPreferences = getSharedPreferences(MY_PREFERENCES, MODE_PRIVATE);
+        editor = sharedPreferences.edit();
         reg = RegistrationModel.first(RegistrationModel.class);
         reg.setProfilePicString("");
     }
@@ -207,6 +213,7 @@ public class ActivitySingleChat extends AppCompatActivity implements EasyPermiss
     protected void onResume() {
         super.onResume();
         try {
+            saveCountOfNewMessage(hostBean.phoneNumber);
             LocalBroadcastManager.getInstance(getApplicationContext()).registerReceiver(mRegistrationBroadcastReceiver, new IntentFilter(INTENT_FILTER_BROADCAST_INCOMING));
             populateChat();
         } catch (Exception ex) {
@@ -507,11 +514,17 @@ public class ActivitySingleChat extends AppCompatActivity implements EasyPermiss
         @Override
         public void onReceive(Context context, Intent intent) {
             sendMessage(hostBean, "$acknowledgment" + reg.phone);
+            saveCountOfNewMessage(hostBean.phoneNumber);
             NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
             notificationManager.cancel(Integer.valueOf(hostBean.phoneNumber.substring(hostBean.phoneNumber.length() - 7)));
             populateChat();
         }
     };
+
+    private void saveCountOfNewMessage(String phoneNumber){
+        editor.putInt(phoneNumber, 0);
+        editor.apply();
+    }
 
     @AfterPermissionGranted(PERMISSION_REQUEST_CODE)
     private void methodRequiresPermission() {

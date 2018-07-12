@@ -14,7 +14,7 @@ import retrofit2.http.POST;
 
 public interface ApiService {
     //@POST("/posts")
-    @POST("wifimingle/feedback/save")
+    @POST("feedback/save")
     @FormUrlEncoded
     Call<FeedBackModel> savePost(@Field("fb_name") String fbName,
                                  @Field("fb_email") String fbEmail,
@@ -22,7 +22,7 @@ public interface ApiService {
                                  @Field("fb_image") String fbImage,
                                  @Field("api_key") String apiKey);
 
-    @POST("wifimingle/api/user_registeration")
+    @POST("api/user_registeration")
     @FormUrlEncoded
     Call<RegistrationModel> saveRegistrationPost(@Field("name") String rgName,
                                                  @Field("phone_number") String rgPhone,

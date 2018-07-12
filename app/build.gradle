@@ -31,6 +31,7 @@ dependencies {
     compile "com.android.support:support-emoji:26.1.0"
     compile 'com.intuit.sdp:sdp-android:1.0.4'
     compile 'de.hdodenhof:circleimageview:2.2.0'
+    compile 'com.mikhaellopez:circularimageview:3.1.0'
     compile 'com.github.satyan:sugar:1.5'
     compile 'com.hbb20:ccp:2.1.2'
     compile 'com.google.code.gson:gson:2.8.0'

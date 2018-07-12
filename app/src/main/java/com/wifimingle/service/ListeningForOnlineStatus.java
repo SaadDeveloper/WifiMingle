@@ -6,6 +6,7 @@ import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
@@ -38,6 +39,7 @@ import java.util.ArrayList;
 
 import static com.wifimingle.activity.ActivityMain.INTENT_FILTER_BROADCAST;
 import static com.wifimingle.activity.ActivityMain.INTENT_FILTER_BROADCAST_INCOMING;
+import static com.wifimingle.activity.ActivityMain.MY_PREFERENCES;
 import static com.wifimingle.activity.ActivityMain.TAG;
 import static com.wifimingle.activity.ActivitySingleChat.SEEN;
 
@@ -45,6 +47,8 @@ import static com.wifimingle.activity.ActivitySingleChat.SEEN;
 public class ListeningForOnlineStatus extends Service {
 
     private ChatServerThread chatServerThread;
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
     //private final int SocketServerPORT = 8080;
     private final int SocketServerPORT = 53705;
 
@@ -69,6 +73,8 @@ public class ListeningForOnlineStatus extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        sharedPreferences = getSharedPreferences(MY_PREFERENCES, MODE_PRIVATE);
+        editor = sharedPreferences.edit();
         chatServerThread = new ChatServerThread(this);
         chatServerThread.start();
         Log.e(TAG, "ListenService OnStartCommand called");
@@ -198,6 +204,7 @@ public class ListeningForOnlineStatus extends Service {
                         HostBean hostBean = gson.fromJson(hostBeanString, HostBean.class);
                         insertDataFromSrver(msg);
                         String phoneNumber = msg.phone;
+                        saveCountOfNewMessage(phoneNumber);
                         int id = Integer.valueOf(phoneNumber.substring(phoneNumber.length() - 7));
                         buildingNotification(context, msg.name, msg.message, getPendingIntent(context, id, hostBean, msg), id);
                         sendLocalBroadCast(context, msg, id);
@@ -222,6 +229,7 @@ public class ListeningForOnlineStatus extends Service {
                         HostBean hostBean = gson.fromJson(hostBeanString, HostBean.class);
                         insertDataFromSrver(msg);
                         String phoneNumber = msg.phone;
+                        saveCountOfNewMessage(phoneNumber);
                         sendLocalBroadCastForNewMingler(context, hostBeanString, registrationString);
                         int notificationId = Integer.valueOf(phoneNumber.substring(phoneNumber.length() - 7));
                         buildingNotification(context, msg.name, msg.message, getPendingIntent(context, notificationId, hostBean, msg), notificationId);
@@ -361,6 +369,13 @@ public class ListeningForOnlineStatus extends Service {
                 }
             }
         }
+    }
+
+
+    private void saveCountOfNewMessage(String phoneNumber){
+        int messageCount = sharedPreferences.getInt(phoneNumber, 0)+1;
+        editor.putInt(phoneNumber, messageCount);
+        editor.apply();
     }
 
     private void sendLocalBroadCast(Context context, Message message, int notificationId) {

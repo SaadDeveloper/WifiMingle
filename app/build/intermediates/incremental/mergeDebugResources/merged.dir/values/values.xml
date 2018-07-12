@@ -297,6 +297,13 @@
     <declare-styleable name="ButtonBarLayout"><attr format="boolean" name="allowStacking"/></declare-styleable>
     <declare-styleable name="CardView"><attr format="color" name="cardBackgroundColor"/><attr format="dimension" name="cardCornerRadius"/><attr format="dimension" name="cardElevation"/><attr format="dimension" name="cardMaxElevation"/><attr format="boolean" name="cardUseCompatPadding"/><attr format="boolean" name="cardPreventCornerOverlap"/><attr format="dimension" name="contentPadding"/><attr format="dimension" name="contentPaddingLeft"/><attr format="dimension" name="contentPaddingRight"/><attr format="dimension" name="contentPaddingTop"/><attr format="dimension" name="contentPaddingBottom"/><attr name="android:minWidth"/><attr name="android:minHeight"/></declare-styleable>
     <declare-styleable name="CircleImageView"><attr format="dimension" name="civ_border_width"/><attr format="color" name="civ_border_color"/><attr format="boolean" name="civ_border_overlay"/><attr format="color" name="civ_fill_color"/><attr format="color" name="civ_circle_background_color"/></declare-styleable>
+    <declare-styleable name="CircularImageView"><attr format="boolean" name="civ_border"/><attr format="dimension" name="civ_border_width"/><attr format="color" name="civ_border_color"/><attr format="color" name="civ_background_color"/><attr format="boolean" name="civ_shadow"/><attr format="color" name="civ_shadow_color"/><attr format="float" name="civ_shadow_radius"/><attr name="civ_shadow_gravity">
+            <flag name="center" value="1"/>
+            <flag name="top" value="2"/>
+            <flag name="bottom" value="3"/>
+            <flag name="start" value="4"/>
+            <flag name="end" value="5"/>
+        </attr></declare-styleable>
     <declare-styleable name="CollapsingToolbarLayout"><attr format="dimension" name="expandedTitleMargin"/><attr format="dimension" name="expandedTitleMarginStart"/><attr format="dimension" name="expandedTitleMarginTop"/><attr format="dimension" name="expandedTitleMarginEnd"/><attr format="dimension" name="expandedTitleMarginBottom"/><attr format="reference" name="expandedTitleTextAppearance"/><attr format="reference" name="collapsedTitleTextAppearance"/><attr format="color" name="contentScrim"/><attr format="color" name="statusBarScrim"/><attr format="reference" name="toolbarId"/><attr format="dimension" name="scrimVisibleHeightTrigger"/><attr format="integer" name="scrimAnimationDuration"/><attr name="collapsedTitleGravity">
             
             <flag name="top" value="0x30"/>
@@ -1020,7 +1027,7 @@
     <string name="task_services">Creating Services database ...\nThis may take a while ...</string>
     <string name="title">Filters</string>
     <string name="title_settings_dialog">Permissions Required</string>
-    <string name="version_name">1.0 </string>
+    <string name="version_name">1.0</string>
     <string name="wifi_associating">Wifi is associating with %s</string>
     <string name="wifi_dhcp">Obtaining IP address from %s</string>
     <string name="wifi_disabled">Wifi is disabled</string>
